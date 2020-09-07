@@ -1,0 +1,33 @@
+/* base */
+/* --------------------------------- */
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* title */
+/* --------------------------------- */
+.m-ttl {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+/* btn */
+/* --------------------------------- */
+.m-btn {
+  display: block;
+  color: #fff;
+  background-color: #000000;
+}
+
+/* utility */
+/* --------------------------------- */
+.u-wrap {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.u-ptb-m {
+  padding: 80px 0;
+}
