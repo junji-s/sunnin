@@ -1,0 +1,29 @@
+.gnav {
+	position: fixed;
+	top: 0;
+	right: 0;
+
+	.gnav-inner {
+		display: flex;
+		align-items: center;
+		width: rem(60);
+		height: 100vh;
+		padding: rem(80) 0;
+		writing-mode: vertical-lr; // 縦書き
+
+		.gnav__list {
+			margin-bottom: rem(16);
+			a {
+				font-size: rem(12);
+			}
+		}
+	}
+}
+
+@include mq(tab) {
+	.gnav {
+		.gnav-inner {
+			width: rem(30);
+		}
+	}
+}

@@ -5,6 +5,7 @@
 	left: 0;
 	z-index: 10;
 	width: rem(80);
+	background-color: #fff;
 
 	.header-inner {
 		display: flex;
@@ -23,8 +24,6 @@
 		}
 	}
 }
-
-
 
 /* 以下、ハンバーガーメニュー */
 .hamburgerbtn {
@@ -123,5 +122,18 @@
 		color: #333;
 		cursor: pointer;
 		transition: .3s;
+	}
+}
+
+@include mq(tab) {
+	.header {
+		width: rem(60);
+		.header-inner {
+			padding: rem(37) rem(10);
+		}
+	}
+
+	.hamburger-wrap {
+		left: rem(60);
 	}
 }

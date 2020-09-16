@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="scss/base/destyle.css">
   <link rel="stylesheet" href="scss/style.css">
+  <link rel="stylesheet" href="scss/plugin/swiper.min.css">
   <script src="https://kit.fontawesome.com/ba645373e0.js" crossorigin="anonymous"></script>
   <title>サンニン株式会社 | sunnin, Inc.</title>
 </head>
@@ -37,23 +38,21 @@
   <div class="u-wrap">
     <!-- heroエリアここから -->
     <div class="hero">
-      <h1 class="m-site__ttl">sunn<span class="m-site__ttl-red">i</span>n</h1>
-      <div class="hero__carousel">
-        <div class="hero__carousel-area">
-          <div class="hero__carousel-list"></div>
-          <div class="hero__carousel-list"></div>
-          <div class="hero__carousel-list"></div>
+      <h1 class="m-site__ttl hero__ttl">sunn<span class="m-site__ttl-red">i</span>n</h1>
+      <div class="hero__carousel swiper-container">
+        <div class="hero__carousel-area swiper-wrapper">
+          <div class="hero__carousel-list swiper-slide"><img src="img/hero1.jpg" alt=""></div>
+          <div class="hero__carousel-list swiper-slide"><img src="img/hero2.jpg" alt=""></div>
+          <div class="hero__carousel-list swiper-slide"><img src="img/hero3.jpg" alt=""></div>
         </div>
-        <div class="hero__carousel-arow">
-          <div class="arrow-left">
-            <button class="arrow-btn js-btn-back" type="button"></button>
-          </div>
-          <div class="arrow-right">
-            <button class="arrow-btn js-btn-next" type="button"></button>
-          </div>
-        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
-      <span class="m-induction__icon hero-Induction__icon">scroll</span>
+      <div class="concept-wrap">
+        <p>The Communication produce</p>
+        <p>The Supreme Design</p>
+      </div>
+      <div class="m-induction__icon hero-induction__icon">scroll<span class="hero-induction__arrow"></span></div>
     </div>
 
     <main>
@@ -117,49 +116,49 @@
           <h2 class="m-ttl works-ttl">works</h2>
           <!-- サムネイルサイズlarge -->
           <article class="works__contents-lg">
-            <p><img src="" alt="" width="100%" height="480"></p>
+            <p><img src="" alt=""></p>
             <p class="works__content-ttl">「木と鉄」でつくるアパレル店舗163㎡</p>
             <p class="works__content-view">view details</p>
           </article>
           <article class="works__contents-lg">
-            <p><img src="" alt="" width="100%" height="480"></p>
+            <p><img src="" alt=""></p>
             <p class="works__content-ttl">イケア家具をオフィスで使う</p>
             <p class="works__content-view">view details</p>
           </article>
           <article class="works__contents-lg">
-            <p><img src="" alt="" width="100%" height="480"></p>
+            <p><img src="" alt=""></p>
             <p class="works__content-ttl">オフィスデザイン</p>
             <p class="works__content-view">view details</p>
           </article>
           <!-- サムネイルサイズsmall -->
           <div class="works__contents-wrap">
             <article class="works__content-sm">
-              <p><img src="" alt="" width="400" height="300"></p>
+              <p><img src="" alt=""></p>
               <p class="works__content-ttl">カフェをオフィスに改修</p>
               <p class="works__content-view">view details</p>
             </article>
             <article class="works__content-sm">
-              <p><img src="" alt="" width="400" height="300"></p>
+              <p><img src="" alt=""></p>
               <p class="works__content-ttl">カフェをオフィスに改修</p>
               <p class="works__content-view">view details</p>
             </article>
             <article class="works__content-sm">
-              <p><img src="" alt="" width="400" height="300"></p>
+              <p><img src="" alt=""></p>
               <p class="works__content-ttl">カフェをオフィスに改修</p>
               <p class="works__content-view">view details</p>
             </article>
             <article class="works__content-sm">
-              <p><img src="" alt="" width="400" height="300"></p>
+              <p><img src="" alt=""></p>
               <p class="works__content-ttl">カフェをオフィスに改修</p>
               <p class="works__content-view">view details</p>
             </article>
             <article class="works__content-sm">
-              <p><img src="" alt="" width="400" height="300"></p>
+              <p><img src="" alt=""></p>
               <p class="works__content-ttl">カフェをオフィスに改修</p>
               <p class="works__contents-view">view details</p>
             </article>
             <article class="works__content-sm">
-              <p><img src="" alt="" width="400" height="300"></p>
+              <p><img src="" alt=""></p>
               <p class="works__content-ttl">カフェをオフィスに改修</p>
               <p class="works__content-view">view details</p>
             </article>
@@ -173,12 +172,12 @@
         <div id="instagram" class="instagram">
           <h2 class="m-ttl instagram-ttl">instagram</h2>
           <div class="instagram-wrap">
-            <div class="instagram__content"><img src="" alt="" width="260" height="260"></div>
-            <div class="instagram__content"><img src="" alt="" width="260" height="260"></div>
-            <div class="instagram__content"><img src="" alt="" width="260" height="260"></div>
-            <div class="instagram__content"><img src="" alt="" width="260" height="260"></div>
-            <div class="instagram__content"><img src="" alt="" width="260" height="260"></div>
-            <div class="instagram__content"><img src="" alt="" width="260" height="260"></div>
+            <div class="instagram__content"><img src="" alt=""></div>
+            <div class="instagram__content"><img src="" alt=""></div>
+            <div class="instagram__content"><img src="" alt=""></div>
+            <div class="instagram__content"><img src="" alt=""></div>
+            <div class="instagram__content"><img src="" alt=""></div>
+            <div class="instagram__content"><img src="" alt=""></div>
           </div>
         </div>
       </section>
@@ -232,13 +231,29 @@
           <dd>新卒採用</dd>
           <dd>キャリア採用</dd>
         </dl>
-        <span class="m-induction__icon footer-Induction__icon">back to top</span>
+        <span class="m-induction__icon footer-induction__icon">back to top<span class="hero-induction__arrow"></span></span>
       </div>
     </footer>
   </div> <!-- containerここまで -->
 
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/script.js"></script>
-  <script type="text/javascript" src="js/carousel.js"></script>
+  <script type="text/javascript" src="js/top/top.js"></script>
+  <script type="text/javascript" src="js/plugin/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      loop: true,
+      initialSlide: 0,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <!-- objectfit cover　IE対策 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
+  <script>objectFitImages();</script>
+  <!-- <script type="text/javascript" src="js/carousel.js"></script> -->
+
 </body>
 </html>
