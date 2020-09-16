@@ -1,0 +1,8 @@
+/* -------------- message ------------------- */
+.message-ttl::after {
+	content: "ごあいさつ";
+	display: block;
+	margin-top: rem(10);
+	font-weight: normal;
+	font-size: rem(14);
+}

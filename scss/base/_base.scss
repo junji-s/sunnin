@@ -3,24 +3,24 @@
 /* base */
 /* --------------------------------- */
 body {
-  color: $baseFont-color;
-  font-family: $fontFamily;
-  overflow-x: hidden;
-  animation: fadein 1s forwards;
+	overflow-x: hidden;
+	color: $baseFont-color;
+	font-family: $fontFamily;
+	animation: fadein 1s forwards;
 }
-
+// ページ遷移時アニメーション
 @keyframes fadein {
-  0% {
-    opacity: 0;
-  }
+	0% {
+		opacity: 0;
+	}
 
-  100% {
-    opacity: 100%;
-  }
+	100% {
+		opacity: 100%;
+	}
 }
 
 img {
-  width: 100%;
-  height: auto;
-  vertical-align: bottom;
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
 }

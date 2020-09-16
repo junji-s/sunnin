@@ -1,0 +1,44 @@
+/* -------------- instagram ------------------- */
+.instagram-ttl::after {
+	content: "SOCISL NETWORK SERVICE";
+	display: block;
+	margin-top: rem(10);
+	font-weight: normal;
+	font-size: rem(14);
+}
+
+.instagram-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+
+	.instagram__content {
+		width: calc((100% - 20px * 2 ) / 3);
+		height: rem(300);
+		margin-right: 20px;
+		margin-bottom: 20px;
+		background-color: #9e2828;
+	}
+
+	.instagram__content:nth-child(3n) {
+		margin-right: 0;
+	}
+}
+
+@include mq(tab) {
+	.instagram-wrap {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+
+		.instagram__content {
+			width: 80%;
+			height: rem(300);
+			margin: 0 auto 20px;
+			background-color: #9e2828;
+		}
+		.instagram__content:nth-child(3n) {
+			margin: 0 auto 20px;
+		}
+	}
+}

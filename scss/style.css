@@ -2,9 +2,9 @@
 /* base */
 /* --------------------------------- */
 body {
-  color: #333333;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   overflow-x: hidden;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI semibold", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic", "Segoe UI", Verdana, Meiryo, sans-serif;
   -webkit-animation: fadein 1s forwards;
           animation: fadein 1s forwards;
 }
@@ -35,44 +35,371 @@ img {
 
 /* module（共通アイテム） */
 /* --------------------------------- */
-/* title */
-.m-ttl {
-  font-size: 2rem;
+/* サイトtitle */
+.m-site__ttl {
   font-weight: 900;
-  text-transform: capitalize;
+  font-size: 3.5rem;
 }
 
-/* btn */
-.m-btn {
+.m-site__ttl .m-site__ttl-red {
+  color: #e60a17;
+}
+
+/* セクションtitle */
+.m-ttl {
+  position: relative;
+  margin-bottom: 6.5625rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 4.5rem;
+}
+
+/* 下層ページ用button */
+.m-more__btn {
+  display: inline-block;
+  padding: .75em 2.5em;
+  border: 1px solid #333;
+}
+
+.m-more__btn a {
   display: block;
-  font-size: 0.75rem;
-  color: #fff;
-  background-color: #000000;
+}
+
+.m-more__btn.more__btnSP {
+  opacity: .5;
+}
+
+.m-induction__icon {
+  display: inline-block;
+  padding: .5em 1em;
+  background: #912e2e;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
 }
 
 /* utility（便利スタイル） */
 /* --------------------------------- */
 .u-wrap {
+  max-width: 85rem;
+  margin-left: 5rem;
+}
+
+/* -------------- header ------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 5rem;
+}
+
+.header .header-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  padding: 2.3125rem 1.875rem;
+}
+
+.header .header-inner .header__icon {
+  margin-bottom: 0.625rem;
+}
+
+.header .header-inner .header-fixed__copy {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+/* 以下、ハンバーガーメニュー */
+.hamburgerbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  width: 1.875rem;
+  height: 1.375rem;
+}
+
+.hamburgerbtn-line {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transition: .5s;
+}
+
+.hamburgerbtn-line::before, .hamburgerbtn-line::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: #333;
+  transition: .5s;
+}
+
+.hamburgerbtn-line::before {
+  width: 80%;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.hamburgerbtn-line::after {
+  width: 70%;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.hamburgerbtn-line::before, .hamburgerbtn-line::after {
+  content: "";
+  position: absolute;
+}
+
+.hamburgerbtn-line.open::before {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.hamburgerbtn-line.open::after {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.hamburger-wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 5rem;
+  z-index: 10;
+}
+
+.hamburger__nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+  height: 100vh;
+  background-color: rgba(34, 34, 34, 0.9);
+  color: #fff;
+  transition: .3s;
+}
+
+.hamburger__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hamburger__list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  line-height: 50%;
+}
+
+.hamburger__list a:hover {
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+}
+
+/* -------------- message ------------------- */
+.message-ttl::after {
+  content: "ごあいさつ";
+  display: block;
+  margin-top: 0.625rem;
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+
+/* -------------- business ------------------- */
+.business-ttl::after {
+  content: "";
+  display: block;
+  margin-top: 0.625rem;
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+
+.business__card {
+  position: relative;
+  counter-increment: number;
+}
+
+.business__card::before {
+  content: counter(number, decimal-leading-zero);
+}
+
+/* -------------- works ------------------- */
+.works .works-ttl::after {
+  content: "制作事例";
+  display: block;
+  margin-top: 0.625rem;
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+
+.works .carousel {
+  position: relative;
+  width: 100vw;
+  height: 37.5rem;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.works .carousel .carousel.erase {
+  padding-bottom: 0;
+}
+
+.works .carousel .carousel-area {
+  display: flex;
+  position: absolute;
+  /* widthはjsで代入 */
+  height: 100%;
+}
+
+.works .carousel .carousel-area .carousel-list {
+  width: 25rem;
+  height: 31.25rem;
+  margin-right: 1.875rem;
+  background-color: #2a187a;
+}
+
+@media screen and (max-width: 600px) {
+  .works .carousel {
+    width: 90vw;
+    height: 25rem;
+  }
+  .works .carousel .carousel-list {
+    width: 18.75rem;
+    height: 25rem;
+    margin-right: 0.5rem;
+  }
+}
+
+/* -------------- instagram ------------------- */
+.instagram-ttl::after {
+  content: "SOCISL NETWORK SERVICE";
+  display: block;
+  margin-top: 0.625rem;
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+
+.instagram-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.instagram-wrap .instagram__content {
+  width: calc((100% - 20px * 2 ) / 3);
+  height: 18.75rem;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: #9e2828;
+}
+
+.instagram-wrap .instagram__content:nth-child(3n) {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .instagram-wrap {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .instagram-wrap .instagram__content {
+    width: 80%;
+    height: 18.75rem;
+    margin: 0 auto 20px;
+    background-color: #9e2828;
+  }
+  .instagram-wrap .instagram__content:nth-child(3n) {
+    margin: 0 auto 20px;
+  }
+}
+
+/* -------------- produce ------------------- */
+.produce-ttl::after {
+  content: "私たちがプロデュースするサービス";
+  display: block;
+  margin-top: 0.625rem;
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+
+.produce-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.produce-wrap .produce__content {
+  width: calc((100% - 20px * 3 ) / 4);
+  height: 12.5rem;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: #9e2828;
+}
+
+.produce-wrap .produce__content:nth-child(4n) {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .produce-wrap {
+    display: block;
+  }
+  .produce-wrap .produce__content {
+    width: 12.5rem;
+    height: 12.5rem;
+    margin: 0 auto 20px;
+    background-color: #9e2828;
+  }
+  .produce-wrap .produce__content:nth-child(4n) {
+    margin: 0 auto 20px;
+  }
+}
+
+/* -------------- contact ------------------- */
+.contact-ttl {
+  text-align: center;
+}
+
+.contact-ttl::after {
+  content: "お問い合わせ";
+  display: block;
+  margin-top: 0.625rem;
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+
+/* -------------- footer ------------------- */
+.footer {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  background-color: #413f3f;
+  color: #fff;
+}
+
+.footer__inner {
   max-width: 62.5rem;
   margin: 0 auto;
-}
-
-@media screen and (min-width: 1025px) {
-  .u-wrap {
-    padding: 0 2rem;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .u-wrap {
-    padding: 0 1rem;
-  }
-}
-
-.header__list {
-  text-transform: uppercase;
-}
-
-.m-contant {
-  text-transform: uppercase;
 }

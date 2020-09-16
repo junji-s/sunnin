@@ -1,0 +1,41 @@
+/* -------------- produce ------------------- */
+.produce-ttl::after {
+	content: "私たちがプロデュースするサービス";
+	display: block;
+	margin-top: rem(10);
+	font-weight: normal;
+	font-size: rem(14);
+}
+
+.produce-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+
+	.produce__content {
+		width: calc((100% - 20px * 3 ) / 4);
+		height: rem(200);
+		margin-right: 20px;
+		margin-bottom: 20px;
+		background-color: #9e2828;
+	}
+	.produce__content:nth-child(4n) {
+		margin-right: 0;
+	}
+}
+
+@include mq(tab) {
+	.produce-wrap {
+		display: block;
+
+		.produce__content {
+			width: rem(200);
+			height: rem(200);
+			margin: 0 auto 20px;
+			background-color: #9e2828;
+		}
+		.produce__content:nth-child(4n) {
+			margin: 0 auto 20px;
+		}
+	}
+}

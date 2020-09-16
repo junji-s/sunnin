@@ -1,0 +1,73 @@
+/* -------------- works ------------------- */
+.works {
+	.works-ttl::after {
+		content: "制作事例";
+		display: block;
+		margin-top: rem(10);
+		font-weight: normal;
+		font-size: rem(14);
+	}
+
+	.carousel {
+		position: relative;
+		width: 100vw;
+		height: rem(600);
+		margin-bottom: rem(20);
+		// margin-bottom: -17px; /* オーバーレイスクロールバーを消す */
+		// padding-bottom: 17px; /* オーバーレイスクロールバーを消す */
+		overflow: hidden;
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
+
+		.carousel.erase {
+			padding-bottom: 0;
+		}
+
+		.carousel-area {
+			display: flex;
+			position: absolute;
+			/* widthはjsで代入 */
+			height: 100%;
+
+			.carousel-list {
+				width: rem(400);
+				height: rem(500);
+				margin-right: rem(30);
+				background-color: rgb(42, 24, 122);
+			}
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		.carousel {
+			width: 90vw;
+			height: rem(400);
+
+			.carousel-list {
+				width: rem(300);
+				height: rem(400);
+				margin-right: rem(8);
+			}
+		}
+	}
+
+	// スクロールバー
+	// .scrollbar {
+	// 	display: flex;
+	// 	align-items: center;
+	// 	position: absolute;
+	// 	top: rem(500);
+	// 	left: auto;
+	// 	width: 30%; /* スクロールバーの幅 */
+	// 	height: rem(30);
+	// 	border-radius: 8px;
+	// 	background-color: rgba(0, 0, 0, .2);
+	// }
+	// .scrollbar-thumb {
+	// 	/* widthはjsで代入 */
+	// 	height: 80%;
+	// 	border-radius: 10px;
+	// 	background-color: rgb(87, 86, 86);
+	// 	line-height: 90%;
+	// }
+}

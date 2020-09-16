@@ -1,0 +1,11 @@
+/* -------------- contact ------------------- */
+.contact-ttl {
+	text-align: center;
+}
+.contact-ttl::after {
+	content: "お問い合わせ";
+	display: block;
+	margin-top: rem(10);
+	font-weight: normal;
+	font-size: rem(14);
+}

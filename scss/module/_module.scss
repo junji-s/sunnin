@@ -1,36 +1,55 @@
 /* module（共通アイテム） */
 /* --------------------------------- */
-/* title */
-.m-ttl {
-  font-size: rem(32);
-  font-weight: 900;
-  text-transform: capitalize;  // 文頭だけ大文字
+
+/* サイトtitle */
+.m-site__ttl {
+	font-weight: 900;
+	font-size: rem(56);
+	.m-site__ttl-red {
+		color: #e60a17;
+	}
 }
 
-/* btn */
-.m-btn {
-  display: block;
-  font-size: rem(12);
-  color: $whiteFont-color;
-  background-color: $btn-color;
+/* セクションtitle */
+.m-ttl {
+	position: relative;
+	margin-bottom: rem(105);
+	text-transform: uppercase;  // 全ての文字を大文字に
+	font-weight: 600;
+	font-size: rem(72);
+}
+
+
+/* 下層ページ用button */
+.m-more__btn {
+	display: inline-block;
+	padding: .75em 2.5em;
+	border: 1px solid #333;
+
+	a {
+		display: block;
+	}
+}
+
+// タッチ端末hover
+// jQueryでタップ時.more__btnSPクラスを付与
+.m-more__btn.more__btnSP {
+	opacity: .5;
+}
+
+// スクロール誘導アイコン
+.m-induction__icon {
+	display: inline-block;
+	padding: .5em 1em;
+	background: rgb(145, 46, 46);
+	writing-mode: vertical-rl; // 縦書き
 }
 
 
 /* utility（便利スタイル） */
 /* --------------------------------- */
+// 全体コンテナ要素
 .u-wrap {
-  max-width: rem(1000);
-  margin: 0 auto;
-}
-
-@include mq(pc) {
-  .u-wrap {
-    padding: 0 rem(32);
-  }
-}
-
-@include mq(tab) {
-  .u-wrap {
-    padding: 0 rem(16);
-  }
+	max-width: rem(1360);
+	margin-left: rem(80);
 }

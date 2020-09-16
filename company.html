@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="scss/base/destyle.css">
+  <link rel="stylesheet" href="scss/style.css">
+  <title>サンニン株式会社</title>
+</head>
+<body>
+  <div class="u-wrap">
+    <!-- ヘッダーここから -->
+    <header class="header">
+      <div class="header-inner">
+        <p class="header__logo"><a href="#"><img src="" alt="サンニン株式会社"></a></p>
+        <nav>
+          <ul class="header__nav">
+            <li class="header__list"><a href="company.html">company</a></li>
+            <li class="header__list"><a href="works.html">works</a></li>
+            <li class="header__list"><a href="recruit.html">recruit</a></li>
+            <li class="header__list"><a href="blog.html">ceo blog</a></li>
+          </ul>
+          <button type="button" id="m-contact__btn" class="m-contact__btn"><a href="contact.html">contact</a></button>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- 会社概要ページ -->
+      <div class="hero u-sec">
+        <h1 class="hero__ttl">The〜</h1>
+      </div>
+    </main>
+
+    <!-- footerここから -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <p><img src="" alt="サンニン株式会社"></p>
+        <dl>
+          <dt>事業内容</dt>
+          <dd>事業01</dd>
+          <dd>事業01</dd>
+          <dd>企業情報</dd>
+          <dt>制作事例</dt>
+          <dd>制作事例トップ</dd>
+          <dt>採用情報</dt>
+          <dd>採用除法トップ</dd>
+          <dd>新卒採用</dd>
+          <dd>キャリア採用</dd>
+        </dl>
+        <ul>
+          <li class="footer__icon"><img src="" alt="Instagram"></li>
+          <li class="footer__icon"><img src="" alt="Twitter"></li>
+          <li class="footer__icon"><img src="" alt="Facebook"></li>
+          <li class="footer__icon"><img src="" alt="Linkedin"></li>
+        </ul>
+        <small>&copy; sunnin inc.</small>
+      </div>
+    </footer>
+  </div> <!-- containerここまで -->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/carousel.js"></script>
+  <script>
+    // SP用デフォルトhover制御
+    addEventListener('DOMContentLoaded', function () {
+      if (isTouchDevice()) {
+        for (var i in document.styleSheets) if (document.styleSheets.hasOwnProperty(i)) {
+          deleteRuleHover(document.styleSheets[i]);
+        }
+      }
+      function isTouchDevice() {
+        return 'ontouchstart' in document.documentElement || navigator.maxTouchPoints || navigator.msMaxTouchPoints;
+      }
+      function deleteRuleHover(styleSheet) {
+        try {
+          var rules = styleSheet.cssRules || styleSheet.rules;
+          if (rules) {
+            for (var i = rules.length; i--;) {
+              var text = rules[i].selectorText;
+              if (/:hover/.test(text)) {
+                console.log(text);
+                styleSheet.deleteRule(i);
+              }
+            }
+            for (var i = rules.length; i--;) deleteRuleHover(rules[i]);
+          }
+        }
+        catch (ex) {
+          console.log(ex);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

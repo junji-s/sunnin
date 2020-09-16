@@ -1,36 +1,51 @@
-//・・・・・・・ フォントサイズ ・・・・・・・
+//・・・・・・・ フォント ・・・・・・・
 // 基本テキストカラー
-$baseFont-color: #333333;
-// 装飾フォントカラー
-$whiteFont-color: #fff;
+$baseFont-color: #333;
 
+//・・・・・・・ セクションタイトル装飾カラー ・・・・・・・
+$message-color: #fd6620;
+$business-color: #258c98;
+$works-color: #ff4a88;
+$instagram-color: #bfe633;
+$produce-color: #fff962;
+$contact-color: #ffe65a;
 
 //・・・・・・・ 背景 ・・・・・・・
-$bg-color: #F0F0F0;
-//フッター背景
-$footer-color: #525252;
-// オーバーレイ
-$overray-color: rgba(#222222, .6);
-
+$bg-color: #fafafa;
 
 //・・・・・・・ ハンバーガーメニュー ・・・・・・・
-// ハンバーガーアイコン
-$hamburgerIcon-color: #fff;
 // ハンバーガーアイコンテキスト
 $hamburgerFont-color: #fff;
 // ハンバーガーメニュー背景
-$hamburgerBg-color: rgba(#222222, .95);
-
-
-//・・・・・・・ ボタン ・・・・・・・
-$btn-color: #000000;
+$hamburgerBg-color: rgba(#222, .9);
 
 
 //・・・・・・・ フォントファミリー ・・・・・・・
-$fontFamily:"Helvetica Neue",
-Arial,
-"Hiragino Kaku Gothic ProN",
-"Hiragino Sans",
+// ベーステキスト
+$fontFamily: -apple-system,
+BlinkMacSystemFont,
+Roboto,
+"Segoe UI",
+"Helvetica Neue",
+HelveticaNeue,
+YuGothic,
+"Yu Gothic Medium",
+"Yu Gothic",
+Verdana,
+Meiryo,
+sans-serif;
+
+//  太字：セクションタイトルなど（WinではSegoe UI semiboldを適用。Yu Gothic Medium→Yu Gothic）
+$fontFamily: -apple-system,
+BlinkMacSystemFont,
+Roboto,
+"Segoe UI semibold",
+"Helvetica Neue",
+HelveticaNeue,
+YuGothic,
+"Yu Gothic",
+"Segoe UI",
+Verdana,
 Meiryo,
 sans-serif;
 
@@ -38,4 +53,4 @@ sans-serif;
 $baseFontsize: 16;
 
 //・・・・・・・ ブレイクポイント ・・・・・・・
-$mq-breakpoints: ('xs': 320px, 'sp': 480px, 'tab': 600px, 'pc' : 1025px, 'full': 1100px);
+$mq-breakpoints: ("xs": 320px, "sp": 480px, "tab": 600px, "pc" : 1000px, "full": 1360px);
