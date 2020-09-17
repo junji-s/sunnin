@@ -1,8 +1,91 @@
 /* -------------- message ------------------- */
-.message-ttl::after {
-	content: "ごあいさつ";
-	display: block;
-	margin-top: rem(10);
-	font-weight: normal;
-	font-size: rem(14);
+.message {
+	padding: rem(90) 0 rem(250);
+
+	.message-ttl::after {
+		content: "";
+		display: block;
+		width: rem(80);
+		height: rem(10);
+		margin-top: rem(10);
+		background-color: $message-color;
+	}
+
+	.message-wrap {
+		display: flex;
+
+		.message__theme {
+			margin-right: rem(60);
+			font-weight: 600;
+			font-size: rem(72);
+			line-height: 1.2;
+		}
+
+		.message__txt-wrap {
+			.message__txt {
+				width: 100%;
+				margin-bottom: rem(40);
+				line-height: 2;
+			}
+		}
+	}
+}
+
+@include mq(full) {
+	.message {
+		.message-wrap {
+			.message__theme {
+				font-size: rem(60);
+			}
+		}
+		.message__txt-wrap {
+			width: 70%;
+		}
+	}
+}
+
+@include mq(pc) {
+	.message {
+		padding: rem(60) 0 rem(100);
+		.message-wrap {
+			.message__theme {
+				margin-right: rem(20);
+				font-size: rem(50);
+			}
+		}
+	}
+}
+@media screen and (max-width: 780px) {
+	.message {
+		padding: rem(60) 0 rem(100);
+		.message-wrap {
+			display: flex;
+			flex-direction: column;
+			.message__theme {
+				margin: 0 0 rem(20) 0;
+				font-size: rem(50);
+			}
+			.message__txt-wrap {
+				width: 100%;
+			}
+		}
+	}
+}
+@include mq(tab) {
+	.message {
+		.message-wrap {
+			.message__theme {
+				font-size: rem(40);
+			}
+		}
+	}
+}
+@include mq(sp) {
+	.message {
+		.message-wrap {
+			.message__theme {
+				font-size: rem(26);
+			}
+		}
+	}
 }

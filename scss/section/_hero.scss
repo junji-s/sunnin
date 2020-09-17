@@ -15,7 +15,7 @@
 	.hero__carousel {
 		position: relative;
 		z-index: 3;
-		width: 100vw;
+		width: calc(100vw - 80px);
 		overflow: hidden;
 		.hero__carousel-area {
 			.hero__carousel-list {
@@ -78,7 +78,6 @@
 	}
 }
 
-
 // 装飾背景
 .hero__carousel::before {
 	content: "";
@@ -89,7 +88,7 @@
 	width: 200vw;
 	height: 200vh;
 	overflow: hidden;
-	background-color: rgba($color: #fff, $alpha: .5);
+	background-color: rgba($color: #fff, $alpha: .25);
 	transform: rotate(-30deg);
 	transform-origin: left top;
 }
@@ -113,46 +112,56 @@
 		.hero__carousel::before {
 			top: 120%;
 		}
-	}
-}
 
-@include mq(tab) {
-	.hero {
-		.concept-wrap {
-			bottom: rem(20);
-			left: rem(10);
-			font-size: rem(24);
-		}
-		.hero__carousel::before {
-			transform: rotate(-15deg);
+		.hero-induction__icon {
+			.hero-induction__arrow {
+				height: 30px;
+				margin-top: rem(5);
+			}
 		}
 	}
 }
 
 @include mq(tab) {
 	.hero {
-		height: 50vh;
+		width: calc(100vw - 60px);
+		height: 50%;
+		.hero__carousel {
+			width: calc(100vw - 60px);
+		}
 		.concept-wrap {
 			bottom: rem(20);
 			left: rem(10);
 			font-size: rem(24);
 		}
 		.hero__carousel::before {
-			transform: rotate(-10deg);
+			left: -400px;
+			transform: rotate(-20deg);
+		}
+
+		.hero-induction__icon {
+			bottom: -10px;
+			.hero-induction__arrow {
+				height: 30px;
+				margin-top: rem(5);
+			}
 		}
 	}
 }
 
 @include mq(sp) {
 	.hero {
-		height: 40vh;
 		.concept-wrap {
-			bottom: rem(20);
 			left: rem(10);
-			font-size: rem(24);
+			font-size: rem(18);
 		}
 		.hero__carousel::before {
-			transform: rotate(-10deg);
+			top: 100%;
+			left: -300px;
+			transform: rotate(-15deg);
+		}
+		.hero-induction__icon {
+			display: none;
 		}
 	}
 }

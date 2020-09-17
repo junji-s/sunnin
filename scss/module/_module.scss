@@ -26,6 +26,23 @@
 	font-size: rem(72);
 }
 
+@media screen and (max-width: 780px) {
+	.m-ttl {
+		margin-bottom: rem(40);
+	}
+}
+@include mq(tab) {
+	.m-ttl {
+		font-size: rem(60);
+	}
+}
+@include mq(sp) {
+	.m-ttl {
+		margin-bottom: rem(30);
+		font-size: rem(40);
+	}
+}
+
 
 /* 下層ページ用button */
 .m-more__btn {
@@ -58,17 +75,11 @@
 
 @include mq(pc) {
 	.m-induction__icon {
-		display: block;
-		padding: 2em 1em;
-		background: $scrollBg-color;
-		color: $scrollFont-color;
-		text-transform: uppercase;  // 全ての文字を大文字に
-		letter-spacing: .08em;
-		font-weight: 300;
+		padding: 1.5em 1em;
 		font-size: rem(14);
-		writing-mode: vertical-rl; // 縦書き
 	}
 }
+
 
 
 /* utility（便利スタイル） */
@@ -76,11 +87,18 @@
 // 全体コンテナ要素
 .u-wrap {
 	max-width: rem(1360);
-	margin-left: rem(80);
+	padding: 0 rem(60) 0 rem(80);
 }
 
 @include mq(tab) {
 	.u-wrap {
-		margin: 0 rem(30) 0 rem(60);
+		padding: 0 rem(30) 0 rem(60);
+	}
+}
+
+// 改行
+@media screen and (max-width: 1200px) {
+	.br-none {
+		display: none;
 	}
 }

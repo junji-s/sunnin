@@ -61,6 +61,25 @@ img {
   font-size: 4.5rem;
 }
 
+@media screen and (max-width: 780px) {
+  .m-ttl {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .m-ttl {
+    font-size: 3.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .m-ttl {
+    margin-bottom: 1.875rem;
+    font-size: 2.5rem;
+  }
+}
+
 /* 下層ページ用button */
 .m-more__btn {
   display: inline-block;
@@ -91,17 +110,8 @@ img {
 
 @media screen and (max-width: 1000px) {
   .m-induction__icon {
-    display: block;
-    padding: 2em 1em;
-    background: #fff;
-    color: #5a93ff;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    font-weight: 300;
+    padding: 1.5em 1em;
     font-size: 0.875rem;
-    -webkit-writing-mode: vertical-rl;
-        -ms-writing-mode: tb-rl;
-            writing-mode: vertical-rl;
   }
 }
 
@@ -109,12 +119,18 @@ img {
 /* --------------------------------- */
 .u-wrap {
   max-width: 85rem;
-  margin-left: 5rem;
+  padding: 0 3.75rem 0 5rem;
 }
 
 @media screen and (max-width: 600px) {
   .u-wrap {
-    margin: 0 1.875rem 0 3.75rem;
+    padding: 0 1.875rem 0 3.75rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .br-none {
+    display: none;
   }
 }
 
@@ -208,7 +224,7 @@ img {
   z-index: 10;
 }
 
-.hamburger__nav {
+.hamburger-wrap .hamburger__nav {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -220,7 +236,7 @@ img {
   transition: .3s;
 }
 
-.hamburger__list {
+.hamburger-wrap .hamburger__nav .hamburger__list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -228,7 +244,7 @@ img {
   height: 100%;
 }
 
-.hamburger__list a {
+.hamburger-wrap .hamburger__nav .hamburger__list a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,7 +254,7 @@ img {
   line-height: 50%;
 }
 
-.hamburger__list a:hover {
+.hamburger-wrap .hamburger__nav .hamburger__list a:hover {
   background-color: #fff;
   color: #333;
   cursor: pointer;
@@ -274,7 +290,7 @@ img {
 .hero .hero__carousel {
   position: relative;
   z-index: 3;
-  width: 100vw;
+  width: calc(100vw - 80px);
   overflow: hidden;
 }
 
@@ -346,7 +362,7 @@ img {
   width: 200vw;
   height: 200vh;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.25);
   -webkit-transform: rotate(-30deg);
           transform: rotate(-30deg);
   -webkit-transform-origin: left top;
@@ -371,23 +387,19 @@ img {
   .hero .hero__carousel::before {
     top: 120%;
   }
-}
-
-@media screen and (max-width: 600px) {
-  .hero .concept-wrap {
-    bottom: 1.25rem;
-    left: 0.625rem;
-    font-size: 1.5rem;
-  }
-  .hero .hero__carousel::before {
-    -webkit-transform: rotate(-15deg);
-            transform: rotate(-15deg);
+  .hero .hero-induction__icon .hero-induction__arrow {
+    height: 30px;
+    margin-top: 0.3125rem;
   }
 }
 
 @media screen and (max-width: 600px) {
   .hero {
-    height: 50vh;
+    width: calc(100vw - 60px);
+    height: 50%;
+  }
+  .hero .hero__carousel {
+    width: calc(100vw - 60px);
   }
   .hero .concept-wrap {
     bottom: 1.25rem;
@@ -395,64 +407,145 @@ img {
     font-size: 1.5rem;
   }
   .hero .hero__carousel::before {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    left: -400px;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  .hero .hero-induction__icon {
+    bottom: -10px;
+  }
+  .hero .hero-induction__icon .hero-induction__arrow {
+    height: 30px;
+    margin-top: 0.3125rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .hero {
-    height: 40vh;
-  }
   .hero .concept-wrap {
-    bottom: 1.25rem;
     left: 0.625rem;
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
   .hero .hero__carousel::before {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    top: 100%;
+    left: -300px;
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  .hero .hero-induction__icon {
+    display: none;
   }
 }
 
-.gnav {
+/* -------------- current ------------------- */
+.current {
   position: fixed;
   top: 0;
   right: 0;
 }
 
-.gnav .gnav-inner {
+.current .current-inner {
   display: flex;
   align-items: center;
   width: 3.75rem;
   height: 100vh;
-  padding: 5rem 0;
+  padding: 3.75rem 0;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
 }
 
-.gnav .gnav-inner .gnav__list {
+.current .current-inner .current__list {
   margin-bottom: 1rem;
 }
 
-.gnav .gnav-inner .gnav__list a {
+.current .current-inner .current__list a {
   font-size: 0.75rem;
 }
 
 @media screen and (max-width: 600px) {
-  .gnav .gnav-inner {
+  .current .current-inner {
     width: 1.875rem;
+    padding: 2.5rem 0;
   }
 }
 
 /* -------------- message ------------------- */
-.message-ttl::after {
-  content: "ごあいさつ";
+.message {
+  padding: 5.625rem 0 15.625rem;
+}
+
+.message .message-ttl::after {
+  content: "";
   display: block;
+  width: 5rem;
+  height: 0.625rem;
   margin-top: 0.625rem;
-  font-weight: normal;
-  font-size: 0.875rem;
+  background-color: #fd6620;
+}
+
+.message .message-wrap {
+  display: flex;
+}
+
+.message .message-wrap .message__theme {
+  margin-right: 3.75rem;
+  font-weight: 600;
+  font-size: 4.5rem;
+  line-height: 1.2;
+}
+
+.message .message-wrap .message__txt-wrap .message__txt {
+  width: 100%;
+  margin-bottom: 2.5rem;
+  line-height: 2;
+}
+
+@media screen and (max-width: 1360px) {
+  .message .message-wrap .message__theme {
+    font-size: 3.75rem;
+  }
+  .message .message__txt-wrap {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .message {
+    padding: 3.75rem 0 6.25rem;
+  }
+  .message .message-wrap .message__theme {
+    margin-right: 1.25rem;
+    font-size: 3.125rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .message {
+    padding: 3.75rem 0 6.25rem;
+  }
+  .message .message-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .message .message-wrap .message__theme {
+    margin: 0 0 1.25rem 0;
+    font-size: 3.125rem;
+  }
+  .message .message-wrap .message__txt-wrap {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .message .message-wrap .message__theme {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .message .message-wrap .message__theme {
+    font-size: 1.625rem;
+  }
 }
 
 /* -------------- business ------------------- */
@@ -475,7 +568,7 @@ img {
 
 /* -------------- works ------------------- */
 .works .works-ttl::after {
-  content: "制作事例";
+  content: "";
   display: block;
   margin-top: 0.625rem;
   font-weight: normal;
@@ -524,7 +617,7 @@ img {
 
 /* -------------- instagram ------------------- */
 .instagram-ttl::after {
-  content: "SOCISL NETWORK SERVICE";
+  content: "";
   display: block;
   margin-top: 0.625rem;
   font-weight: normal;
@@ -568,7 +661,7 @@ img {
 
 /* -------------- produce ------------------- */
 .produce-ttl::after {
-  content: "私たちがプロデュースするサービス";
+  content: "";
   display: block;
   margin-top: 0.625rem;
   font-weight: normal;
@@ -614,7 +707,7 @@ img {
 }
 
 .contact-ttl::after {
-  content: "お問い合わせ";
+  content: "";
   display: block;
   margin-top: 0.625rem;
   font-weight: normal;

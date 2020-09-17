@@ -1,17 +1,18 @@
-.gnav {
+/* -------------- current ------------------- */
+.current {
 	position: fixed;
 	top: 0;
 	right: 0;
 
-	.gnav-inner {
+	.current-inner {
 		display: flex;
 		align-items: center;
 		width: rem(60);
 		height: 100vh;
-		padding: rem(80) 0;
+		padding: rem(60) 0;
 		writing-mode: vertical-lr; // 縦書き
 
-		.gnav__list {
+		.current__list {
 			margin-bottom: rem(16);
 			a {
 				font-size: rem(12);
@@ -21,9 +22,10 @@
 }
 
 @include mq(tab) {
-	.gnav {
-		.gnav-inner {
+	.current {
+		.current-inner {
 			width: rem(30);
+			padding: rem(40) 0;
 		}
 	}
 }
