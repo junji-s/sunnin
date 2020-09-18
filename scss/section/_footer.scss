@@ -36,8 +36,8 @@
 		align-items: center;
 		flex-direction: row-reverse;
 		position: absolute;
-		right: 10px;
-		bottom: 0;
+		right: 80px;
+		bottom: 20px;
 		z-index: 10;
 
 		.footer-induction__arrow {
@@ -89,7 +89,7 @@
 
 @include mq(pc) {
 	.footer {
-		padding: rem(90) 0 rem(80) rem(20);
+		padding: rem(90) 0 rem(80) rem(80);
 
 		.footer__nav-wrap {
 			font-size: rem(14);
@@ -103,20 +103,17 @@
 	}
 }
 
-@include mq(tab) {
+@media screen and (max-width: 780px) {
 	.footer {
-		padding: rem(40) 0 0 rem(20);
-
+		padding: rem(40) 0 0 rem(80);
 		.footer__nav-wrap {
 			display: flex;
 			flex-direction: column;
 			width: 100%;
-
 			.footer__nav {
 				display: flex;
 				flex-direction: column;
 				margin-bottom: rem(30);
-
 				.footer__team {
 					margin: 0 0 rem(18) 0;
 				}
@@ -128,6 +125,12 @@
 				}
 			}
 		}
+	}
+}
+
+@include mq(tab) {
+	.footer {
+		padding: rem(40) 0 0 rem(40);
 	}
 	.footer-induction__icon {
 		display: flex;
@@ -172,6 +175,9 @@
 					display: flex;
 					dd {
 						margin: 0 rem(10) rem(24) 0;
+					}
+					dd:last-child {
+						margin: 0 0 rem(24) 0;
 					}
 				}
 			}
