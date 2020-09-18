@@ -3,6 +3,9 @@
 /* base */
 /* --------------------------------- */
 body {
+	/* mobile viewport bug fix */
+	height: -webkit-fill-available;
+	min-height: -webkit-fill-available;
 	overflow-x: hidden;
 	color: $baseFont-color;
 	font-family: $fontFamily;
@@ -23,4 +26,8 @@ img {
 	width: 100%;
 	height: auto;
 	vertical-align: bottom;
+}
+
+a:hover {
+	opacity: .5;
 }

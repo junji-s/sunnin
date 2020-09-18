@@ -5,14 +5,13 @@
 .m-site__ttl {
 	font-weight: 900;
 	font-size: rem(56);
-	.m-site__ttl-red {
+	&-red {
 		color: #e60a17;
 	}
 }
 
 @include mq(sp) {
 	.m-site__ttl {
-		margin-left: rem(20);
 		font-size: rem(32);
 	}
 }
@@ -43,10 +42,16 @@
 	}
 }
 
+.m-ttl__wrap {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+
 
 /* 下層ページ用button */
 .m-more__btn {
-	display: inline-block;
+	display: block;
 	padding: .75em 2.5em;
 	border: 1px solid #333;
 
@@ -79,20 +84,40 @@
 		font-size: rem(14);
 	}
 }
-
+@include mq(sp) {
+	.m-induction__icon {
+		padding: 1em .5em;
+		font-size: rem(14);
+	}
+}
 
 
 /* utility（便利スタイル） */
 /* --------------------------------- */
 // 全体コンテナ要素
 .u-wrap {
-	max-width: rem(1360);
-	padding: 0 rem(60) 0 rem(80);
+	padding: 0 rem(80);
 }
 
 @include mq(tab) {
 	.u-wrap {
-		padding: 0 rem(30) 0 rem(60);
+		padding: 0 rem(40);
+	}
+}
+
+.u-wrap__inner {
+	max-width: rem(1320);
+	margin: 0 auto;
+}
+
+// セクション毎の余白
+.u-sec-wrap {
+	padding-bottom: rem(250);
+}
+
+@include mq(pc) {
+	.u-sec-wrap {
+		padding-bottom: rem(100);
 	}
 }
 

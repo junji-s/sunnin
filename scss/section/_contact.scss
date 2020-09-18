@@ -1,11 +1,70 @@
 /* -------------- contact ------------------- */
-.contact-ttl {
-	text-align: center;
+.contact {
+	position: relative;
+	.contact-ttl {
+		text-align: center;
+	}
+	.contact-ttl::after {
+		content: "";
+		display: block;
+		width: rem(80);
+		height: rem(10);
+		margin: rem(10) auto 0;
+		background-color: $contact-color;
+	}
+
+	.contact__txt {
+		margin-bottom: rem(40);
+		text-align: center;
+		font-size: rem(24);
+	}
+
+	// リンクボタン
+	.contact__btn {
+		margin: 0 auto rem(100);
+		border: 1px solid $contact-color ;
+		color: $contact-color;
+		transition: .5s;
+	}
+
+	.contact__btn:hover {
+		background-color: $contact-color;
+		color: #fff;
+	}
 }
-.contact-ttl::after {
+
+// 背景
+.contact::before {
 	content: "";
-	display: block;
-	margin-top: rem(10);
-	font-weight: normal;
-	font-size: rem(14);
+	position: absolute;
+	top: -180px;
+	left: 0;
+	z-index: -1;
+	width: 100vw;
+	height: 200%;
+	margin: 0 calc(50% - 50vw);
+	background-color: rgba(245, 245, 245, .7);
+	transform: skewY(-10deg);
+	transform-origin: top right;
+}
+
+@include mq(tab) {
+	.contact {
+		.contact__txt {
+			font-size: rem(16);
+		}
+	}
+	.contact::before {
+		content: "";
+		position: absolute;
+		top: -100px;
+		left: 0;
+		z-index: -3;
+		width: 100vw;
+		height: 200%;
+		margin: 0 calc(50% - 50vw);
+		background-color: rgba(245, 245, 245, .7);
+		transform: skewY(-10deg);
+		transform-origin: top right;
+	}
 }

@@ -3,17 +3,17 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 10;
+	z-index: 50;
 	width: rem(80);
-	background-color: #fff;
 
 	.header-inner {
 		display: flex;
+		align-items: center;
 		flex-direction: column;
 		justify-content: space-between;
 		width: 100%;
 		height: 100vh;
-		padding: rem(37) rem(30);
+		padding: rem(37) 0;
 
 		.header__icon {
 			margin-bottom: rem(10);
@@ -25,7 +25,7 @@
 	}
 }
 
-/* 以下、ハンバーガーメニュー */
+// 以下、ハンバーガーメニュー
 .hamburgerbtn {
 	display: flex;
 	align-items: center;
@@ -33,7 +33,7 @@
 	z-index: 100;
 	// ボタンの大きさ
 	width: rem(30);
-	height: rem(22);
+	height: rem(80);
 }
 
 // 真ん中のバーガー線
@@ -86,7 +86,6 @@
 	position: fixed;
 	top: 0;
 	left: rem(80);
-	z-index: 10;
 
 	.hamburger__nav {
 		display: flex;
@@ -127,13 +126,10 @@
 
 @include mq(tab) {
 	.header {
-		width: rem(60);
-		.header-inner {
-			padding: rem(37) rem(10);
-		}
+		width: rem(40);
 	}
 
 	.hamburger-wrap {
-		left: rem(60);
+		left: rem(40);
 	}
 }

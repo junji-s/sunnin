@@ -3,11 +3,12 @@
 	position: fixed;
 	top: 0;
 	right: 0;
+	z-index: 100;
 
 	.current-inner {
 		display: flex;
 		align-items: center;
-		width: rem(60);
+		width: rem(80);
 		height: 100vh;
 		padding: rem(60) 0;
 		writing-mode: vertical-lr; // 縦書き
@@ -15,6 +16,7 @@
 		.current__list {
 			margin-bottom: rem(16);
 			a {
+				text-transform: capitalize;
 				font-size: rem(12);
 			}
 		}
@@ -25,7 +27,30 @@
 	.current {
 		.current-inner {
 			width: rem(30);
-			padding: rem(40) 0;
+			padding: rem(30) 0;
 		}
 	}
 }
+
+.link-current {
+	color: red;
+}
+// .message--active {
+// 	color: $message-color;
+// }
+// .business--active {
+// 	color: $business-color;
+// }
+// .works--active {
+// 	color: $works-color;
+// }
+// .instagram--active {
+// 	color: $instagram-color;
+// }
+
+// .produce--active {
+// 	color: $produce-color;
+// }
+// .contact--active {
+// 	color: $contact-color;
+// }

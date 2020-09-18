@@ -5,20 +5,20 @@
 	height: 100%;
 	overflow: hidden;
 
-	.hero__ttl {
+	&__ttl {
 		position: absolute;
 		top: 10px;
 		z-index: 5;
 	}
 
 	// カルーセル
-	.hero__carousel {
+	&__carousel {
 		position: relative;
 		z-index: 3;
 		width: calc(100vw - 80px);
 		overflow: hidden;
-		.hero__carousel-area {
-			.hero__carousel-list {
+		&-area {
+			&-list {
 				img {
 					object-fit: cover;
 					font-family: "object-fit: cover;";  /*IE対策*/
@@ -85,8 +85,8 @@
 	top: 100%;
 	left: -500px;
 	z-index: 2;
-	width: 200vw;
-	height: 200vh;
+	width: 200%;
+	height: 100%;
 	overflow: hidden;
 	background-color: rgba($color: #fff, $alpha: .25);
 	transform: rotate(-30deg);
@@ -96,7 +96,7 @@
 @media screen and (min-width: 1500px) {
 	.hero {
 		height: 100vh;
-		.hero__carousel {
+		&__carousel {
 			height: 100vh;
 		}
 	}
@@ -124,10 +124,10 @@
 
 @include mq(tab) {
 	.hero {
-		width: calc(100vw - 60px);
+		width: calc(100vw - 40px);
 		height: 50%;
-		.hero__carousel {
-			width: calc(100vw - 60px);
+		&__carousel {
+			width: calc(100vw - 40px);
 		}
 		.concept-wrap {
 			bottom: rem(20);
@@ -157,7 +157,8 @@
 		}
 		.hero__carousel::before {
 			top: 100%;
-			left: -300px;
+			left: -200px;
+			width: 200%;
 			transform: rotate(-15deg);
 		}
 		.hero-induction__icon {
