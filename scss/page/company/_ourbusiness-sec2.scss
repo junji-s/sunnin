@@ -1,0 +1,442 @@
+/* 会社概要ページ　セクション2 */
+.business__partner-wrap {
+	position: relative;
+	margin-bottom: rem(120);
+
+	.business__partner {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		margin-bottom: rem(40);
+
+		.business__partner-about {
+			width: rem(400);
+			margin-right: rem(40);
+		}
+
+		.business__partner-img {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			width: rem(840);
+			height: rem(342);
+			background-color: #fff;
+
+			.business__partner-flow {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				figure {
+					width: rem(108);
+					height: rem(108);
+					margin-right: rem(40);
+				}
+				span {
+					display: block;
+					width: 80px;
+					margin-right: rem(40);
+					color: $business-color;
+					text-align: center;
+					font-size: rem(14);
+					.business__partner-arrow {
+						display: block;
+						position: relative;
+						width: 100%;
+						height: 1px;
+						margin-bottom: rem(10);
+						background-color: $business-color;
+					}
+					.business__partner-arrow::before {
+						content: "";
+						display: block;
+						position: absolute;
+						right: 0;
+						bottom: 4px;
+						width: 8px;
+						height: 1px;
+						background-color: $business-color;
+						transform: rotate(45deg);
+					}
+					.business__partner-arrow::after {
+						content: "";
+						display: block;
+						position: absolute;
+						right: 0;
+						bottom: -4px;
+						width: 8px;
+						height: 1px;
+						background-color: $business-color;
+						transform: rotate(-45deg);
+					}
+				}
+
+				.business__partner-stack {
+					position: relative;
+					width: rem(200);
+					height: rem(108);
+					margin-right: rem(40);
+
+					.business__partner-stack1 {
+						position: absolute;
+						left: 0;
+					}
+					.business__partner-stack2 {
+						position: absolute;
+						left: 80px;
+					}
+				}
+			}
+		}
+	}
+
+	.business__partner:first-child {
+		flex-direction: row-reverse;
+		.business__partner-about {
+			margin-left: rem(40);
+		}
+		.business__partner-img {
+			padding: rem(40) rem(100);
+		}
+	}
+
+	.business__partner:nth-child(2) {
+		.business__partner-img {
+			padding: rem(40) rem(78);
+		}
+	}
+}
+
+// サービス紹介
+.business-collaboration__wrap {
+	width: 100%;
+	margin-bottom: rem(260);
+}
+.business-collaboration__cotents {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+
+	.business-collaboration__item {
+		width: 100%;
+		margin-right: rem(40);
+
+		.business-collaboration__logowrap {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: rem(280);
+			margin-bottom: rem(40);
+			background-color: #f6f6f6;
+
+			.business-collaboration__logo {
+				width: 100%;
+				height: rem(60);
+				background-color: #999;
+			}
+		}
+
+		.business-collaboration__name {
+			text-align: center;
+			font-weight: 600;
+			font-size: rem(18);
+		}
+	}
+	.business-collaboration__item:last-child {
+		margin-right: 0;
+	}
+}
+
+
+// 背景
+.business__partner-wrap::before {
+	content: "";
+	position: absolute;
+	top: 180px;
+	left: 80px;
+	z-index: -1;
+	width: calc(100vw - 80px);
+	height: 900px;
+	margin: 0 calc(50% - 50vw);
+	background-color: rgba(236, 236, 236, .5);
+	transform: skewY(-17deg);
+	transform-origin: bottom right;
+}
+
+.business__partner:first-child::before {
+	content: "";
+	position: absolute;
+	top: -180px;
+	left: 80px;
+	z-index: -1;
+	width: calc(100vw - 80px);
+	height: 1px;
+	margin: 0 calc(50% - 50vw);
+	background-color: $business-color;
+	transform: skewY(-17deg);
+	transform-origin: bottom right;
+}
+
+.business__partner-wrap::after {
+	content: "";
+	position: absolute;
+	top: -280px;
+	left: 0;
+	z-index: -2;
+	width: 100vw;
+	height: 1550px;
+	margin: 0 calc(50% - 50vw);
+	background-color: #f5f5f5;
+	transform: skewY(25deg);
+	transform-origin: bottom left;
+}
+
+
+///////////////// レスポンシブ 
+@media screen and (max-width: 1439px) {
+	.business__partner-wrap {
+		.business__partner:first-child {
+			flex-direction: column;
+			.business__partner-about {
+				margin-left: 0;
+			}
+		}
+
+		.business__partner {
+			flex-direction: column;
+			.business__partner-about {
+				width: 70%;
+				margin-bottom: rem(40);
+			}
+			.business__partner-img {
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+@include mq(pc) {
+	.business__partner-wrap {
+		.business__partner {
+			.business__partner-about {
+				width: 70%;
+				margin-bottom: rem(40);
+			}
+
+			.business__partner-img {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				width: 100%;
+				height: rem(300);
+
+				.business__partner-flow {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					figure {
+						width: rem(70);
+						height: rem(70);
+						margin-right: rem(20);
+					}
+					span {
+						display: block;
+						width: 60px;
+						margin-right: rem(20);
+						color: $business-color;
+					}
+
+					.business__partner-stack {
+						display: flex;
+						align-items: center;
+						position: relative;
+						width: rem(150);
+						height: rem(108);
+						margin-right: rem(20);
+
+						.business__partner-stack1 {
+							position: absolute;
+							left: 0;
+						}
+						.business__partner-stack2 {
+							position: absolute;
+							left: 50px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.business-collaboration__cotents {
+		.business-collaboration__item {
+			width: calc(100% / 3);
+			margin-right: rem(20);
+
+			.business-collaboration__logowrap {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: rem(280);
+				.business-collaboration__logo {
+					width: 100%;
+				}
+			}
+		}
+		.business-collaboration__item:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.business__partner-wrap {
+		margin-bottom: rem(50);
+		.business__partner {
+			.business__partner-img {
+				height: rem(250);
+				.business__partner-flow {
+					figure {
+						width: rem(50);
+						height: rem(50);
+						margin-right: rem(10);
+					}
+					span {
+						display: block;
+						width: 60px;
+						margin-right: rem(10);
+						color: $business-color;
+					}
+
+					.business__partner-stack {
+						width: rem(100);
+						height: rem(80);
+						margin-right: rem(10);
+
+						.business__partner-stack1 {
+							position: absolute;
+							left: 0;
+						}
+						.business__partner-stack2 {
+							position: absolute;
+							left: 40px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	.business-collaboration__wrap {
+		margin-bottom: rem(100);
+	}
+	.business-collaboration__cotents {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		.business-collaboration__item {
+			width: 70%;
+			margin-right: rem(0);
+
+			.business-collaboration__name {
+				margin-bottom: rem(50);
+				text-align: center;
+				font-weight: 600;
+				font-size: rem(18);
+			}
+		}
+		.business-collaboration__item:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+
+@include mq(sp) {
+	.business__partner-wrap {
+		.business__partner {
+			.business__partner-about {
+				width: 100%;
+			}
+
+			.business__partner-img {
+				height: rem(200);
+				padding: 0;
+				.business__partner-flow {
+					display: flex;
+					align-items: center;
+					width: 100%;
+					height: 50%;
+					margin: auto 0;
+
+					figure {
+						width: rem(40);
+						height: rem(40);
+						margin-right: rem(10);
+					}
+					span {
+						display: block;
+						width: 60px;
+						margin-right: rem(10);
+						color: $business-color;
+						.business__partner-arrow {
+							margin-bottom: rem(5);
+						}
+					}
+
+					.business__partner-stack {
+						width: rem(80);
+						height: rem(80);
+
+						.business__partner-stack1 {
+							position: absolute;
+							left: 0;
+						}
+						.business__partner-stack2 {
+							position: absolute;
+							left: 30px;
+							margin-right: rem(0);
+						}
+					}
+				}
+			}
+		}
+
+		.business__partner:first-child {
+			flex-direction: column;
+			.business__partner-about {
+				margin-left: 0;
+			}
+			.business__partner-img {
+				padding: rem(10);
+			}
+		}
+
+		.business__partner:nth-child(2) {
+			.business__partner-img {
+				padding: rem(10);
+			}
+		}
+	}
+
+	.business-collaboration__cotents {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		.business-collaboration__item {
+			width: 100%;
+
+			.business-collaboration__logowrap {
+				margin-bottom: rem(15);
+			}
+			.business-collaboration__name {
+				margin-bottom: rem(50);
+				font-size: rem(14);
+			}
+		}
+	}
+}

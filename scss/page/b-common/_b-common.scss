@@ -1,0 +1,52 @@
+/*  下層ページ用module（共通アイテム） */
+/* --------------------------------- */
+//hero背景
+.m-hero__bottom {
+	position: relative;
+	padding: rem(120) 0;
+}
+
+.m-hero__bottom::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100vw;
+	width: 100vw;
+	height: 320px;
+	margin: 0 calc(50% - 50vw);
+	background-color: #fafafa;
+	transform: skewY(-4deg);
+	transform-origin: bottom left;
+}
+
+// 下層ページheroタイトル
+.m-bottom__ttl {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: rem(48);
+}
+
+
+/* 下層ページ用utility（便利スタイル） */
+/* --------------------------------- */
+.u-wrap__bottom {
+	max-width: rem(1440);
+	margin: 0 auto;
+	padding: 0 rem(80);
+}
+
+@include mq(tab) {
+	.u-wrap__bottom {
+		padding: 0 rem(10) 0 rem(40);
+	}
+}
+
+// 下層ページ用ヒーロー幅
+.hero__bottom {
+	height: rem(320);
+}

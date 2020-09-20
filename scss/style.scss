@@ -1,16 +1,17 @@
-// setting：基本設定（変数などにまとめられるスタイル基本情報）
+//******* setting：基本設定（変数などにまとめられるスタイル基本情報）
 @import "setting/setting";
 
-// base：ベース設定(サイト全体スタイル・リセットCSS)
+//******* base：ベース設定(サイト全体スタイル・リセットCSS)
 @import "base/base";
 
-// mixin：共通スタイル（別Block間で使いまわせるスタイルの部品化）
+//******* mixin：共通スタイル（別Block間で使いまわせるスタイルの部品化）
 @import "mixin/mixin";
 
-// module：モジュール（別Block間で使いまわせる共通スタイル  ※m-）
+//******* module：モジュール（別Block間で使いまわせる共通スタイル  ※m-）
 @import "module/module";
 
-// section：各セクション（ブロック単位のセクションで区切る）
+//******* section：トップページ用セクション区切り
+// トップページ
 @import "section/header";
 @import "section/hero";
 @import "section/current";
@@ -23,20 +24,24 @@
 @import "section/footer";
 
 
-//////////////////////////////////////////////////////
-///// ブロック名共通MEMO
-// header = "header" //サイトヘッダー
-// footer = "footer" //サイトフッター
-// nav = "gnav" //グローバルナビ
-// main = "main" //メインコンテンツ
-// header = "ch" //コンテンツヘッダー
-// footer = "cf" //コンテンツフッター
-// nav = "snav" //サイドナビ
-// nav = "fnav" //フッターナビ
-// section = "sec" //セクション
+//******* page：下層ページ
+// 下層ページ共通スタイル
+@import "page/b-common/b-common";
 
-///// エレメント名共通MEMO
-// title = "ttl" //タイトル
-// text = "txt" //テキスト
-// button = "btn" //ボタン
-// item = "item" //アイテム
+// company
+@import "page/company/m-company";
+@import "page/company/ourbusiness-sec1";
+@import "page/company/ourbusiness-sec2";
+@import "page/company/ourbusiness-sec3";
+@import "page/company/company.scss";
+@import "page/company/access";
+
+
+// works
+@import "page/works/woeks";
+
+// recruit
+@import "page/recruit/recruit";
+
+// contact
+@import "page/contact/contact";

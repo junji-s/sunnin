@@ -1,0 +1,185 @@
+/* 下層ページ（会社概要） */
+/* --------------------------------- */
+
+/* 会社概要共通スタイル */
+///////////////// ページタイトル
+.company__ttl {
+	position: relative;
+}
+.company__ttl::after {
+	content: "会社概要";
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	color: $business-color;
+	font-weight: 400;
+	font-size: rem(16);
+	transform: translateX(-50%);
+}
+
+///////////////// セクションタイトル
+.business-ttl {
+	margin: rem(78) 0 rem(105);
+}
+
+.business-ttl::after {
+	content: "";
+	display: block;
+	width: rem(80);
+	height: rem(10);
+	margin-top: rem(10);
+	background-color: $business-color;
+}
+
+///////////////// セクション説明
+.business__contents {
+	position: relative;
+	width: rem(400);
+	margin-bottom: rem(40);
+
+	&-ttl {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		margin-bottom: rem(20);
+		color: $business-color;
+		font-weight: 600;
+		font-size: rem(24);
+	}
+	&-ttl::before {
+		content: counter(number , decimal-leading-zero);
+		margin: 0 0 6px 7px;
+		color: #333;
+		font-weight: 400;
+		font-size: rem(14);
+	}
+	&-ttl::after {
+		content: "";
+		position: absolute;
+		top: 14px;
+		left: 0;
+		width: 5px;
+		height: 1px;
+		background-color: $business-color;
+	}
+
+	&-txt {
+		font-size: rem(14);
+		line-height: 1.7;
+	}
+}
+// 2・3 セクションタイトル
+.business__contents {
+	position: relative;
+	width: 100%;
+	.business__contents-wrap {
+		width: rem(400);
+	}
+}
+.business__contents::before {
+	content: counter(number , decimal-leading-zero);
+	position: absolute;
+	top: -100px;
+	right: -80px;
+	color: rgba(168, 168, 168, .5);
+	font-weight: 800;
+	font-size: rem(150);
+}
+
+///////////////// h4カウントスタイル
+.business-introduction__ttl {
+	position: relative;
+	margin-bottom: rem(100);
+	text-align: center;
+	font-weight: 600;
+	font-size: rem(32);
+}
+
+.business-introduction__ttl::after {
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	width: 80px;
+	height: 5px;
+	background-color: $business-color;
+	transform: translateX(-50%);
+}
+
+
+@include mq(tab) {
+	.business-introduction__ttl {
+		position: relative;
+		margin-bottom: rem(70);
+		text-align: center;
+		font-weight: 600;
+		font-size: rem(24);
+	}
+
+	.business-introduction__ttl::after {
+		content: "";
+		position: absolute;
+		bottom: -20px;
+		left: 50%;
+		width: 80px;
+		height: 5px;
+		background-color: $business-color;
+		transform: translateX(-50%);
+	}
+}
+
+
+.business__sec-wrap {
+	counter-increment: number;
+}
+
+.business__count-style {
+	display: block;
+	margin-bottom: rem(20);
+	color: $business-color;
+	font-weight: 600;
+	font-size: rem(48);
+}
+
+.business__sub-ttl {
+	margin-bottom: rem(20);
+	font-weight: 600;
+	font-size: rem(24);
+}
+
+.business__sub-txt {
+	font-size: rem(14);
+	line-height: 1.6em;
+}
+
+///////////////// レスポンシブ 
+@media screen and (max-width: 1440px) {
+	.business__contents {
+		margin-left: auto;
+	}
+	.business__contents::before {
+		content: counter(number , decimal-leading-zero);
+		position: absolute;
+		top: -100px;
+		right: 0;
+		color: rgba(168, 168, 168, .5);
+		font-weight: 800;
+		font-size: rem(150);
+	}
+}
+
+@include mq(tab) {
+	.business__contents {
+		width: 100%;
+	}
+}
+
+@include mq(sp) {
+	.business__contents {
+		position: relative;
+		width: 100%;
+		.business__contents-wrap {
+			width: 100%;
+		}
+	}
+}

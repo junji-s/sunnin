@@ -2,6 +2,7 @@
 /* --------------------------------- */
 
 /* サイトtitle */
+// トップページ
 .m-site__ttl {
 	font-weight: 900;
 	font-size: rem(56);
@@ -15,6 +16,7 @@
 		font-size: rem(32);
 	}
 }
+
 
 /* セクションtitle */
 .m-ttl {
@@ -49,7 +51,7 @@
 }
 
 
-/* 下層ページ用button */
+/* ページ移動用button */
 .m-more__btn {
 	display: block;
 	padding: .75em 2.5em;

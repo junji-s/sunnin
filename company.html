@@ -5,92 +5,414 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="scss/base/destyle.css">
   <link rel="stylesheet" href="scss/style.css">
-  <title>サンニン株式会社</title>
+  <link rel="stylesheet" href="scss/plugin/swiper.min.css">
+  <script src="https://kit.fontawesome.com/ba645373e0.js" crossorigin="anonymous"></script>
+  <title>サンニン株式会社 | sunnin, Inc.</title>
 </head>
 <body>
-  <div class="u-wrap">
-    <!-- ヘッダーここから -->
-    <header class="header">
-      <div class="header-inner">
-        <p class="header__logo"><a href="#"><img src="" alt="サンニン株式会社"></a></p>
-        <nav>
-          <ul class="header__nav">
-            <li class="header__list"><a href="company.html">company</a></li>
-            <li class="header__list"><a href="works.html">works</a></li>
-            <li class="header__list"><a href="recruit.html">recruit</a></li>
-            <li class="header__list"><a href="blog.html">ceo blog</a></li>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header__hamburger">
+        <button type="button" class="hamburgerbtn js-hamburgerbtn"><span class="hamburgerbtn-line"></span></button>
+        <nav class="hamburger-wrap">
+          <ul class="hamburger__nav">
+            <li class="hamburger__list"><a href="company.html">company</a></li>
+            <li class="hamburger__list"><a href="works.html">works</a></li>
+            <li class="hamburger__list"><a href="recruit.html">recruit</a></li>
+            <li class="hamburger__list"><a href="blog.html">ceo blog</a></li>
           </ul>
-          <button type="button" id="m-contact__btn" class="m-contact__btn"><a href="contact.html">contact</a></button>
         </nav>
       </div>
-    </header>
-    <main>
-      <!-- 会社概要ページ -->
-      <div class="hero u-sec">
-        <h1 class="hero__ttl">The〜</h1>
-      </div>
-    </main>
-
-    <!-- footerここから -->
-    <footer class="footer">
-      <div class="footer__inner">
-        <p><img src="" alt="サンニン株式会社"></p>
-        <dl>
-          <dt>事業内容</dt>
-          <dd>事業01</dd>
-          <dd>事業01</dd>
-          <dd>企業情報</dd>
-          <dt>制作事例</dt>
-          <dd>制作事例トップ</dd>
-          <dt>採用情報</dt>
-          <dd>採用除法トップ</dd>
-          <dd>新卒採用</dd>
-          <dd>キャリア採用</dd>
-        </dl>
+      <div class="header-fixed">
         <ul>
-          <li class="footer__icon"><img src="" alt="Instagram"></li>
-          <li class="footer__icon"><img src="" alt="Twitter"></li>
-          <li class="footer__icon"><img src="" alt="Facebook"></li>
-          <li class="footer__icon"><img src="" alt="Linkedin"></li>
+          <li class="header__icon"><a href=""><i class="fab fa-instagram"></i></a></li>
+          <li class="header__icon"><a href=""><i class="fab fa-twitter"></i></a></li>
+          <li class="header__icon"><a href=""><i class="fab fa-facebook"></i></a></li>
         </ul>
-        <small>&copy; sunnin inc.</small>
+        <small class="header-fixed__copy">&copy; sunnin inc. | Linkedln</small>
       </div>
-    </footer>
-  </div> <!-- containerここまで -->
+    </div>
+  </header>
+
+  <div class="u-wrap__bottom">
+    <!-- heroエリア -->
+    <div class="m-hero__bottom">
+      <h1 class="m-bottom__ttl company__ttl">company</h1>
+      <p class="m-site__ttl hero__ttl"><a href="index.html">sunn<span class="m-site__ttl-red">i</span>n</a></p>
+    </div>
+
+    <main>
+      <section>
+        <h2 class="m-ttl business-ttl">our<br>business</h2>
+        <!-- コンテンツ1 -->
+        <div class="business__sec-wrap">
+          <div class="business__about-wrap">
+            <div class="business__contents">
+              <div class="business__contents-wrap">
+                <h3 class="business__contents-ttl">設計・施工事業</h3>
+                <p class="business__contents-txt">独自のサービスサイトで顧客を開拓し、これまでの既存の顧客のリピート、既存顧客からのご紹介などPULL型のセールスモデルでインテリア設計提案から施工まで行う事業です。<br>オフィス、店舗、商業施設、住宅など全国各地の実績を持っています。</p>
+              </div>
+            </div>
+            <div class="business__logo-wrap">
+              <div class="business__logo">
+                <figure class="business__logo-img"><img src="img/bottom-logo.png" alt=""></figure>
+                <span class="business__logo-txt">物件探し</span>
+              </div>
+              <div class="business__logo">
+                <figure class="business__logo-img"><img src="img/bottom-logo.png" alt=""></figure>
+                <span class="business__logo-txt">デザイン</span>
+              </div>
+              <div class="business__logo">
+                <figure class="business__logo-img"><img src="img/bottom-logo.png" alt=""></figure>
+                <span class="business__logo-txt">パース作成</span>
+              </div>
+              <div class="business__logo">
+                <figure class="business__logo-img"><img src="img/bottom-logo.png" alt=""></figure>
+                <span class="business__logo-txt">内装施工</span>
+              </div>
+              <div class="business__logo">
+                <figure class="business__logo-img"><img src="img/bottom-logo.png" alt=""></figure>
+                <span class="business__logo-txt">造作家具</span>
+              </div>
+              <div class="business__logo">
+                <figure class="business__logo-img"><img src="img/bottom-logo.png" alt=""></figure>
+                <span class="business__logo-txt">引っ越し</span>
+              </div>
+              <div class="business__logo">
+                <figure class="business__logo-img"><img src="img/bottom-logo.png" alt=""></figure>
+                <span class="business__logo-txt">グラフィック制作</span>
+              </div>
+              <div class="business__logo">
+                <figure class="business__logo-img"><img src="img/bottom-logo.png" alt=""></figure>
+                <span class="business__logo-txt">メンテナンス</span>
+              </div>
+            </div>
+          </div>
+
+          <ol class="business__example-wrap">
+            <li class="business__example-list">
+              <p class="business__example-img"><img src="img/provisional1.jpg" alt=""></p>
+              <span class="business__example-num">example<span></span>01</span>
+              <p class="business__example-txt">オフィスデザイン</p>
+            </li>
+            <li class="business__example-list">
+              <p class="business__example-img"><img src="img/provisional2.jpg" alt=""></p>
+              <span class="business__example-num">example<span></span>02</span>
+              <p class="business__example-txt">店舗デザイン</p>
+            </li>
+            <li class="business__example-list">
+              <p class="business__example-img"><img src="img/provisional3.jpg" alt=""></p>
+              <span class="business__example-num">example<span>03</span></span>
+              <p class="business__example-txt">住宅デザイン</p>
+            </li>
+          </ol>
+
+          <div class="business-introduction-wrap">
+            <h4 class="business-introduction__ttl">独自のサービス</h4>
+            <div class="business-introduction__cotents">
+              <div class="business-introduction__item">
+                <div class="business-introduction__logowrap">
+                  <p class="business-introduction__logo">
+                    <img src="img/icon1.png" alt="">
+                  </p>
+                </div>
+                <div class="business-introduction__txtwrap">
+                  <span class="business-introduction__about">オフィスデザインサイト</span>
+                  <p class="business-introduction__name">SCOP</p>
+                  <a class="business-introduction__link" href="https://www.s-cop.net/">https://www.s-cop.net/</a>
+                </div>
+                <p>オフィスデザインに特化したサービスで、デザインだけでなく、細やかなヒアリングを元に働き方に合わせた空間のご提案をしています。</p>
+              </div>
+              <div class="business-introduction__item">
+                <div class="business-introduction__logowrap">
+                  <p class="business-introduction__logo">
+                    <img src="img/icon1.png" alt="">
+                  </p>
+                </div>
+                <div class="business-introduction__txtwrap">
+                  <span class="business-introduction__about">CGパース制作サイト</span>
+                  <p class="business-introduction__name">PERSMAN</p>
+                  <a class="business-introduction__link" href="https://pers-man.com/">https://pers-man.com/</a>
+                </div>
+                <p>パースは全て社内で内製しています。高い技術と経験を持った専任スタッフが制作するため、短納期・低価格で満足のいく仕上がりが可能です。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- コンテンツ2 -->
+        <div class="business__sec-wrap">
+          <div class="business__contents">
+            <div class="business__contents-wrap">
+              <h3 class="business__contents-ttl">パートナー支援事業</h3>
+              <p class="business__contents-txt">サンニン株式会社は2005年創業以来インテリアを専門にデザイン・施工を行っている会社です。積み上げてきた経験とそこから獲得したデザイン・設計・施工・エンジニアリングのノウハウをパートナー企業へ提供する事業です。</p>
+            </div>
+          </div>
+          <div class="business__partner-wrap">
+            <div class="business__partner">
+              <div class="business__partner-about">
+                <h4 class="business__sub-ttl"><span class="business__count-style">01</span>デザイン設計支援</h4>
+                <p class="business__sub-txt">新規顧客開拓や既存顧客に対して付加価値の高い提案をしたいと考えている企業は多く空間にデザインの重要性が日増しに求められている現在、対策は急務です。<br>しかし受注できるかどうか不明な状況でデザイナーや設計士を抱えるという経営判断は簡単ではありません。またデザインの好みは十人十色。自社のデザインチームだけで市場のニー ズをすべてカバーするのも困難です。<br>サンニン株式会社はこの様な企業のニーズに応えるためパートナー企業の一員として一歩下がった所からデザイン設計で支援させていただきます。</p>
+              </div>
+              <div class="business__partner-img">
+                <div class="business__partner-flow">
+                  <figure><img src="img/icon1.png" alt=""></figure>
+                  <span><span class="business__partner-arrow"></span>Design OEM</span>
+                  <figure><img src="img/icon1.png" alt=""></figure>
+                  <span><span class="business__partner-arrow"></span>Design</span>
+                  <figure><img src="img/icon1.png" alt=""></figure>
+                </div>
+                <div class="business__partner-flow">
+                  <div class="business__partner-stack">
+                    <figure class="business__partner-stack1"><img src="img/icon1.png" alt=""></figure>
+                    <figure class="business__partner-stack2"><img src="img/icon1.png" alt=""></figure>
+                  </div>
+                  <span><span class="business__partner-arrow"></span>Design</span>
+                  <figure><img src="img/icon1.png" alt=""></figure>
+                </div>
+              </div>
+            </div>
+            <div class="business__partner">
+              <div class="business__partner-about">
+                <h4 class="business__sub-ttl"><span class="business__count-style">02</span>施工監理支援</h4>
+                <p class="business__sub-txt">工事を誰に頼んだら良いか分からない…<br>不透明な工事価格…<br>これらは業界が慢性的に抱えている問題です。<br>弊社は早くからこの問題を解決したいと考え工事価格、高品質な施工を実現するスキームなど日々データとして蓄積してきており、日々蓄積されています。<br>商業施設、オフィス、住宅など数多くのインテリア・内装・メンテナンス工事を手がけお客様に満足していただいております。適正価格と高品質の施工でお客様に満足していただく理想の空間の具現化をサポートさせていただきます。</p>
+              </div>
+              <div class="business__partner-img">
+                <div class="business__partner-flow">
+                  <figure><img src="img/icon1.png" alt=""></figure>
+                  <span><span class="business__partner-arrow"></span>Design</span>
+                  <figure><img src="img/icon1.png" alt=""></figure>
+                  <span><span class="business__partner-arrow"></span>Design</span>
+                  <div class="business__partner-stack">
+                    <figure class="business__partner-stack1"><img src="img/icon1.png" alt=""></figure>
+                    <figure class="business__partner-stack2"><img src="img/icon1.png" alt=""></figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="business-collaboration__wrap">
+            <h4 class="business-introduction__ttl">主な協業パートナー実績</h4>
+            <div class="business-collaboration__cotents">
+              <div class="business-collaboration__item">
+                <div class="business-collaboration__logowrap">
+                  <p class="business-collaboration__logo">
+                    <img src="" alt="">
+                  </p>
+                </div>
+                <p class="business-collaboration__name">株式会社エヌ・ティ・ティ・データ</p>
+              </div>
+              <div class="business-collaboration__item">
+                <div class="business-collaboration__logowrap">
+                  <p class="business-collaboration__logo">
+                    <img src="" alt="">
+                  </p>
+                </div>
+                <p class="business-collaboration__name">株式会社Phone Appli</p>
+              </div>
+              <div class="business-collaboration__item">
+                <div class="business-collaboration__logowrap">
+                  <p class="business-collaboration__logo">
+                    <img src="" alt="">
+                  </p>
+                </div>
+                <p class="business-collaboration__name">株式会社船井総合研究所</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- コンテンツ3 -->
+        <div class="business__sec-wrap">
+          <div class="business__contents">
+            <div class="business__contents-wrap">
+              <h3 class="business__contents-ttl">不動産事業</h3>
+              <p class="business__contents-txt">サンニンの不動産事業は「物件探し」をサポートさせて頂く事業です。<br>オフィス・店舗を中心に事業用から居住用まで幅広く対応させて頂いております。また、デザイン設計・施工のノウハウを活かし、物件の契約から内装工事まで一括サポートいたします。</p>
+            </div>
+          </div>
+          <div class="business__realestate">
+            <div class="business__realestate-imgwrap">
+              <div class="business__realestate-logowrap1">
+                <figure class="business__realestate-logo"><img src="img/icon1.png" alt=""></figure>
+              </div>
+              <div class="business__realestate-logowrap2">
+                <figure class="business__realestate-logo"><img src="img/icon1.png" alt=""></figure>
+                <figure class="business__realestate-logo"><img src="img/icon1.png" alt=""></figure>
+              </div>
+              <div class="business__realestate-logowrap3">
+                <figure class="business__realestate-logo"><img src="img/icon1.png" alt=""></figure>
+                <figure class="business__realestate-logo"><img src="img/icon1.png" alt=""></figure>
+              </div>
+            </div>
+            <div class="business__realestate-itemwrap">
+              <div class="business__realestate-item">
+                <span class="business__count-style">01</span>
+                <h4 class="business__sub-ttl">物件案内/契約</h4>
+                <p class="business__sub-txt">物件のご紹介から内見・契約まで、仲介に関する全ての工程を担当します。</p>
+              </div>
+              <div class="business__realestate-item">
+                <span class="business__count-style">02</span>
+                <h4 class="business__sub-ttl">デザインリフォーム/現状回復</h4>
+                <p class="business__sub-txt">徹底したヒアリングでお客様にご満足いただけるオフィスデザインを具現化します。</p>
+              </div>
+              <div class="business__realestate-item">
+                <span class="business__count-style">03</span>
+                <h4 class="business__sub-ttl">メンテナンス/管理</h4>
+                <p class="business__sub-txt">ただ直すだけのメンテナンスではなく、デザインの付加価値がある提案をさせていただきます。</p>
+              </div>
+              <div class="business__realestate-item">
+                <span class="business__count-style">04</span>
+                <h4 class="business__sub-ttl">売買</h4>
+                <p class="business__sub-txt">ただ直すだけのメンテナンスではなく、デザインの付加価値がある提案をさせていただきます。</p>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <!-- 会社概要セクション -->
+      <section>
+        <h2 class="m-ttl business-ttl">company</h2>
+        <dl class="company__table">
+          <div class="company-block">
+            <dt class="company__team">社名</dt>
+            <dd class="company__description">サンニン株式会社<br>sunnin, Inc.</dd>
+          </div>
+          <div class="company-block">
+            <dt class="company__team">代表取締役</dt>
+            <dd class="company__description">代表取締役　東 正展（代表ブログへ）</dd>
+          </div>
+          <div class="company-block">
+            <dt class="company__team">Mail / Web</dt>
+            <dd class="company__description"><span class="company__description-link"><a href="info@sunnin.jp">info@sunnin.jp</a>　/　<a href="https://sunnin.jp">https://sunnin.jp</a></span></dd>
+          </div>
+          <div class="company-block">
+            <dt class="company__team">設立</dt>
+            <dd class="company__description">2005年7月</dd>
+          </div>
+          <div class="company-block">
+            <dt class="company__team">資本金</dt>
+            <dd class="company__description">3,000,000円</dd>
+          </div>
+          <div class="company-block">
+            <dt class="company__team">事業内容</dt>
+            <dd class="company__description">デザイン設計・グラフィック事業、不動産事業、メンテナンス事業、特注製作事業、インテリアサービス事業</dd>
+          </div>
+          <div class="company-block">
+            <dt class="company__team">独自のサービス</dt>
+            <dd class="company__description">
+              <p>オフィスデザイン・事務所内装のスコップ（SCOP）</p>
+              <span class="company__description-link"><a href="https://www.s-cop.net/">https://www.s-cop.net/</a></span>
+              <p>最も速く・低価格でCGパースを制作するパースマン</p>
+              <span class="company__description-link"><a href="https://pers-man.com/">https://pers-man.com/</a></span>
+              <p>誰に頼むの？メンテやちょっとした工事</p>
+              <span class="company__description-link"><a href="https://picolabo.jp/">https://picolabo.jp/</a></span>
+            </dd>
+          </div>
+          <div class="company-block">
+            <dt class="company__team">取引銀行</dt>
+            <dd class="company__description">
+              <p>三菱UFJ銀行秋葉原支店</p>
+              <p>みずほ銀行神谷町支店</p>
+            </dd>
+          </div>
+          <div class="company-block">
+            <dt class="company__team">許可・資格/<br>加入団体・保険</dt>
+            <dd class="company__description">
+              <p>宅地建物取引業　東京都知事（1）第98257号
+              <p>民泊適性管理主任者</p>
+              <p>二級建築士事務所　東京都知事登録　第15722号</p>
+              <p>一般建設業　東京都知事許可（般―30）第148655号</p>
+              <p>日本ファシリティマネジメント協会　会員</p>
+              <p>全国宅地建物取引業保証協会加入</p>
+              <p>AIU事業総合賠償責任保険</p>
+              <p>住宅リフォーム瑕疵担保責任保険</p>
+            </dd>
+          </div>
+          <div class="company-block">
+            <dt class="company__team">取引実績</dt>
+            <dd class="company__description">ソフトバンクグループ、NTTデータ、東京電力、積水グループ、三菱倉庫、伊藤忠グループ、船井総合研究所、ワールド、バーバリーインターナショナル、ボッテガヴェネタジャパン、ケリングジャパン、Aesop Japan、カッシーナ・イクスシー、ヤマギワ、アクタス、インターオフィス、個人のお客様</dd>
+          </div>
+          <div class="company-block">
+            <dt class="company__team">沿革</dt>
+            <dd class="company__description">ソフトバンクグループ、NTTデータ、東京電力、積水グループ、三菱倉庫、伊藤忠グループ、船井総合研究所、ワールド、バーバリーインターナショナル、ボッテガヴェネタジャパン、ケリングジャパン、Aesop Japan、カッシーナ・イクスシー、ヤマギワ、アクタス、インターオフィス、個人のお客様</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- accessセクション -->
+      <section>
+        <div class="access">
+          <h2 class="m-ttl business-ttl">access</h2>
+          <div class="access-wrap">
+            <p class="access-ttl">東京 Office MAP</p>
+            <address class="access-about">〒106-0044<br>東京都港区東麻布2-6-5 Tuttle Bldg 4F-WEST<br>Tel:03-6683-3435　Fax：03-6683-3437</address>
+          </div>
+          <p class="access-map"><img src="img/map.png" alt=""></p>
+          <div class="access-wrap">
+            <p class="access-ttl">大阪 Office MAP</p>
+            <address class="access-about">〒550-0005<br>大阪府大阪市西区西本町1-8-2 三晃ビル旧館305号<br>Tel:06-6643-9140　Fax：06-6643-9142</address>
+          </div>
+          <p class="access-map"><img src="img/map.png" alt=""></p>
+        </div>
+      </section>
+
+      <!-- contactセクション -->
+      <section>
+        <div id="contact" class="contact">
+          <h2 class="m-ttl contact-ttl">contact</h2>
+          <p class="contact__txt">ご相談・ご質問等ございましたらお気軽にご連絡ください</p>
+          <button type="button" id="m-contact__btn" class="m-more__btn contact__btn"><a href="contact.html">お問い合わせ</a></button>
+        </div>
+      </section>
+    </main>
+  </div> <!--  u-wrap -->
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="m-site__ttl footer__logo">sunn<span class="m-site__ttl-red">i</span>n</p>
+      <dl class="footer__nav-wrap">
+        <!-- 事業内容 -->
+        <div class="footer__nav">
+          <dt class="footer__team">事業内容</dt>
+          <div class="footer__description-wrap">
+            <dd><a href="">事業01</a></dd>
+            <dd><a href="">事業02</a></dd>
+            <dd><a href="">事業03</a></dd>
+            <dd><a href="">企業情報</a></dd>
+          </div>
+        </div>
+        <!-- 制作事例 -->
+        <div class="footer__nav">
+          <dt class="footer__team">制作事例</dt>
+          <div class="footer__description-wrap">
+            <dd><a href="">制作事例トップ</a></dd>
+          </div>
+        </div>
+        <!-- 採用情報 -->
+        <div class="footer__nav">
+          <dt class="footer__team">採用情報</dt>
+          <div class="footer__description-wrap">
+            <dd><a href="">採用情報トップ</a></dd>
+            <dd><a href="">新卒採用</a></dd>
+            <dd><a href="">キャリア採用</a></dd>
+          </div>
+        </div>
+      </dl>
+      <span class="m-induction__icon footer-induction__icon">
+        <a href="#">back to top</a>
+        <span class="footer-induction__arrow"></span>
+      </span>
+    </div>
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/script.js"></script>
-  <script type="text/javascript" src="js/carousel.js"></script>
-  <script>
-    // SP用デフォルトhover制御
-    addEventListener('DOMContentLoaded', function () {
-      if (isTouchDevice()) {
-        for (var i in document.styleSheets) if (document.styleSheets.hasOwnProperty(i)) {
-          deleteRuleHover(document.styleSheets[i]);
-        }
-      }
-      function isTouchDevice() {
-        return 'ontouchstart' in document.documentElement || navigator.maxTouchPoints || navigator.msMaxTouchPoints;
-      }
-      function deleteRuleHover(styleSheet) {
-        try {
-          var rules = styleSheet.cssRules || styleSheet.rules;
-          if (rules) {
-            for (var i = rules.length; i--;) {
-              var text = rules[i].selectorText;
-              if (/:hover/.test(text)) {
-                console.log(text);
-                styleSheet.deleteRule(i);
-              }
-            }
-            for (var i = rules.length; i--;) deleteRuleHover(rules[i]);
-          }
-        }
-        catch (ex) {
-          console.log(ex);
-        }
-      }
-    });
-  </script>
+  <!-- objectfit cover IE対策 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
+  <script>objectFitImages();</script>
+
 </body>
 </html>

@@ -56,11 +56,13 @@ jQuery(document).ready(function ($) {
   // ハンバーガーメニュー
   $('.js-hamburgerbtn').on('click', function () {
     $('.hamburgerbtn-line').toggleClass('open');
+    $('body').toggleClass('no-scroll');
     $('.hamburger-wrap').fadeToggle(300);
   })
 
   $('.hamburger__list').on('click', function () {
     $('.hamburgerbtn-line').toggleClass('open');
+    $('body').toggleClass('no-scroll');
     $('.hamburger-wrap').fadeOut(300);
   })
 });

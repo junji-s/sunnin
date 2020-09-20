@@ -5,5 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="scss/base/destyle.css">
   <link rel="stylesheet" href="scss/style.css">
-  <title>サンニン株式会社</title>
+  <link rel="stylesheet" href="scss/plugin/swiper.min.css">
+  <script src="https://kit.fontawesome.com/ba645373e0.js" crossorigin="anonymous"></script>
+  <title>サンニン株式会社 | sunnin, Inc.</title>
 </head>
+<body>
+  <!-- ヘッダーここから -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header__hamburger">
+        <button type="button" class="hamburgerbtn js-hamburgerbtn"><span class="hamburgerbtn-line"></span></button>
+        <nav class="hamburger-wrap">
+          <ul class="hamburger__nav">
+            <li class="hamburger__list"><a href="company.html">company</a></li>
+            <li class="hamburger__list"><a href="works.html">works</a></li>
+            <li class="hamburger__list"><a href="recruit.html">recruit</a></li>
+            <li class="hamburger__list"><a href="blog.html">ceo blog</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-fixed">
+        <ul>
+          <li class="header__icon"><a href=""><i class="fab fa-instagram"></i></a></li>
+          <li class="header__icon"><a href=""><i class="fab fa-twitter"></i></a></li>
+          <li class="header__icon"><a href=""><i class="fab fa-facebook"></i></a></li>
+        </ul>
+        <small class="header-fixed__copy">&copy; sunnin inc. | Linkedln</small>
+      </div>
+    </div>
+  </header>
+
+  <div class="u-wrap__bottom">
+    <!-- heroエリアここから -->
+    <div class="hero">
+      <h1 class="m-bottom__ttl hero__ttl">会社概要</h1>
+      <p class="m-site__ttl hero__ttl"><a href="index.html">sunn<span class="m-site__ttl-red">i</span>n</a></p>
+    </div>
+
+    <main>
+      <!-- contactセクションここから -->
+      <section>
+        <div id="contact" class="contact">
+          <h2 class="m-ttl contact-ttl">contact</h2>
+          <p class="contact__txt">ご相談・ご質問等ございましたらお気軽にご連絡ください</p>
+          <button type="button" id="m-contact__btn" class="m-more__btn contact__btn"><a href="contact.html">お問い合わせ</a></button>
+        </div>
+      </section>
+    </main>
+  </div> <!--  u-wrap -->
+
+  <!-- footerここから -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="m-site__ttl footer__logo">sunn<span class="m-site__ttl-red">i</span>n</p>
+      <dl class="footer__nav-wrap">
+        <!-- 事業内容 -->
+        <div class="footer__nav">
+          <dt class="footer__team">事業内容</dt>
+          <div class="footer__description-wrap">
+            <dd><a href="">事業01</a></dd>
+            <dd><a href="">事業02</a></dd>
+            <dd><a href="">事業03</a></dd>
+            <dd><a href="">企業情報</a></dd>
+          </div>
+        </div>
+        <!-- 制作事例 -->
+        <div class="footer__nav">
+          <dt class="footer__team">制作事例</dt>
+          <div class="footer__description-wrap">
+            <dd><a href="">制作事例トップ</a></dd>
+          </div>
+        </div>
+        <!-- 採用情報 -->
+        <div class="footer__nav">
+          <dt class="footer__team">採用情報</dt>
+          <div class="footer__description-wrap">
+            <dd><a href="">採用情報トップ</a></dd>
+            <dd><a href="">新卒採用</a></dd>
+            <dd><a href="">キャリア採用</a></dd>
+          </div>
+        </div>
+      </dl>
+      <span class="m-induction__icon footer-induction__icon">
+        <a href="#">back to top</a>
+        <span class="footer-induction__arrow"></span>
+      </span>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <!-- objectfit cover IE対策 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
+  <script>objectFitImages();</script>
+
+</body>
+</html>
