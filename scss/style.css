@@ -3250,6 +3250,22 @@ a:hover {
           transform-origin: top left;
 }
 
+.tab-container::after {
+  content: "";
+  position: absolute;
+  top: 300px;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 1px;
+  margin: 0 calc(50% - 50vw);
+  background-color: #ff4a88;
+  -webkit-transform: skewY(-17deg);
+          transform: skewY(-17deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
 @media screen and (max-width: 600px) {
   .b-works::before {
     content: "";
@@ -3280,6 +3296,21 @@ a:hover {
             transform: skewY(-20deg);
     -webkit-transform-origin: top left;
             transform-origin: top left;
+  }
+  .tab-container::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: -15px;
+    z-index: -1;
+    width: 100vw;
+    height: 1px;
+    margin: 0 calc(50% - 50vw);
+    background-color: #ff4a88;
+    -webkit-transform: skewY(-17deg);
+            transform: skewY(-17deg);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
   }
 }
 

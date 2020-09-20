@@ -167,8 +167,6 @@
 	}
 }
 
-
-
 // 背景
 .b-works::before {
 	content: "";
@@ -197,6 +195,21 @@
 	transform-origin: top left;
 }
 
+.tab-container::after {
+	content: "";
+	position: absolute;
+	top: 300px;
+	left: 0;
+	z-index: -1;
+	width: 100vw;
+	height: 1px;
+	margin: 0 calc(50% - 50vw);
+	background-color: $works-color;
+	transform: skewY(-17deg);
+	transform-origin: bottom right;
+}
+
+
 @include mq(tab) {
 	// 背景
 	.b-works::before {
@@ -224,6 +237,20 @@
 		background-color: #fff;
 		transform: skewY(-20deg);
 		transform-origin: top left;
+	}
+
+	.tab-container::after {
+		content: "";
+		position: absolute;
+		top: 50px;
+		left: -15px;
+		z-index: -1;
+		width: 100vw;
+		height: 1px;
+		margin: 0 calc(50% - 50vw);
+		background-color: $works-color;
+		transform: skewY(-17deg);
+		transform-origin: bottom right;
 	}
 }
 
