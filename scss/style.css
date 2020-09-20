@@ -3010,9 +3010,9 @@ a:hover {
     content: "";
     position: absolute;
     top: 0;
-    left: 20px;
+    left: 25px;
     z-index: -1;
-    width: calc(100vw - 35px);
+    width: calc(100vw - 30px);
     height: 800px;
     margin: 0 calc(50% - 50vw);
     background-color: rgba(236, 236, 236, 0.5);
@@ -3025,9 +3025,9 @@ a:hover {
     content: "";
     position: absolute;
     top: 590px;
-    left: -20px;
+    left: -25px;
     z-index: -2;
-    width: calc(100vw + 5px);
+    width: calc(100vw + 20px);
     height: 1px;
     margin: 0 calc(50% - 50vw);
     background-color: #258c98;
@@ -3040,9 +3040,9 @@ a:hover {
     content: "";
     position: absolute;
     top: 500px;
-    left: -20px;
+    left: -25px;
     z-index: -2;
-    width: calc(100vw + 5px);
+    width: calc(100vw + 20px);
     height: 850px;
     margin: 0 calc(50% - 50vw);
     background-color: #ddd;
