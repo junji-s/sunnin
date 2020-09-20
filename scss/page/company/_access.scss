@@ -29,7 +29,6 @@
 	}
 }
 
-
 // 背景
 .access::before {
 	content: "";
@@ -80,5 +79,50 @@
 		width: 100%;
 		height: rem(344);
 		margin-bottom: rem(80);
+	}
+}
+
+@include mq(tab) {
+	// 背景
+	.access::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 20px;
+		z-index: -1;
+		width: calc(100vw - 35px);
+		height: 800px;
+		margin: 0 calc(50% - 50vw);
+		background-color: rgba(236, 236, 236, .5);
+		transform: skewY(-13deg);
+		transform-origin: bottom right;
+	}
+
+	.access-wrap::before {
+		content: "";
+		position: absolute;
+		top: 590px;
+		left: -20px;
+		z-index: -2;
+		width: calc(100vw + 5px);
+		height: 1px;
+		margin: 0 calc(50% - 50vw);
+		background-color: $business-color;
+		transform: skewY(17deg);
+		transform-origin: bottom right;
+	}
+
+	.access::after {
+		content: "";
+		position: absolute;
+		top: 500px;
+		left: -20px;
+		z-index: -2;
+		width: calc(100vw + 5px);
+		height: 850px;
+		margin: 0 calc(50% - 50vw);
+		background-color: #ddd;
+		transform: skewY(17deg);
+		transform-origin: bottom left;
 	}
 }

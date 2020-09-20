@@ -354,6 +354,50 @@
 	}
 }
 
+@include mq(tab) {
+	// 背景
+	.business__partner-wrap::before {
+		content: "";
+		position: absolute;
+		top: 180px;
+		left: -20px;
+		z-index: -1;
+		width: calc(100vw + 5px);
+		height: 900px;
+		margin: 0 calc(50% - 50vw);
+		background-color: rgba(236, 236, 236, .5);
+		transform: skewY(-17deg);
+		transform-origin: bottom right;
+	}
+
+	.business__partner:first-child::before {
+		content: "";
+		position: absolute;
+		top: -180px;
+		left: -20px;
+		z-index: -1;
+		width: calc(100vw + 5px);
+		height: 1px;
+		margin: 0 calc(50% - 50vw);
+		background-color: $business-color;
+		transform: skewY(-17deg);
+		transform-origin: bottom right;
+	}
+
+	.business__partner-wrap::after {
+		content: "";
+		position: absolute;
+		top: -280px;
+		left: -20px;
+		z-index: -2;
+		width: calc(100vw + 5px);
+		height: 1550px;
+		margin: 0 calc(50% - 50vw);
+		background-color: #f5f5f5;
+		transform: skewY(25deg);
+		transform-origin: bottom left;
+	}
+}
 
 @include mq(sp) {
 	.business__partner-wrap {

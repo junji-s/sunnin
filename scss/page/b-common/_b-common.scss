@@ -21,6 +21,22 @@
 	transform-origin: bottom left;
 }
 
+@include mq(tab) {
+	.m-hero__bottom::before {
+		content: "";
+		position: absolute;
+		top: 10px;
+		left: -20px;
+		z-index: -1;
+		width: calc(100vw + 5px);
+		height: 320px;
+		margin: 0 calc(50% - 50vw);
+		background-color: #fafafa;
+		transform: skewY(-10deg);
+		transform-origin: bottom left;
+	}
+}
+
 // 下層ページheroタイトル
 .m-bottom__ttl {
 	position: relative;
@@ -49,4 +65,34 @@
 // 下層ページ用ヒーロー幅
 .hero__bottom {
 	height: rem(320);
+}
+
+// 下層ページcontact背景
+@include mq(tab) {
+	.b-contact::before {
+		content: "";
+		position: absolute;
+		top: -100px;
+		left: 20px;
+		z-index: -3;
+		width: calc(100vw - 35px);
+		height: 200%;
+		margin: 0 calc(50% - 50vw);
+		background-color: rgba(245, 245, 245, .7);
+		transform: skewY(-10deg);
+		transform-origin: top right;
+	}
+
+	.b-footer::before {
+		content: "";
+		position: absolute;
+		top: -100%;
+		left: 20px;
+		width: calc(100vw - 20px);
+		height: 100%;
+		margin: 0 calc(50% - 50vw);
+		background-color: #f7f7f7;
+		transform: skewY(5deg);
+		transform-origin: top left;
+	}
 }
