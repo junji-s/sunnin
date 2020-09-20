@@ -10,10 +10,9 @@
 	content: "";
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 80px;
 	z-index: -1;
-	width: 100vw;
-	width: 100vw;
+	width: calc(100vw - 80px);
 	height: 320px;
 	margin: 0 calc(50% - 50vw);
 	background-color: #fafafa;
@@ -26,9 +25,9 @@
 		content: "";
 		position: absolute;
 		top: 10px;
-		left: -20px;
+		left: 20px;
 		z-index: -1;
-		width: calc(100vw + 5px);
+		width: calc(100vw - 35px);
 		height: 320px;
 		margin: 0 calc(50% - 50vw);
 		background-color: #fafafa;

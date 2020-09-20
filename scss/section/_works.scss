@@ -47,7 +47,7 @@
 	.works__content-sm {
 		width: calc((100% / 3) - 27px);
 		height: rem(300);
-		margin: 0 0 rem(110) rem(40);
+		margin: 0 rem(40) rem(110) 0;
 		background-color: #ddd;
 
 		.works__txtwrap-sm {
@@ -59,10 +59,7 @@
 		}
 	}
 
-	.works__content-sm:nth-child(1) {
-		margin: 0 0 rem(110) 0;
-	}
-	.works__content-sm:nth-child(3n+1) {
+	.works__content-sm:nth-child(3n) {
 		margin: 0 0 rem(110) 0;
 	}
 }
@@ -142,10 +139,7 @@
 		.works__content-sm {
 			width: calc((100% / 3) - 30px);
 		}
-		.works__content-sm:nth-child(1) {
-			margin: 0 0 rem(110) 0;
-		}
-		.works__content-sm:nth-child(3n+1) {
+		.works__content-sm:nth-child(3n) {
 			margin: 0 0 rem(110) 0;
 		}
 	}
@@ -155,13 +149,13 @@
 	.works__contents-wrap {
 		.works__content-sm {
 			width: calc(50% - 30px);
-			margin: 0  0 rem(110) rem(60);
+			margin: 0 rem(60) rem(110) 0;
 		}
-		.works__content-sm:nth-child(3n+1) {
-			margin: 0  0 rem(110) rem(60);
+		.works__content-sm:nth-child(3n) {
+			margin: 0 rem(60) rem(110) 0;
 		}
-		.works__content-sm:nth-child(odd) {
-			margin: 0  0 rem(110) 0;
+		.works__content-sm:nth-child(even) {
+			margin: 0 0 rem(110) 0;
 		}
 	}
 }
@@ -185,13 +179,13 @@
 	.works__contents-wrap {
 		.works__content-sm {
 			width: calc(50% - 15px);
-			margin: 0  0 rem(110) rem(30);
+			margin: 0 rem(30) rem(110) 0;
 		}
-		.works__content-sm:nth-child(3n+1) {
-			margin: 0  0 rem(110) rem(30);
+		.works__content-sm:nth-child(3n) {
+			margin: 0 rem(30) rem(110) 0;
 		}
-		.works__content-sm:nth-child(odd) {
-			margin: 0  0 rem(110) 0;
+		.works__content-sm:nth-child(even) {
+			margin: 0 0 rem(110) 0;
 		}
 	}
 }
@@ -208,13 +202,13 @@
 		.works__content-sm {
 			width: 100%;
 			height: rem(200);
-			margin: 0  0 rem(100) 0;
+			margin: 0 0 rem(100) 0;
 		}
-		.works__content-sm:nth-child(3n+1) {
-			margin: 0  0 rem(100) 0;
+		.works__content-sm:nth-child(3n) {
+			margin: 0 0 rem(110) 0;
 		}
-		.works__content-sm:nth-child(odd) {
-			margin: 0  0 rem(100) 0;
+		.works__content-sm:nth-child(even) {
+			margin: 0 0 rem(110) 0;
 		}
 	}
 }

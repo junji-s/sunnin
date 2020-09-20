@@ -1,0 +1,321 @@
+/* 下層ページ（works 制作事例） */
+/* --------------------------------- */
+///////////////// ページタイトル
+.b-works {
+	position: relative;
+	margin-bottom: rem(120);
+}
+
+.works__ttl {
+	position: relative;
+}
+
+.works__ttl::after {
+	content: "制作事例";
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	color: $works-color;
+	font-weight: 400;
+	font-size: rem(16);
+	transform: translateX(-50%);
+}
+
+
+// タブメニュー 
+.tab-container {
+	display: flex;
+	margin: rem(154) 0 rem(80);
+
+	.tab {
+		position: relative;
+		width: rem(100);
+		padding: rem(10) 0;
+		text-align: center;
+	}
+	.tab::after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: rem(100);
+		border-bottom: 2px solid #efefef;
+	}
+	.tab:hover {
+		opacity: .5;
+		cursor: pointer;
+	}
+
+	// 表示中タブ
+	.tab-current {
+		color: $works-color;
+		font-weight: 600;
+	}
+	.tab-current::after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: rem(100);
+		border-bottom: 2px solid $works-color;
+	}
+}
+
+// ページネーション
+.page-numwrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: rem(96);
+
+	// 矢印
+	.page-num__arrow {
+		display: block;
+		position: relative;
+		width: 60px;
+		height: 1px;
+		background-color: $works-color;
+	}
+	.page-num__arrow:hover {
+		opacity: .5;
+		cursor: pointer;
+	}
+	// 左
+	.page-num__arrow:first-child::before {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 4px;
+		left: 0;
+		width: 8px;
+		height: 1px;
+		background-color: $works-color;
+		transform: rotate(135deg);
+	}
+	.page-num__arrow:first-child::after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		width: 8px;
+		height: 1px;
+		background-color: $works-color;
+		transform: rotate(-135deg);
+	}
+	// 右
+	.page-num__arrow:last-child::before {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 4px;
+		width: 8px;
+		height: 1px;
+		background-color: $works-color;
+		transform: rotate(45deg);
+	}
+	.page-num__arrow:last-child::after {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: -4px;
+		width: 8px;
+		height: 1px;
+		background-color: $works-color;
+		transform: rotate(-45deg);
+	}
+
+	// ナンバーリスト
+	.page-num__list {
+		display: flex;
+	}
+
+	.page-num {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(48);
+		height: rem(48);
+		margin-right: rem(20);
+		border: 1px solid $works-color;
+		color: $works-color;
+		transition: color .6s;
+	}
+
+	.page-num:hover {
+		border: 1px solid $works-color;
+		background-color: $works-color;
+		color: #fff;
+		cursor: pointer;
+	}
+
+	.page-num:first-child {
+		margin-left: rem(40);
+	}
+	.page-num:last-child {
+		margin-right: rem(40);
+	}
+
+	// 表示中のページ
+	.page-num.displaying {
+		background-color: $works-color;
+		color: #fff;
+	}
+}
+
+
+
+// 背景
+.b-works::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100vw;
+	height: 55%;
+	margin: 0 calc(50% - 50vw);
+	background-color: #f5f5f5;
+	transform: skewY(25deg);
+	transform-origin: top left;
+}
+.b-works::after {
+	content: "";
+	position: absolute;
+	top: rem(1000);
+	left: 0;
+	z-index: -1;
+	width: 50vw;
+	height: 70%;
+	margin: 0 calc(50% - 50vw);
+	background-color: #fff;
+	transform: skewY(-20deg);
+	transform-origin: top left;
+}
+
+@include mq(tab) {
+	// 背景
+	.b-works::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -15px;
+		z-index: -1;
+		width: 100vw;
+		height: 55%;
+		margin: 0 calc(50% - 50vw);
+		background-color: #f5f5f5;
+		transform: skewY(25deg);
+		transform-origin: top left;
+	}
+	.b-works::after {
+		content: "";
+		position: absolute;
+		top: rem(1000);
+		left: -15px;
+		z-index: -1;
+		width: 100vw;
+		height: 55%;
+		margin: 0 calc(50% - 50vw);
+		background-color: #fff;
+		transform: skewY(-20deg);
+		transform-origin: top left;
+	}
+}
+
+@include mq(sp) {
+	// タブ
+	.tab-container {
+		display: flex;
+		margin: rem(80) 0 rem(40);
+		font-size: rem(14);
+
+		.tab {
+			width: 100%;
+		}
+		.tab::after {
+			width: 100%;
+		}
+
+		.tab-current::after {
+			width: 100%;
+		}
+	}
+
+	// ページネーション
+	.page-numwrap {
+		width: 100%;
+
+		// 矢印
+		.page-num__arrow {
+			width: 10px;
+		}
+		// 左
+		.page-num__arrow:first-child::before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 4px;
+			left: 0;
+			width: 8px;
+			height: 1px;
+			background-color: $works-color;
+			transform: rotate(135deg);
+		}
+		.page-num__arrow:first-child::after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -4px;
+			left: 0;
+			width: 8px;
+			height: 1px;
+			background-color: $works-color;
+			transform: rotate(-135deg);
+		}
+		// 右
+		.page-num__arrow:last-child::before {
+			content: "";
+			display: block;
+			position: absolute;
+			right: 0;
+			bottom: 4px;
+			width: 8px;
+			height: 1px;
+			background-color: $works-color;
+			transform: rotate(45deg);
+		}
+		.page-num__arrow:last-child::after {
+			content: "";
+			display: block;
+			position: absolute;
+			right: 0;
+			bottom: -4px;
+			width: 8px;
+			height: 1px;
+			background-color: $works-color;
+			transform: rotate(-45deg);
+		}
+
+		// ナンバーリスト
+		.page-num {
+			justify-content: center;
+			width: rem(32);
+			height: rem(32);
+			margin-right: rem(10);
+			border: 1px solid $works-color;
+			color: $works-color;
+		}
+
+		.page-num:first-child {
+			margin-left: rem(20);
+		}
+		.page-num:last-child {
+			margin-right: rem(20);
+		}
+	}
+}
