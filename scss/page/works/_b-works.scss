@@ -197,7 +197,7 @@
 	width: 50vw;
 	height: 70%;
 	margin: 0 calc(50% - 50vw);
-	background-color: #fff;
+	background-color: #fafafa;
 	transform: skewY(-25deg);
 	transform-origin: top left;
 }
@@ -209,9 +209,9 @@
 	left: 0;
 	z-index: -1;
 	width: 100vw;
-	height: 1px;
+	height: 1000px;
 	margin: 0 calc(50% - 50vw);
-	background-color: $works-color;
+	background-color: #f5f5f5;
 	transform: skewY(-25deg);
 	transform-origin: bottom right;
 }
@@ -241,7 +241,7 @@
 		width: 100vw;
 		height: 55%;
 		margin: 0 calc(50% - 50vw);
-		background-color: #fff;
+		background-color: #fafafa;
 		transform: skewY(-20deg);
 		transform-origin: top left;
 	}
@@ -253,9 +253,9 @@
 		left: -15px;
 		z-index: -1;
 		width: 100vw;
-		height: 1px;
+		height: 600px;
 		margin: 0 calc(50% - 50vw);
-		background-color: $works-color;
+		background-color: #f5f5f5;
 		transform: skewY(-17deg);
 		transform-origin: bottom right;
 	}

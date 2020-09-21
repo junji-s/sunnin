@@ -64,7 +64,7 @@ a:hover {
 
 @media screen and (max-width: 480px) {
   .m-site__ttl {
-    font-size: 1.875rem;
+    font-size: 2rem;
   }
 }
 
@@ -344,7 +344,7 @@ a:hover {
   display: flex;
   align-items: center;
   position: absolute;
-  right: 10px;
+  right: 40px;
   bottom: 0;
   z-index: 10;
 }
@@ -398,7 +398,7 @@ a:hover {
   left: -500px;
   z-index: 2;
   width: 200%;
-  height: 100%;
+  height: 150%;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.25);
   -webkit-transform: rotate(-30deg);
@@ -551,12 +551,14 @@ a:hover {
   content: "";
   position: absolute;
   top: 0;
-  left: 80px;
+  left: 87px;
   z-index: -1;
   width: 100vw;
   height: 110%;
   margin: 0 calc(50% - 50vw);
   background-color: rgba(219, 218, 218, 0.5);
+  -webkit-transform: skewY(-25deg);
+          transform: skewY(-25deg);
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
 }
@@ -1279,7 +1281,7 @@ a:hover {
   left: 0;
   z-index: -1;
   width: 100vw;
-  height: 150%;
+  height: 400px;
   margin: 0 calc(50% - 50vw);
   background-color: rgba(245, 245, 245, 0.7);
   -webkit-transform: skewY(-17deg);
@@ -3349,7 +3351,7 @@ a:hover {
   width: 50vw;
   height: 70%;
   margin: 0 calc(50% - 50vw);
-  background-color: #fff;
+  background-color: #fafafa;
   -webkit-transform: skewY(-25deg);
           transform: skewY(-25deg);
   -webkit-transform-origin: top left;
@@ -3363,9 +3365,9 @@ a:hover {
   left: 0;
   z-index: -1;
   width: 100vw;
-  height: 1px;
+  height: 1000px;
   margin: 0 calc(50% - 50vw);
-  background-color: #ff4a88;
+  background-color: #f5f5f5;
   -webkit-transform: skewY(-25deg);
           transform: skewY(-25deg);
   -webkit-transform-origin: bottom right;
@@ -3397,7 +3399,7 @@ a:hover {
     width: 100vw;
     height: 55%;
     margin: 0 calc(50% - 50vw);
-    background-color: #fff;
+    background-color: #fafafa;
     -webkit-transform: skewY(-20deg);
             transform: skewY(-20deg);
     -webkit-transform-origin: top left;
@@ -3410,9 +3412,9 @@ a:hover {
     left: -15px;
     z-index: -1;
     width: 100vw;
-    height: 1px;
+    height: 600px;
     margin: 0 calc(50% - 50vw);
-    background-color: #ff4a88;
+    background-color: #f5f5f5;
     -webkit-transform: skewY(-17deg);
             transform: skewY(-17deg);
     -webkit-transform-origin: bottom right;
@@ -3953,6 +3955,84 @@ a:hover {
   }
   .recruit__about-wrap {
     margin-bottom: 3.75rem;
+  }
+  .recruit-question::before {
+    content: "";
+    position: absolute;
+    top: 250px;
+    left: -15px;
+    z-index: -2;
+    width: 100vw;
+    height: 1600px;
+    margin: 0 calc(50% - 50vw);
+    background-color: #f5f5f5;
+    -webkit-transform: skewY(17deg);
+            transform: skewY(17deg);
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  .recruit-question::after {
+    content: "";
+    position: absolute;
+    top: 380px;
+    left: -15px;
+    z-index: -1;
+    width: 100vw;
+    height: 1000px;
+    margin: 0 calc(50% - 50vw);
+    background-color: rgba(236, 236, 236, 0.5);
+    -webkit-transform: skewY(-17deg);
+            transform: skewY(-17deg);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  .recruit-answer::before {
+    content: "";
+    position: absolute;
+    top: 2750px;
+    left: 0;
+    z-index: -2;
+    width: 100vw;
+    height: 650px;
+    margin: 0 calc(50% - 50vw);
+    background-color: #f5f5f5;
+    -webkit-transform: skewY(17deg);
+            transform: skewY(17deg);
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  .recruit-answer::after {
+    content: "";
+    position: absolute;
+    top: 2400px;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 1150px;
+    margin: 0 calc(50% - 50vw);
+    background-color: rgba(236, 236, 236, 0.5);
+    -webkit-transform: skewY(-17deg);
+            transform: skewY(-17deg);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  .recruit-wrap {
+    position: relative;
+  }
+  .recruit-wrap::before {
+    content: "";
+    position: absolute;
+    top: 4300px;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 750px;
+    margin: 0 calc(50% - 50vw);
+    background-color: rgba(236, 236, 236, 0.5);
+    -webkit-transform: skewY(-17deg);
+            transform: skewY(-17deg);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
   }
 }
 
