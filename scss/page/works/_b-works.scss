@@ -64,26 +64,26 @@
 }
 
 // ページネーション
-.page-numwrap {
+.page-movewrap {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-top: rem(96);
 
 	// 矢印
-	.page-num__arrow {
+	.page-move__back {
 		display: block;
 		position: relative;
 		width: 60px;
 		height: 1px;
 		background-color: $works-color;
 	}
-	.page-num__arrow:hover {
+	.page-move__back:hover {
 		opacity: .5;
 		cursor: pointer;
 	}
 	// 左
-	.page-num__arrow:first-child::before {
+	.page-move__back::before {
 		content: "";
 		display: block;
 		position: absolute;
@@ -94,7 +94,7 @@
 		background-color: $works-color;
 		transform: rotate(135deg);
 	}
-	.page-num__arrow:first-child::after {
+	.page-move__back::after {
 		content: "";
 		display: block;
 		position: absolute;
@@ -106,7 +106,14 @@
 		transform: rotate(-135deg);
 	}
 	// 右
-	.page-num__arrow:last-child::before {
+	.page-move__next {
+		display: block;
+		position: relative;
+		width: 60px;
+		height: 1px;
+		background-color: $works-color;
+	}
+	.page-move__next::before {
 		content: "";
 		display: block;
 		position: absolute;
@@ -117,7 +124,7 @@
 		background-color: $works-color;
 		transform: rotate(45deg);
 	}
-	.page-num__arrow:last-child::after {
+	.page-move__next::after {
 		content: "";
 		display: block;
 		position: absolute;
@@ -173,7 +180,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: -1;
+	z-index: -2;
 	width: 100vw;
 	height: 55%;
 	margin: 0 calc(50% - 50vw);
@@ -186,12 +193,12 @@
 	position: absolute;
 	top: rem(1000);
 	left: 0;
-	z-index: -1;
+	z-index: -3;
 	width: 50vw;
 	height: 70%;
 	margin: 0 calc(50% - 50vw);
 	background-color: #fff;
-	transform: skewY(-20deg);
+	transform: skewY(-25deg);
 	transform-origin: top left;
 }
 
@@ -205,7 +212,7 @@
 	height: 1px;
 	margin: 0 calc(50% - 50vw);
 	background-color: $works-color;
-	transform: skewY(-17deg);
+	transform: skewY(-25deg);
 	transform-origin: bottom right;
 }
 
@@ -274,54 +281,57 @@
 	}
 
 	// ページネーション
-	.page-numwrap {
+	.page-movewrap {
 		width: 100%;
 
 		// 矢印
-		.page-num__arrow {
+		.page-move__back {
 			width: 10px;
 		}
 		// 左
-		.page-num__arrow:first-child::before {
+		.page-move__back::before {
 			content: "";
 			display: block;
 			position: absolute;
-			bottom: 4px;
-			left: 0;
+			bottom: 3px;
+			left: -1px;
 			width: 8px;
 			height: 1px;
 			background-color: $works-color;
 			transform: rotate(135deg);
 		}
-		.page-num__arrow:first-child::after {
+		.page-move__back::after {
 			content: "";
 			display: block;
 			position: absolute;
-			bottom: -4px;
-			left: 0;
+			bottom: -3px;
+			left: -1px;
 			width: 8px;
 			height: 1px;
 			background-color: $works-color;
 			transform: rotate(-135deg);
 		}
+		.page-move__next {
+			width: 10px;
+		}
 		// 右
-		.page-num__arrow:last-child::before {
+		.page-move__next.page-num.displaying {
 			content: "";
 			display: block;
 			position: absolute;
-			right: 0;
-			bottom: 4px;
+			right: -1px;
+			bottom: 3px;
 			width: 8px;
 			height: 1px;
 			background-color: $works-color;
 			transform: rotate(45deg);
 		}
-		.page-num__arrow:last-child::after {
+		.page-move__next.page-num.displaying::after {
 			content: "";
 			display: block;
 			position: absolute;
-			right: 0;
-			bottom: -4px;
+			right: -1px;
+			bottom: -3px;
 			width: 8px;
 			height: 1px;
 			background-color: $works-color;

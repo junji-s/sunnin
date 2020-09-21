@@ -54,11 +54,13 @@
 /* ページ移動用button */
 .m-more__btn {
 	display: block;
-	padding: .75em 2.5em;
 	border: 1px solid #333;
 
 	a {
 		display: block;
+		width: 100%;
+		height: 100%;
+		padding: .75em 2.5em;
 	}
 }
 
