@@ -2817,7 +2817,7 @@ a:hover {
 }
 
 .business__realestate .business__realestate-imgwrap .business__realestate-logowrap1::before {
-  content: url(../../../img/business/sec3/path.png);
+  content: url(./../img/business/sec3/path.png);
   position: absolute;
   top: 40px;
   z-index: -10;
