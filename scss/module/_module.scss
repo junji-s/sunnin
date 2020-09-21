@@ -84,8 +84,6 @@
 	letter-spacing: .08em;
 	font-weight: 300;
 	writing-mode: vertical-rl; // 縦書き
-	a {
-	}
 }
 
 @include mq(pc) {

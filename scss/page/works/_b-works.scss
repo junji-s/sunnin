@@ -194,11 +194,11 @@
 	top: rem(1000);
 	left: 0;
 	z-index: -3;
-	width: 50vw;
+	width: 5vw;
 	height: 70%;
 	margin: 0 calc(50% - 50vw);
 	background-color: #fafafa;
-	transform: skewY(-25deg);
+	transform: skewY(-10deg);
 	transform-origin: top left;
 }
 
@@ -256,7 +256,7 @@
 		height: 600px;
 		margin: 0 calc(50% - 50vw);
 		background-color: #f5f5f5;
-		transform: skewY(-17deg);
+		transform: skewY(-10deg);
 		transform-origin: bottom right;
 	}
 }

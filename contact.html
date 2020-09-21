@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="scss/base/destyle.css">
   <link rel="stylesheet" href="scss/style.css">
-  <link rel="stylesheet" href="scss/plugin/swiper.min.css">
   <script src="https://kit.fontawesome.com/ba645373e0.js" crossorigin="anonymous"></script>
   <title>サンニン株式会社 | sunnin, Inc.</title>
 </head>
 <body>
-  <!-- ヘッダーここから -->
+  <!-- ヘッダー -->
   <header class="header">
     <div class="header-inner">
       <div class="header__hamburger">
@@ -20,7 +19,7 @@
             <li class="hamburger__list"><a href="company.html">company</a></li>
             <li class="hamburger__list"><a href="works.html">works</a></li>
             <li class="hamburger__list"><a href="recruit.html">recruit</a></li>
-            <li class="hamburger__list"><a href="blog.html">ceo blog</a></li>
+            <li class="hamburger__list"><a href="blog.html">contact</a></li>
           </ul>
         </nav>
       </div>
@@ -36,26 +35,56 @@
   </header>
 
   <div class="u-wrap__bottom">
-    <!-- heroエリアここから -->
-    <div class="hero">
-      <h1 class="m-bottom__ttl hero__ttl">会社概要</h1>
+    <!-- heroエリア -->
+    <div class="m-hero__bottom">
+      <h1 class="m-bottom__ttl contact__ttl">contact</h1>
       <p class="m-site__ttl hero__ttl"><a href="index.html">sunn<span class="m-site__ttl-red">i</span>n</a></p>
     </div>
 
     <main>
-      <!-- contactセクションここから -->
-      <section>
-        <div id="contact" class="contact">
-          <h2 class="m-ttl contact-ttl">contact</h2>
-          <p class="contact__txt">ご相談・ご質問等ございましたらお気軽にご連絡ください</p>
-          <button type="button" id="m-contact__btn" class="m-more__btn contact__btn"><a href="contact.html">お問い合わせ</a></button>
-        </div>
-      </section>
+      <div id="contact" class="b-contact">
+        <h2 class="contact-request">下記フォームに必要事項をご入力の上送信ボタンを押してください。</h2>
+        <form action="" method="post" class="form-wrap">
+          <div class="contact-item">
+            <label for="name" class="form__label">お名前<span class="form__required">※必須</span></label>
+            <input id="name" class="form__input" type="text" name="yourname" placeholder="入力してください" autocomplete="name" required>
+          </div>
+          <div class="contact-item">
+            <label for="company" class="form__label">御社名<span class="form__required">※必須</span></label>
+            <input id="company" class="form__input" type="text" name="company" placeholder="入力してください" autocomplete="name" required>
+          </div>
+          <div class="contact-item">
+            <label for="mail" class="form__label">メールアドレス<span class="form__required">※必須</span></label>
+            <input id="mail" class="form__input" type="email" name="mail" placeholder="入力してください" autocomplete="email" required>
+          </div>
+          <div class="contact-item">
+            <label for="mail" class="form__label">メールアドレス（確認用）<span class="form__required">※必須</span></label>
+            <input id="mail" class="form__input" type="email" name="mail" placeholder="入力してください" autocomplete="email" required>
+          </div>
+          <div class="contact-item">
+            <label for="option" class="form__label">お問い合わせ項目<span class="form__required">※必須</span></label>
+            <select class="form__input" name="about" required>
+              <option value="" disabled selected>選択してください</option>
+              <option value="option1">option1</option>
+              <option value="option2">option2</option>
+              <option value="option3">option3</option>
+            </select>
+          </div>
+          <div class="contact-item">
+            <label for="comment" class="form__label">お問い合わせ内容<span class="form__required">※必須</span></label>
+            <textarea id="comment" class="form__textarea" name="comment" placeholder="入力して下さい" required></textarea>
+          </div>
+
+          <p class="contact-attention">ご利用規約に同意いただき、入力内容を確認するには下のボタンを押して下さい。</p>
+          <div class="recaptha"><span></span></div>
+          <button type="submit" id="m-contact__btn" class="m-more__btn contact__btn" value="送信">送信</button>
+        </form>
+      </div>
     </main>
   </div> <!--  u-wrap -->
 
-  <!-- footerここから -->
-  <footer class="footer">
+  <!-- footer -->
+  <footer class="footer b-footer">
     <div class="footer__inner">
       <p class="m-site__ttl footer__logo">sunn<span class="m-site__ttl-red">i</span>n</p>
       <dl class="footer__nav-wrap">
@@ -95,9 +124,9 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/works/works.js"></script>
   <!-- objectfit cover IE対策 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
   <script>objectFitImages();</script>
-
 </body>
 </html>
