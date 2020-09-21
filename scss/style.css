@@ -56,9 +56,15 @@ a:hover {
   color: #e60a17;
 }
 
+@media screen and (max-width: 600px) {
+  .m-site__ttl {
+    font-size: 2.5rem;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .m-site__ttl {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -114,7 +120,6 @@ a:hover {
 }
 
 .m-induction__icon {
-  display: block;
   padding: 2em 1em;
   background: #fff;
   color: #5a93ff;
@@ -312,7 +317,6 @@ a:hover {
 .hero {
   position: relative;
   width: calc(100vw - 80px);
-  height: 100%;
   overflow: hidden;
 }
 
@@ -385,7 +389,6 @@ a:hover {
   bottom: 3.75rem;
   left: 2.5rem;
   z-index: 5;
-  font-size: 3.125rem;
 }
 
 .hero__carousel::before {
@@ -404,20 +407,13 @@ a:hover {
           transform-origin: left top;
 }
 
-@media screen and (min-width: 1500px) {
-  .hero {
-    height: 100vh;
-  }
-  .hero__carousel {
-    height: 100vh;
-  }
-}
-
 @media screen and (max-width: 1000px) {
   .hero .concept-wrap {
     bottom: 1.875rem;
     left: 1.25rem;
-    font-size: 2rem;
+  }
+  .hero .concept-wrap .concept-img {
+    width: 60%;
   }
   .hero .hero__carousel::before {
     top: 120%;
@@ -439,7 +435,6 @@ a:hover {
   .hero .concept-wrap {
     bottom: 1.25rem;
     left: 0.625rem;
-    font-size: 1.5rem;
   }
   .hero .hero__carousel::before {
     left: -400px;
@@ -456,9 +451,15 @@ a:hover {
 }
 
 @media screen and (max-width: 480px) {
+  .hero__ttl {
+    top: 10px;
+  }
   .hero .concept-wrap {
+    bottom: 0.625rem;
     left: 0.625rem;
-    font-size: 1.125rem;
+  }
+  .hero .concept-wrap .concept-img {
+    width: 50%;
   }
   .hero .hero__carousel::before {
     top: 100%;
@@ -475,7 +476,7 @@ a:hover {
 /* -------------- current ------------------- */
 .current {
   position: fixed;
-  top: 0;
+  top: 80px;
   right: 0;
   z-index: 100;
 }
@@ -501,6 +502,9 @@ a:hover {
 }
 
 @media screen and (max-width: 600px) {
+  .current {
+    right: 10px;
+  }
   .current .current-inner {
     width: 1.875rem;
     padding: 1.875rem 0;
@@ -549,12 +553,10 @@ a:hover {
   top: 0;
   left: 80px;
   z-index: -1;
-  width: calc(100vw - 80px);
+  width: 100vw;
   height: 110%;
   margin: 0 calc(50% - 50vw);
   background-color: rgba(219, 218, 218, 0.5);
-  -webkit-transform: skewY(-25deg);
-          transform: skewY(-25deg);
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
 }
@@ -824,6 +826,7 @@ a:hover {
 .works__contents-img {
   width: 100%;
   height: 100%;
+  background-color: #f5f5f5;
 }
 
 .works__contents-img img {
@@ -1837,10 +1840,20 @@ a:hover {
 
 .business__example-wrap .business__example-list {
   width: 25rem;
+  margin-right: 1.25rem;
 }
 
 .business__example-wrap .business__example-list .business__example-img {
+  height: 18.75rem;
   margin-bottom: 1.375rem;
+}
+
+.business__example-wrap .business__example-list .business__example-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  font-family: "object-fit: cover;";
+  /*IE対策*/
 }
 
 .business__example-wrap .business__example-list .business__example-num {
@@ -1898,13 +1911,14 @@ a:hover {
 
 .business-introduction-wrap .business-introduction__cotents .business-introduction__item .business-introduction__logowrap .business-introduction__logo {
   width: 10rem;
-  height: 7.5rem;
+  height: 8.75rem;
 }
 
 .business-introduction-wrap .business-introduction__cotents .business-introduction__item .business-introduction__logowrap .business-introduction__logo img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
+  font-family: "object-fit: cover;";
+  /*IE対策*/
 }
 
 .business-introduction-wrap .business-introduction__cotents .business-introduction__item .business-introduction__txtwrap {
@@ -2073,9 +2087,8 @@ a:hover {
     height: 7.5rem;
   }
   .business-introduction-wrap .business-introduction__cotents .business-introduction__item .business-introduction__logowrap .business-introduction__logo img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    height: 100%;
+    width: 100%;
+    height: auto;
   }
   .business-introduction-wrap .business-introduction__cotents .business-introduction__item .business-introduction__txtwrap {
     margin-bottom: 2.5rem;
@@ -2269,6 +2282,7 @@ a:hover {
 
 .business__partner-wrap .business__partner .business__partner-img {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   width: 52.5rem;
@@ -2283,9 +2297,26 @@ a:hover {
 }
 
 .business__partner-wrap .business__partner .business__partner-img .business__partner-flow figure {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   width: 6.75rem;
   height: 6.75rem;
   margin-right: 2.5rem;
+}
+
+.business__partner-wrap .business__partner .business__partner-img .business__partner-flow figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  font-family: "object-fit: cover;";
+  /*IE対策*/
+}
+
+.business__partner-wrap .business__partner .business__partner-img .business__partner-flow figure .business__partner-txt {
+  width: 120%;
+  margin: 2.3125rem 0 0 0;
+  color: #333;
 }
 
 .business__partner-wrap .business__partner .business__partner-img .business__partner-flow span {
@@ -2387,13 +2418,24 @@ a:hover {
   justify-content: center;
   height: 17.5rem;
   margin-bottom: 2.5rem;
-  background-color: #f6f6f6;
+  border: 1px solid #efefef;
+  background-color: #fff;
 }
 
 .business-collaboration__cotents .business-collaboration__item .business-collaboration__logowrap .business-collaboration__logo {
-  width: 100%;
-  height: 3.75rem;
-  background-color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18.75rem;
+  height: 3.125rem;
+}
+
+.business-collaboration__cotents .business-collaboration__item .business-collaboration__logowrap .business-collaboration__logo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  font-family: "object-fit: cover;";
+  /*IE対策*/
 }
 
 .business-collaboration__cotents .business-collaboration__item .business-collaboration__name {
@@ -2526,9 +2568,27 @@ a:hover {
     align-items: center;
     justify-content: center;
     height: 17.5rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid #efefef;
+    background-color: #fff;
   }
   .business-collaboration__cotents .business-collaboration__item .business-collaboration__logowrap .business-collaboration__logo {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18.75rem;
+    height: 3.125rem;
+  }
+  .business-collaboration__cotents .business-collaboration__item .business-collaboration__logowrap .business-collaboration__logo img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 100%;
+  }
+  .business-collaboration__cotents .business-collaboration__item .business-collaboration__logowrap .business-collaboration__logo .business-collaboration__logo2 {
+    -o-object-fit: cover;
+       object-fit: cover;
+    font-family: "object-fit: cover;";
+    /*IE対策*/
   }
   .business-collaboration__cotents .business-collaboration__item:last-child {
     margin-right: 0;
@@ -2540,12 +2600,15 @@ a:hover {
     margin-bottom: 3.125rem;
   }
   .business__partner-wrap .business__partner .business__partner-img {
-    height: 15.625rem;
+    height: 100%;
   }
   .business__partner-wrap .business__partner .business__partner-img .business__partner-flow figure {
     width: 3.125rem;
     height: 3.125rem;
     margin-right: 0.625rem;
+  }
+  .business__partner-wrap .business__partner .business__partner-img .business__partner-flow figure .business__partner-txt {
+    display: none;
   }
   .business__partner-wrap .business__partner .business__partner-img .business__partner-flow span {
     display: block;
@@ -2638,6 +2701,11 @@ a:hover {
 }
 
 @media screen and (max-width: 480px) {
+  .business-collaboration__cotents .business-collaboration__item .business-collaboration__logowrap .business-collaboration__logo img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 100%;
+  }
   .business__partner-wrap .business__partner .business__partner-about {
     width: 100%;
   }
@@ -2722,9 +2790,15 @@ a:hover {
   margin-right: 4.875rem;
 }
 
+.business__realestate .business__realestate-imgwrap .business__realestate-logo {
+  padding: 0.625rem;
+  background-color: #fff;
+}
+
 .business__realestate .business__realestate-imgwrap .business__realestate-logowrap1 {
   display: flex;
   justify-content: center;
+  position: relative;
   width: 100%;
 }
 
@@ -2735,9 +2809,18 @@ a:hover {
   position: absolute;
   bottom: -18px;
   width: 100%;
+  padding: 0.3125rem;
+  background-color: #fff;
   text-align: center;
   font-weight: 300;
   font-size: 0.75rem;
+}
+
+.business__realestate .business__realestate-imgwrap .business__realestate-logowrap1::before {
+  content: url(../../../img/business/sec3/path.png);
+  position: absolute;
+  top: 40px;
+  z-index: -10;
 }
 
 .business__realestate .business__realestate-imgwrap .business__realestate-logowrap2 {
@@ -2751,6 +2834,8 @@ a:hover {
   position: absolute;
   bottom: -18px;
   width: 100%;
+  padding: 0.3125rem;
+  background-color: #fff;
   text-align: center;
   font-weight: 300;
   font-size: 0.75rem;
@@ -2762,6 +2847,8 @@ a:hover {
   position: absolute;
   bottom: -18px;
   width: 100%;
+  padding: 0.3125rem;
+  background-color: #fff;
   text-align: center;
   font-weight: 300;
   font-size: 0.75rem;
@@ -2789,6 +2876,8 @@ a:hover {
   position: absolute;
   bottom: -36px;
   width: 100%;
+  padding: 0.3125rem;
+  background-color: #fff;
   text-align: center;
   white-space: pre;
   font-weight: 300;
@@ -2841,13 +2930,20 @@ a:hover {
     margin: 0 auto 6.25rem;
   }
   .business__realestate .business__realestate-imgwrap {
-    width: 100%;
+    max-width: 100%;
   }
   .business__realestate .business__realestate-imgwrap .business__realestate-logo {
     position: relative;
   }
   .business__realestate .business__realestate-itemwrap .business__realestate-item {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .business__realestate .business__realestate-imgwrap .business__realestate-logo {
+    padding: 0.625rem;
+    background-color: #fff;
   }
 }
 

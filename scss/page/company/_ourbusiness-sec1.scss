@@ -51,9 +51,16 @@
 
 	.business__example-list {
 		width: rem(400);
+		margin-right: rem(20);
 
 		.business__example-img {
+			height: rem(300);
 			margin-bottom: rem(22);
+			img {
+				object-fit: cover;
+				height: 100%;
+				font-family: "object-fit: cover;";  /*IE対策*/
+			}
 		}
 		.business__example-num {
 			display: block;
@@ -109,10 +116,10 @@
 
 				.business-introduction__logo {
 					width: rem(160);
-					height: rem(120);
+					height: rem(140);
 					img {
 						object-fit: cover;
-						height: 100%;
+						font-family: "object-fit: cover;";  /*IE対策*/
 					}
 				}
 			}
@@ -302,8 +309,8 @@
 						width: rem(160);
 						height: rem(120);
 						img {
-							object-fit: cover;
-							height: 100%;
+							width: 100%;
+							height: auto;
 						}
 					}
 				}

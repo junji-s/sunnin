@@ -16,6 +16,7 @@
 
 		.business__partner-img {
 			display: flex;
+			align-items: center;
 			flex-wrap: wrap;
 			justify-content: center;
 			width: rem(840);
@@ -28,9 +29,22 @@
 				justify-content: center;
 
 				figure {
+					display: flex;
+					align-items: center;
+					flex-direction: column;
 					width: rem(108);
 					height: rem(108);
 					margin-right: rem(40);
+					img {
+						object-fit: cover;
+						height: 100%;
+						font-family: "object-fit: cover;";  /*IE対策*/
+					}
+					.business__partner-txt {
+						width: 120%;
+						margin: rem(37) 0 0 0;
+						color: #333;
+					}
 				}
 				span {
 					display: block;
@@ -127,12 +141,21 @@
 			justify-content: center;
 			height: rem(280);
 			margin-bottom: rem(40);
-			background-color: #f6f6f6;
+			border: 1px solid #efefef;
+			background-color: #fff;
 
 			.business-collaboration__logo {
-				width: 100%;
-				height: rem(60);
-				background-color: #999;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: rem(300);
+				height: rem(50);
+
+				img {
+					object-fit: cover;
+					height: 100%;
+					font-family: "object-fit: cover;";  /*IE対策*/
+				}
 			}
 		}
 
@@ -279,8 +302,26 @@
 				align-items: center;
 				justify-content: center;
 				height: rem(280);
+				margin-bottom: rem(40);
+				border: 1px solid #efefef;
+				background-color: #fff;
+
 				.business-collaboration__logo {
-					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: rem(300);
+					height: rem(50);
+
+					img {
+						object-fit: contain;
+						height: 100%;
+					}
+
+					.business-collaboration__logo2 {
+						object-fit: cover;
+						font-family: "object-fit: cover;";  /*IE対策*/
+					}
 				}
 			}
 		}
@@ -295,12 +336,15 @@
 		margin-bottom: rem(50);
 		.business__partner {
 			.business__partner-img {
-				height: rem(250);
+				height: 100%;
 				.business__partner-flow {
 					figure {
 						width: rem(50);
 						height: rem(50);
 						margin-right: rem(10);
+						.business__partner-txt {
+							display: none;
+						}
 					}
 					span {
 						display: block;
@@ -400,6 +444,19 @@
 }
 
 @include mq(sp) {
+	.business-collaboration__cotents {
+		.business-collaboration__item {
+			.business-collaboration__logowrap {
+				.business-collaboration__logo {
+					img {
+						object-fit: contain;
+						height: 100%;
+						// font-family: "object-fit: cover;";  /*IE対策*/
+					}
+				}
+			}
+		}
+	}
 	.business__partner-wrap {
 		.business__partner {
 			.business__partner-about {

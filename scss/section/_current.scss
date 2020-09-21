@@ -1,7 +1,7 @@
 /* -------------- current ------------------- */
 .current {
 	position: fixed;
-	top: 0;
+	top: 80px;
 	right: 0;
 	z-index: 100;
 
@@ -11,8 +11,7 @@
 		width: rem(80);
 		height: 100vh;
 		padding: rem(60) 0;
-		writing-mode: vertical-lr; // 縦書き
-
+		writing-mode: vertical-lr;
 		.current__list {
 			margin-bottom: rem(16);
 			a {
@@ -25,6 +24,7 @@
 
 @include mq(tab) {
 	.current {
+		right: 10px;
 		.current-inner {
 			width: rem(30);
 			padding: rem(30) 0;
@@ -35,22 +35,3 @@
 .link-current {
 	color: red;
 }
-// .message--active {
-// 	color: $message-color;
-// }
-// .business--active {
-// 	color: $business-color;
-// }
-// .works--active {
-// 	color: $works-color;
-// }
-// .instagram--active {
-// 	color: $instagram-color;
-// }
-
-// .produce--active {
-// 	color: $produce-color;
-// }
-// .contact--active {
-// 	color: $contact-color;
-// }

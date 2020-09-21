@@ -2,7 +2,6 @@
 .hero {
 	position: relative;
 	width: calc(100vw - 80px);
-	height: 100%;
 	overflow: hidden;
 
 	&__ttl {
@@ -74,7 +73,6 @@
 		bottom: rem(60);
 		left: rem(40);
 		z-index: 5;
-		font-size: rem(50);
 	}
 }
 
@@ -93,21 +91,14 @@
 	transform-origin: left top;
 }
 
-@media screen and (min-width: 1500px) {
-	.hero {
-		height: 100vh;
-		&__carousel {
-			height: 100vh;
-		}
-	}
-}
-
 @include mq(pc) {
 	.hero {
 		.concept-wrap {
 			bottom: rem(30);
 			left: rem(20);
-			font-size: rem(32);
+			.concept-img {
+				width: 60%;
+			}
 		}
 		.hero__carousel::before {
 			top: 120%;
@@ -132,7 +123,6 @@
 		.concept-wrap {
 			bottom: rem(20);
 			left: rem(10);
-			font-size: rem(24);
 		}
 		.hero__carousel::before {
 			left: -400px;
@@ -151,9 +141,15 @@
 
 @include mq(sp) {
 	.hero {
+		&__ttl {
+			top: 10px;
+		}
 		.concept-wrap {
+			bottom: rem(10);
 			left: rem(10);
-			font-size: rem(18);
+			.concept-img {
+				width: 50%;
+			}
 		}
 		.hero__carousel::before {
 			top: 100%;
