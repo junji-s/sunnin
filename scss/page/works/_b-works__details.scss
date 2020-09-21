@@ -192,11 +192,13 @@
 		height: rem(475);
 	}
 
-	.page-movewrap {
-		display: block;
+	.details-movewrap {
+		.page-movewrap {
+			display: block;
 
-		.works__btn {
-			margin: rem(10) auto;
+			.works__btn {
+				margin: rem(10) auto;
+			}
 		}
 	}
 }
