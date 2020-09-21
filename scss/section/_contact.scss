@@ -1,6 +1,7 @@
 /* -------------- contact ------------------- */
 .contact {
 	position: relative;
+
 	.contact-ttl {
 		text-align: center;
 	}
@@ -41,10 +42,10 @@
 	left: 0;
 	z-index: -1;
 	width: 100vw;
-	height: 200%;
+	height: 150%;
 	margin: 0 calc(50% - 50vw);
 	background-color: rgba(245, 245, 245, .7);
-	transform: skewY(-10deg);
+	transform: skewY(-17deg);
 	transform-origin: top right;
 }
 

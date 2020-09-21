@@ -163,7 +163,7 @@ a:hover {
 }
 
 .u-sec-wrap {
-  padding-bottom: 15.625rem;
+  padding-bottom: 7.5rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1279,11 +1279,11 @@ a:hover {
   left: 0;
   z-index: -1;
   width: 100vw;
-  height: 200%;
+  height: 150%;
   margin: 0 calc(50% - 50vw);
   background-color: rgba(245, 245, 245, 0.7);
-  -webkit-transform: skewY(-10deg);
-          transform: skewY(-10deg);
+  -webkit-transform: skewY(-17deg);
+          transform: skewY(-17deg);
   -webkit-transform-origin: top right;
           transform-origin: top right;
 }
@@ -3698,5 +3698,274 @@ a:hover {
   }
   .details-movewrap .page-movewrap .works__btn {
     margin: 0.625rem auto;
+  }
+}
+
+.recruit__ttl {
+  position: relative;
+}
+
+.recruit__ttl::after {
+  content: "採用情報";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  color: #fd6620;
+  font-weight: 400;
+  font-size: 1rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.recruit-question {
+  position: relative;
+  margin: 6.25rem 0 5rem;
+  font-weight: 900;
+  font-size: 4.5rem;
+}
+
+.recruit-answer {
+  position: relative;
+  margin-bottom: 10rem;
+  letter-spacing: .09em;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2em;
+}
+
+.recruit__about-container {
+  position: relative;
+  max-width: 52.5rem;
+  margin-left: 27.5rem;
+  font-size: 1.125rem;
+  line-height: 2em;
+}
+
+.recruit__about-container .recruit__about-wrap {
+  margin-bottom: 10rem;
+}
+
+.recruit__about-container .recruit__about-wrap .recruit-aboutttl {
+  position: relative;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+}
+
+.recruit__about-container .recruit__about-wrap .recruit-aboutttl::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 0.25rem;
+  margin-top: 1.25rem;
+  background-color: #fd6620;
+}
+
+.recruit__about-container .recruit__about-wrap .recruit-txtblock {
+  margin-bottom: 2.5rem;
+}
+
+.recruit__about-container .recruit__about-wrap .recruit-num__list {
+  counter-increment: number;
+}
+
+.recruit__about-container .recruit__about-wrap .recruit-num__list::before {
+  content: counter(number) ".";
+  display: inline-block;
+  margin-right: .3em;
+}
+
+.recruit__about-container .recruit__about-wrap .recruit-about__list::before {
+  content: "・";
+}
+
+.recruit__about-container .recruit__about-wrap .recruit-term__list {
+  color: #fd6620;
+}
+
+.recruit__about-container .recruit-term__list::before {
+  content: "■";
+}
+
+.recruit__about-container .recruit-description__list {
+  margin-bottom: 2.5rem;
+}
+
+.recruit__about-container .recruit-link {
+  color: #fd6620;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.recruit__about-container .recruit-arrow {
+  display: inline-block;
+  position: relative;
+  top: -6px;
+  width: 80px;
+  height: 2px;
+  margin-left: 10px;
+  background-color: #fd6620;
+}
+
+.recruit__about-container .recruit-arrow::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  width: 8px;
+  height: 2px;
+  background-color: #fd6620;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.recruit__about-container .recruit-arrow::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 8px;
+  height: 2px;
+  background-color: #fd6620;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.recruit-question::before {
+  content: "";
+  position: absolute;
+  top: 250px;
+  left: 0;
+  z-index: -2;
+  width: 100vw;
+  height: 1600px;
+  margin: 0 calc(50% - 50vw);
+  background-color: #f5f5f5;
+  -webkit-transform: skewY(17deg);
+          transform: skewY(17deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.recruit-question::after {
+  content: "";
+  position: absolute;
+  top: 380px;
+  left: 80px;
+  z-index: -1;
+  width: calc(100vw - 80px);
+  height: 1000px;
+  margin: 0 calc(50% - 50vw);
+  background-color: rgba(236, 236, 236, 0.5);
+  -webkit-transform: skewY(-17deg);
+          transform: skewY(-17deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.recruit-answer::before {
+  content: "";
+  position: absolute;
+  top: 2750px;
+  left: 0;
+  z-index: -2;
+  width: 100vw;
+  height: 650px;
+  margin: 0 calc(50% - 50vw);
+  background-color: #f5f5f5;
+  -webkit-transform: skewY(17deg);
+          transform: skewY(17deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.recruit-answer::after {
+  content: "";
+  position: absolute;
+  top: 2400px;
+  left: 80px;
+  z-index: -1;
+  width: calc(100vw - 80px);
+  height: 1150px;
+  margin: 0 calc(50% - 50vw);
+  background-color: rgba(236, 236, 236, 0.5);
+  -webkit-transform: skewY(-17deg);
+          transform: skewY(-17deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.recruit-wrap {
+  position: relative;
+}
+
+.recruit-wrap::before {
+  content: "";
+  position: absolute;
+  top: 4300px;
+  left: 80px;
+  z-index: -1;
+  width: calc(100vw - 80px);
+  height: 750px;
+  margin: 0 calc(50% - 50vw);
+  background-color: rgba(236, 236, 236, 0.5);
+  -webkit-transform: skewY(-17deg);
+          transform: skewY(-17deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+@media screen and (max-width: 1000px) {
+  .recruit-question {
+    position: relative;
+    margin: 5rem 0 3.75rem;
+    font-weight: 900;
+    font-size: 3.5rem;
+  }
+  .recruit__about-container {
+    position: relative;
+    max-width: 52.5rem;
+    margin-left: 6.25rem;
+    font-size: 1.125rem;
+    line-height: 2em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .recruit__about-container {
+    position: relative;
+    max-width: 52.5rem;
+    margin-left: 0;
+    font-size: 1rem;
+    line-height: 2em;
+  }
+  .recruit-question {
+    position: relative;
+    margin: 5rem 0 2.5rem;
+    font-size: 2.5rem;
+  }
+  .recruit-answer {
+    position: relative;
+    margin-bottom: 6.25rem;
+    font-size: 1.25rem;
+    line-height: 1.6em;
+  }
+  .recruit__about-wrap {
+    margin-bottom: 3.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .recruit-question {
+    position: relative;
+    margin: 5rem 0 2.5rem;
+    font-size: 1.875rem;
+  }
+  .recruit-answer {
+    position: relative;
+    margin-bottom: 6.25rem;
+    font-size: 1.125rem;
+    line-height: 1.3em;
   }
 }
