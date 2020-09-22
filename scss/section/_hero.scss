@@ -102,11 +102,12 @@
 }
 
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 1800px) {
 	.hero {
 		height: 100vh;
 	}
 }
+
 @include mq(pc) {
 	.hero {
 		.concept-wrap {

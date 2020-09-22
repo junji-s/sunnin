@@ -16,24 +16,29 @@
 .works__contents-lg {
 	position: relative;
 	width: 100%;
-	height: rem(480);
 	margin-bottom: rem(40);
-	background-color: #ddd;
 
-	.works__txtwrap-lg {
-		position: absolute;
-		right: 20px;
-		bottom: 20px;
-		padding: rem(20);
-		background-color: rgba($color: #fff, $alpha: .75);
+	.works__contents-link {
+		display: block;
+		position: relative;
+		height: rem(480);
+		transition: all .5s;
 
-		.works__content-ttl {
-			font-weight: 600;
-			font-size: rem(24);
-		}
+		.works__txtwrap-lg {
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+			padding: rem(20);
+			background-color: rgba($color: #fff, $alpha: .75);
 
-		.works__content-view {
-			justify-content: flex-end;
+			.works__content-ttl {
+				font-weight: 600;
+				font-size: rem(24);
+			}
+
+			.works__content-view {
+				justify-content: flex-end;
+			}
 		}
 	}
 }
@@ -48,31 +53,38 @@
 		width: calc((100% / 3) - 27px);
 		height: rem(300);
 		margin: 0 rem(40) rem(110) 0;
-		background-color: #ddd;
 
-		.works__txtwrap-sm {
-			padding-top: rem(20);
-			.works__content-ttl {
-				font-weight: 600;
-				font-size: rem(18);
+		.works__contents-link {
+			display: block;
+			position: relative;
+			transition: all .5s;
+
+			.works__txtwrap-sm {
+				padding: rem(20) 0 rem(20) rem(20);
+				.works__content-ttl {
+					font-weight: 600;
+					font-size: rem(18);
+				}
 			}
 		}
 	}
-
 	.works__content-sm:nth-child(3n) {
 		margin: 0 0 rem(110) 0;
 	}
 }
 
+
 // img共通スタイル
 .works__contents-img {
 	width: 100%;
 	height: 100%;
-	background-color: #f5f5f5;
+	overflow: hidden;
+
 	img {
 		object-fit: cover;
 		height: 100%;
 		font-family: "object-fit: cover;";  /*IE対策*/
+		transition-duration: .5s;
 	}
 }
 
@@ -95,6 +107,8 @@
 		height: 1px;
 		margin-left: 10px;
 		background-color: $works-color;
+		transform-origin: left;
+		transition: all .3s;
 	}
 	.works-induction__arrow::before {
 		content: "";
@@ -133,6 +147,23 @@
 	color: #fff;
 }
 
+// hover装飾(aタグhoverで子要素全体に影響させる)
+.works__contents-link:hover {
+	display: block;
+	background-color: rgba($color: #e8e8e8, $alpha: .7);
+
+	.works__contents-img img {
+		object-fit: cover;
+		height: 100%;
+		font-family: "object-fit: cover;";  /*IE対策*/
+		filter: grayscale(60%);
+		transform: scale(1.1);
+	}
+
+	.works-induction__arrow {
+		transform: scaleX(1.2);
+	}
+}
 
 
 @media screen and (max-width: 1440px) {

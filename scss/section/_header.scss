@@ -17,6 +17,10 @@
 
 		.header__icon {
 			margin-bottom: rem(10);
+			transition: .3s;
+		}
+		.header__icon:hover {
+			opacity: .8;
 		}
 
 		.header-fixed__copy {
