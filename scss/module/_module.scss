@@ -84,6 +84,12 @@
 	letter-spacing: .08em;
 	font-weight: 300;
 	writing-mode: vertical-rl; // 縦書き
+	transition: .5s;
+}
+
+.m-induction__icon:hover {
+	background-color: $scrollFont-color;
+	color: $scrollBg-color;
 }
 
 @include mq(pc) {

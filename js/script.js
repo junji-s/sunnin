@@ -41,6 +41,11 @@ jQuery(document).ready(function ($) {
     });
   }
 
+  // hero+footerスクロール誘導アイコンhover制御
+  $(".m-induction__icon").hover(function () {
+    $('.hero-induction__arrow , .footer-induction__arrow').toggleClass('btnhover');
+  });
+
   // ページ内スムーススクロール
   $('a[href^="#"]').click(function () {
     var href = $(this).attr("href");

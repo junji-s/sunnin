@@ -47,6 +47,7 @@
 			height: 40px;
 			margin-bottom: rem(10);
 			background-color: $scrollFont-color;
+			transition: all .5s;
 		}
 		.footer-induction__arrow::before {
 			content: "";
@@ -58,6 +59,7 @@
 			height: 8px;
 			background-color: $scrollFont-color;
 			transform: rotate(-45deg);
+			transition: all .5s;
 		}
 		.footer-induction__arrow::after {
 			content: "";
@@ -69,6 +71,10 @@
 			height: 8px;
 			background-color: $scrollFont-color;
 			transform: rotate(-135deg);
+			transition: all .5s;
+		}
+		.footer-induction__arrow.btnhover , .footer-induction__arrow.btnhover::before , .footer-induction__arrow.btnhover::after {
+			background-color: #fff;
 		}
 	}
 }
