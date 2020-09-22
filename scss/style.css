@@ -973,6 +973,8 @@ img {
   /*IE対策*/
   -webkit-transition-duration: .5s;
           transition-duration: .5s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .works__content-ttl {
@@ -1044,16 +1046,10 @@ img {
 
 .works__contents-link:hover {
   display: block;
-  height: 100%;
   background-color: rgba(232, 232, 232, 0.7);
 }
 
 .works__contents-link:hover .works__contents-img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  font-family: "object-fit: cover;";
-  /*IE対策*/
   opacity: .7;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);

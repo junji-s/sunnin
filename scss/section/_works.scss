@@ -85,6 +85,9 @@
 		height: 100%;
 		font-family: "object-fit: cover;";  /*IE対策*/
 		transition-duration: .5s;
+
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
 	}
 }
 
@@ -147,16 +150,12 @@
 	color: #fff;
 }
 
-// hover装飾(aタグhoverで子要素全体に影響させる)
+// hover装飾
 .works__contents-link:hover {
 	display: block;
-	height: 100%;
 	background-color: rgba($color: #e8e8e8, $alpha: .7);
 
 	.works__contents-img img {
-		object-fit: cover;
-		height: 100%;
-		font-family: "object-fit: cover;";  /*IE対策*/
 		opacity: .7;
 		transform: scale(1.1);
 	}
