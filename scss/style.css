@@ -3107,15 +3107,16 @@ img {
     margin: auto 0;
   }
   .business__partner-wrap .business__partner .business__partner-img .business__partner-flow figure {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-right: 0.625rem;
+    width: 1.875rem;
+    height: 1.875rem;
+    margin-right: 0.5rem;
   }
   .business__partner-wrap .business__partner .business__partner-img .business__partner-flow span {
     display: block;
-    width: 60px;
+    width: 50px;
     margin-right: 0.625rem;
     color: #258c98;
+    font-size: 0.75rem;
   }
   .business__partner-wrap .business__partner .business__partner-img .business__partner-flow span .business__partner-arrow {
     margin-bottom: 0.3125rem;
