@@ -4528,6 +4528,10 @@ img {
   }
 }
 
+input {
+  padding: 1em;
+}
+
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #ddd;
 }
@@ -4562,6 +4566,7 @@ option:first-child {
 }
 
 textarea {
+  padding: 1em;
   resize: both;
 }
 
