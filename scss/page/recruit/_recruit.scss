@@ -89,7 +89,9 @@
 		color: $recruit-color;
 		font-weight: 600;
 		font-size: rem(18);
+		transition: .3s;
 	}
+
 	.recruit-arrow {
 		display: inline-block;
 		position: relative;
@@ -98,6 +100,8 @@
 		height: 2px;
 		margin-left: 10px;
 		background-color: $recruit-color;
+		transform-origin: left;
+		transition: all .3s;
 	}
 	.recruit-arrow::before {
 		content: "";
@@ -120,6 +124,14 @@
 		height: 2px;
 		background-color: $recruit-color;
 		transform: rotate(-45deg);
+	}
+
+	.recruit-link:hover {
+		opacity: .5;
+
+		.recruit-arrow {
+			transform: scaleX(1.2);
+		}
 	}
 }
 

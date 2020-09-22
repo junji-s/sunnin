@@ -113,6 +113,7 @@
 				height: rem(284);
 				margin-bottom: rem(24);
 				background-color: #fff;
+				transition: .5s;
 
 				.business-introduction__logo {
 					width: rem(160);
@@ -122,6 +123,10 @@
 						font-family: "object-fit: cover;";  /*IE対策*/
 					}
 				}
+			}
+			.business-introduction__logowrap:hover {
+				background: #dedede;
+				opacity: .7;
 			}
 
 			.business-introduction__txtwrap {
@@ -143,6 +148,10 @@
 				.business-introduction__link {
 					color: #258c98;
 					text-decoration: underline;
+					transition: .3s;
+				}
+				.business-introduction__link:hover {
+					opacity: .5;
 				}
 			}
 		}

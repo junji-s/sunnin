@@ -28,6 +28,11 @@
 
 	.footer__description-wrap dd {
 		margin-bottom: rem(16);
+		transition: .5s;
+	}
+	.footer__description-wrap dd:hover {
+		text-decoration: underline;
+		opacity: .6;
 	}
 
 	// スクロール誘導

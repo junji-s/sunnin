@@ -51,12 +51,12 @@
 
 	.works__content-sm {
 		width: calc((100% / 3) - 27px);
-		height: rem(300);
-		margin: 0 rem(40) rem(110) 0;
+		margin: 0 rem(40) rem(100) 0;
 
 		.works__contents-link {
 			display: block;
 			position: relative;
+			height: rem(300);
 			transition: all .5s;
 
 			.works__txtwrap-sm {
@@ -150,13 +150,14 @@
 // hover装飾(aタグhoverで子要素全体に影響させる)
 .works__contents-link:hover {
 	display: block;
+	height: 100%;
 	background-color: rgba($color: #e8e8e8, $alpha: .7);
 
 	.works__contents-img img {
 		object-fit: cover;
 		height: 100%;
 		font-family: "object-fit: cover;";  /*IE対策*/
-		filter: grayscale(60%);
+		opacity: .7;
 		transform: scale(1.1);
 	}
 
@@ -213,7 +214,8 @@
 	.works__contents-wrap {
 		.works__content-sm {
 			width: calc(50% - 15px);
-			margin: 0 rem(30) 0 0;
+			height: rem(400);
+			margin: 0 rem(30) rem(30) 0;
 
 			.works__contents-link {
 				.works__txtwrap-sm {
@@ -228,8 +230,8 @@
 		.works__content-sm:nth-child(3n) {
 			margin: 0 rem(30) 0 0;
 		}
-		.works__content-sm:nth-child(even) {
-			margin: 0;
+		.works__content-sm:nth-child(2n) {
+			margin: 0 0 rem(30) 0;
 		}
 	}
 }
@@ -242,17 +244,30 @@
 			font-size: rem(18);
 		}
 	}
+
 	.works__contents-wrap {
+		display: flex;
+		flex-direction: column;
+
 		.works__content-sm {
 			width: 100%;
-			height: rem(200);
-			margin: 0 0 rem(200) 0;
+			height: rem(300);
+			margin: 0 0 rem(30) 0;
+
+			.works__contents-link {
+				display: block;
+				position: relative;
+				height: rem(200);
+
+				.works__txtwrap-sm {
+					.works__content-ttl {
+						font-size: rem(16);
+					}
+				}
+			}
 		}
 		.works__content-sm:nth-child(3n) {
-			margin: 0 0 rem(200) 0;
-		}
-		.works__content-sm:nth-child(even) {
-			margin: 0 0 rem(200) 0;
+			margin: 0 0 rem(30) 0;
 		}
 	}
 }

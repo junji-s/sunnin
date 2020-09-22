@@ -25,6 +25,7 @@
 			height: rem(280);
 			margin-bottom: rem(20);
 			background-color: #fff;
+			transition: .5s;
 
 			.produce__logo {
 				width: rem(160);
@@ -33,6 +34,19 @@
 					width: 100%;
 					height: auto;
 				}
+			}
+		}
+
+		.produce__content {
+			transition: .5s;
+		}
+		.produce__content:hover {
+			.produce__item {
+				background-color: #dedede;
+				opacity: .7;
+			}
+			.produce__about {
+				text-decoration: underline;
 			}
 		}
 
