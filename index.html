@@ -15,13 +15,17 @@
     <div class="header-inner">
       <div class="header__hamburger">
         <button type="button" class="hamburgerbtn js-hamburgerbtn"><span class="hamburgerbtn-line"></span></button>
-        <nav class="hamburger-wrap">
-          <ul class="hamburger__nav">
-            <li class="hamburger__list"><a href="company.html">company</a></li>
-            <li class="hamburger__list"><a href="works.html">works</a></li>
-            <li class="hamburger__list"><a href="recruit.html">recruit</a></li>
-            <li class="hamburger__list"><a href="contact.html">contact</a></li>
-          </ul>
+        <nav class="hamburger-overlay">
+          <div class="hamburger-wrap">
+            <div class="hamburger-inner">
+              <ul class="hamburger__nav">
+                <li class="hamburger__list"><a href="company.html">company</a></li>
+                <li class="hamburger__list"><a href="works.html">works</a></li>
+                <li class="hamburger__list"><a href="recruit.html">recruit</a></li>
+                <li class="hamburger__list"><a href="contact.html">contact</a></li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </div>
       <div class="header-fixed">
@@ -233,7 +237,7 @@
         <section>
           <div id="contact" class="contact">
             <h2 class="m-ttl contact-ttl">contact</h2>
-            <p class="contact__txt">ご相談・ご質問等ございましたらお気軽にご連絡ください</p>
+            <p class="contact__txt">ご相談・ご質問等ございましたら<span class="br-sp">お気軽にご連絡ください</p>
             <button type="button" id="m-contact__btn" class="m-more__btn contact__btn"><a href="contact.html">お問い合わせ</a></button>
           </div>
         </section>
@@ -288,12 +292,13 @@
     var swiper = new Swiper('.swiper-container', {
       loop: true,
       initialSlide: 0,
+      speed: 800,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
       autoplay: {
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: true
       }
     });

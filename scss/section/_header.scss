@@ -81,28 +81,39 @@
 }
 
 // メニュー
-.hamburger-wrap {
+.hamburger-overlay {
 	display: none;
 	position: fixed;
 	top: 0;
-	left: rem(80);
+	left: 80px;
+	z-index: 1000;
+	width: 100vw;
 	height: 100vh;
-	background-color: $hamburgerBg-color;
+	background-color: $ovelay-color;
+
+	.hamburger-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50vw;
+		height: 100%;
+		background-color: $hamburgerBg-color;
+		color: $hamburgerFont-color;
+		transition: .3s;
+	}
+
+	.hamburger-inner {
+		width: 100%;
+		height: 70%;
+	}
 
 	.hamburger__nav {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
-		width: 50vw;
-		height: 80%;
-		color: $hamburgerFont-color;
-		transition: .3s;
-
+		height: 100%;
 		.hamburger__list {
-			display: flex;
-			align-items: center;
-			justify-content: center;
 			width: 100%;
 			height: 100%;
 
@@ -111,15 +122,15 @@
 				align-items: center;
 				justify-content: center;
 				width: 100%;
-				height: 50%;
+				height: 100%;
 				text-align: center;
-				line-height: 50%;
+				transition: all .5s;
 			}
 			a:hover {
 				background-color: #fff;
 				color: #333;
 				cursor: pointer;
-				transition: .3s;
+				transition: all .3s;
 			}
 		}
 	}
@@ -130,7 +141,7 @@
 		width: rem(40);
 	}
 
-	.hamburger-wrap {
+	.hamburger-overlay {
 		left: rem(40);
 	}
 }
