@@ -384,6 +384,12 @@ img {
   position: absolute;
   top: 40px;
   z-index: 5;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.hero__ttl:hover {
+  opacity: .8;
 }
 
 .hero__carousel {
@@ -403,6 +409,8 @@ img {
 }
 
 .hero__carousel-area-list img {
+  -o-object-fit: cover;
+     object-fit: cover;
   font-family: "object-fit: cover;";
   /*IE対策*/
 }
@@ -1147,6 +1155,9 @@ img {
   .works__contents-wrap .works__content-sm:nth-child(3n) {
     margin: 0 0 1.875rem 0;
   }
+  .works-ttl::before {
+    display: none;
+  }
 }
 
 .works::before {
@@ -1179,6 +1190,22 @@ img {
           transform: skewY(-20deg);
   -webkit-transform-origin: top left;
           transform-origin: top left;
+}
+
+.works-ttl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  z-index: -1;
+  width: calc(100vw + 5px);
+  height: 1px;
+  margin: 0 calc(50% - 50vw);
+  background-color: #ff4a88;
+  -webkit-transform: skewY(-17deg);
+          transform: skewY(-17deg);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
 }
 
 /* -------------- instagram ------------------- */
@@ -3193,6 +3220,8 @@ img {
     -o-object-fit: contain;
        object-fit: contain;
     height: 100%;
+    font-family: "object-fit: cover;";
+    /*IE対策*/
   }
   .business__partner-wrap .business__partner .business__partner-about {
     width: 100%;
@@ -3879,7 +3908,7 @@ img {
   color: #fff;
 }
 
-.b-works::before {
+.tab-container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -3895,40 +3924,24 @@ img {
           transform-origin: top left;
 }
 
-.b-works::after {
-  content: "";
-  position: absolute;
-  top: 62.5rem;
-  left: 0;
-  z-index: -3;
-  width: 5vw;
-  height: 70%;
-  margin: 0 calc(50% - 50vw);
-  background-color: #fafafa;
-  -webkit-transform: skewY(-10deg);
-          transform: skewY(-10deg);
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-}
-
 .tab-container::after {
   content: "";
   position: absolute;
-  top: 300px;
-  left: 0;
+  top: 200px;
+  left: -20px;
   z-index: -1;
-  width: 100vw;
-  height: 1000px;
+  width: calc(100vw + 5px);
+  height: 1px;
   margin: 0 calc(50% - 50vw);
-  background-color: #f5f5f5;
-  -webkit-transform: skewY(-25deg);
-          transform: skewY(-25deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  background-color: #ff4a88;
+  -webkit-transform: skewY(-17deg);
+          transform: skewY(-17deg);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
 }
 
 @media screen and (max-width: 600px) {
-  .b-works::before {
+  .tab-container::before {
     content: "";
     position: absolute;
     top: 0;
@@ -3943,35 +3956,8 @@ img {
     -webkit-transform-origin: top left;
             transform-origin: top left;
   }
-  .b-works::after {
-    content: "";
-    position: absolute;
-    top: 62.5rem;
-    left: -15px;
-    z-index: -1;
-    width: 100vw;
-    height: 55%;
-    margin: 0 calc(50% - 50vw);
-    background-color: #fafafa;
-    -webkit-transform: skewY(-20deg);
-            transform: skewY(-20deg);
-    -webkit-transform-origin: top left;
-            transform-origin: top left;
-  }
   .tab-container::after {
-    content: "";
-    position: absolute;
-    top: 50px;
-    left: -15px;
-    z-index: -1;
-    width: 100vw;
-    height: 600px;
-    margin: 0 calc(50% - 50vw);
-    background-color: #f5f5f5;
-    -webkit-transform: skewY(-10deg);
-            transform: skewY(-10deg);
-    -webkit-transform-origin: bottom right;
-            transform-origin: bottom right;
+    display: none;
   }
 }
 
@@ -4147,6 +4133,22 @@ img {
           transform: skewY(-25deg);
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
+}
+
+.works__details-wrap::before {
+  content: "";
+  position: absolute;
+  top: -400px;
+  left: 0;
+  z-index: -2;
+  width: 100vw;
+  height: 1600px;
+  margin: 0 calc(50% - 50vw);
+  background-color: #f5f5f5;
+  -webkit-transform: skewY(25deg);
+          transform: skewY(25deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 .works__details-wrap {

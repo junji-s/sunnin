@@ -269,6 +269,9 @@
 			margin: 0 0 rem(30) 0;
 		}
 	}
+	.works-ttl::before {
+		display: none;
+	}
 }
 
 
@@ -298,4 +301,18 @@
 	background-color: #fff;
 	transform: skewY(-20deg);
 	transform-origin: top left;
+}
+
+.works-ttl::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -20px;
+	z-index: -1;
+	width: calc(100vw + 5px);
+	height: 1px;
+	margin: 0 calc(50% - 50vw);
+	background-color: $works-color;
+	transform: skewY(-17deg);
+	transform-origin: top right;
 }

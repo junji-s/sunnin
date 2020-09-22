@@ -7,6 +7,10 @@
 		position: absolute;
 		top: 40px;
 		z-index: 5;
+		transition: .5s;
+	}
+	&__ttl:hover {
+		opacity: .8;
 	}
 
 	// カルーセル
@@ -21,7 +25,7 @@
 			&-list {
 				height: 100%;
 				img {
-					// object-fit: cover;
+					object-fit: cover;
 					font-family: "object-fit: cover;";  /*IE対策*/
 				}
 			}
