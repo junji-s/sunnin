@@ -306,7 +306,7 @@ img {
   background-color: rgba(51, 51, 51, 0.9);
 }
 
-.hamburger-overlay .hamburger-wrap {
+.hamburger-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,51 +324,34 @@ img {
   transition: .3s;
 }
 
-.hamburger-overlay .hamburger-inner {
+.hamburger-inner {
   width: 100%;
   height: 70%;
 }
 
-.hamburger-overlay .hamburger__nav {
+.hamburger__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 100%;
 }
 
-.hamburger-overlay .hamburger__nav .hamburger__list {
+.hamburger__nav .hamburger__list a {
+  display: block;
   width: 100%;
-  height: 100%;
-}
-
-.hamburger-overlay .hamburger__nav .hamburger__list a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 100%;
+  padding: 2.5rem 0;
   text-align: center;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 
-.hamburger-overlay .hamburger__nav .hamburger__list a:hover {
+.hamburger__nav .hamburger__list a:hover {
   background-color: #fff;
   color: #333;
   cursor: pointer;
