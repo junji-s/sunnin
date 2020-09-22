@@ -3333,6 +3333,7 @@ img {
 
 .business__realestate .business__realestate-itemwrap .business__realestate-item {
   width: 25rem;
+  margin-bottom: 5rem;
 }
 
 @media screen and (max-width: 1439px) {
@@ -3478,14 +3479,6 @@ img {
   width: 100%;
   height: 21.5rem;
   margin-bottom: 5rem;
-}
-
-.access-map img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  font-family: "object-fit: cover;";
-  /*IE対策*/
 }
 
 .access::before {
