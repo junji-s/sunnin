@@ -195,55 +195,68 @@
 
 @include mq(tab) {
 	.works__contents-lg {
-		height: rem(350);
-		.works__txtwrap-lg {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			width: 100%;
-			padding: rem(10);
-			.works__content-ttl {
-				font-weight: 600;
-				font-size: rem(18);
+		.works__contents-link {
+			height: rem(350);
+			.works__txtwrap-lg {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				padding: rem(10);
+				.works__content-ttl {
+					font-weight: 600;
+					font-size: rem(18);
+				}
 			}
 		}
 	}
 	.works__contents-wrap {
 		.works__content-sm {
 			width: calc(50% - 15px);
-			margin: 0 rem(30) rem(110) 0;
+			margin: 0 rem(30) 0 0;
+
+			.works__contents-link {
+				.works__txtwrap-sm {
+					padding: rem(20) 0 ;
+					.works__content-ttl {
+						font-weight: 600;
+						font-size: rem(18);
+					}
+				}
+			}
 		}
 		.works__content-sm:nth-child(3n) {
-			margin: 0 rem(30) rem(110) 0;
+			margin: 0 rem(30) 0 0;
 		}
 		.works__content-sm:nth-child(even) {
-			margin: 0 0 rem(110) 0;
+			margin: 0;
 		}
 	}
 }
 
 
 @include mq(sp) {
-	.works__contents-wrap {
-		.works__contents-lg {
-			.works__txtwrap-lg {
-				padding: rem(8);
-				font-size: rem(18);
-			}
+	.works__contents-lg {
+		.works__txtwrap-lg {
+			padding: rem(8);
+			font-size: rem(18);
 		}
+	}
+	.works__contents-wrap {
 		.works__content-sm {
 			width: 100%;
 			height: rem(200);
-			margin: 0 0 rem(100) 0;
+			margin: 0 0 rem(200) 0;
 		}
 		.works__content-sm:nth-child(3n) {
-			margin: 0 0 rem(110) 0;
+			margin: 0 0 rem(200) 0;
 		}
 		.works__content-sm:nth-child(even) {
-			margin: 0 0 rem(110) 0;
+			margin: 0 0 rem(200) 0;
 		}
 	}
 }
+
 
 // 背景
 .works::before {
