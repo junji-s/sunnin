@@ -68,7 +68,6 @@
 	transform-origin: bottom right;
 }
 
-
 // サムネイル
 .works__details-wrap {
 	display: flex;
@@ -166,6 +165,9 @@
 			padding-bottom: rem(60);
 			font-size: rem(16);
 		}
+	}
+	.works__details-wrap::after {
+		display: none;
 	}
 }
 

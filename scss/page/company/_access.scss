@@ -120,4 +120,8 @@
 		transform: skewY(17deg);
 		transform-origin: bottom left;
 	}
+
+	.access-wrap::before {
+		display: none;
+	}
 }

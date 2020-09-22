@@ -483,7 +483,7 @@ img {
           transform-origin: left top;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 2000px) {
   .hero {
     height: 100vh;
   }
@@ -2295,15 +2295,15 @@ img {
     padding: 0.625rem 0.625rem;
   }
   .business__about-wrap .business__logo-wrap .business__logo {
-    width: 5.625rem;
-    height: 5.625rem;
-    margin: 0 0.625rem 3.75rem 0;
+    width: 3.75rem;
+    height: 3.75rem;
+    margin: 0 2.5rem 3.75rem 0;
   }
   .business__about-wrap .business__logo-wrap .business__logo .business__logo-img {
     width: 100%;
     height: 100%;
   }
-  .business__about-wrap .business__logo-wrap .business__logo:last-child {
+  .business__about-wrap .business__logo-wrap .business__logo:nth-child(4n) {
     margin-right: 0;
   }
   .business__example-wrap {
@@ -2459,18 +2459,21 @@ img {
     width: 100%;
   }
   .business__about-wrap .business__logo-wrap {
-    width: 100%;
+    width: 16.875rem;
   }
   .business__about-wrap .business__logo-wrap .business__logo {
-    width: 3.75rem;
-    height: 3.75rem;
-    margin: 0 0.625rem 3.75rem 0;
+    width: 3.125rem;
+    height: 3.125rem;
+    margin: 0 1.875rem 3.75rem 0;
   }
   .business__about-wrap .business__logo-wrap .business__logo .business__logo-img {
     width: 100%;
     height: 100%;
   }
-  .business__about-wrap .business__logo-wrap .business__logo:last-child {
+  .business__about-wrap .business__logo-wrap .business__logo:nth-child(4n) {
+    margin: 0 1.875rem 3.75rem 0;
+  }
+  .business__about-wrap .business__logo-wrap .business__logo:nth-child(3n), .business__about-wrap .business__logo-wrap .business__logo:last-child {
     margin-right: 0;
   }
   .business__example-wrap {
@@ -3566,6 +3569,9 @@ img {
     -webkit-transform-origin: bottom left;
             transform-origin: bottom left;
   }
+  .access-wrap::before {
+    display: none;
+  }
 }
 
 /* 下層ページ（works 制作事例） */
@@ -4135,6 +4141,9 @@ img {
     width: 100%;
     padding-bottom: 3.75rem;
     font-size: 1rem;
+  }
+  .works__details-wrap::after {
+    display: none;
   }
 }
 
