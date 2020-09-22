@@ -661,7 +661,7 @@ img {
   top: 0;
   left: 80px;
   z-index: -1;
-  width: 100vw;
+  width: calc(100vw - 80px);
   height: 110%;
   margin: 0 calc(50% - 50vw);
   background-color: rgba(219, 218, 218, 0.5);
