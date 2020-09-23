@@ -99,6 +99,7 @@ textarea {
 	margin-bottom: rem(30);
 	color: #707070;
 	text-align: center;
+	line-height: 1.8em;
 }
 
 
@@ -178,16 +179,23 @@ textarea {
 		transform: skewY(-10deg);
 		transform-origin: bottom right;
 	}
+
+	.contact-request {
+		margin: rem(80) 0 rem(80);
+		text-align: left;
+		font-weight: 500;
+		font-size: rem(18);
+		line-height: 1.5em;
+	}
+
+	.contact-attention {
+		color: #707070;
+		text-align: left;
+		line-height: 1.5em;
+	}
 }
 
 @include  mq(sp) {
-	.contact-request {
-		margin: rem(80) 0 rem(80);
-		text-align: center;
-		font-weight: 500;
-		font-size: rem(20);
-	}
-
 	.form__input {
 		width: 100%;
 		height: rem(50);

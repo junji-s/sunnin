@@ -429,7 +429,9 @@
 			}
 		}
 		.business__logo-wrap {
+			justify-content: flex-start;
 			width: rem(270);
+			padding: 15px 0 15px 30px;
 			.business__logo {
 				width: rem(50);
 				height: rem(50);

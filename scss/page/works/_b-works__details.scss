@@ -186,18 +186,26 @@
 }
 
 @include mq(sp) {
-	.works__details-mdwrap {
-		flex-direction: column;
-	}
-
 	.details__column-wrap {
 		.works__details-sm {
 			margin-bottom: rem(20);
 		}
 	}
+
+	.details__row-wrap {
+		flex-direction: column;
+		.works__details-sm:not(:last-child) {
+			margin-right: 0;
+			margin-bottom: rem(20);
+		}
+	}
+	.works__details-mdwrap {
+		flex-direction: column;
+	}
+
 	.works__details-sm {
 		width: 100%;
-		height: rem(100);
+		height: rem(300);
 	}
 	.works__details-md {
 		width: 100%;
@@ -205,13 +213,13 @@
 	}
 	.works__details-lg {
 		width: 100%;
-		height: rem(475);
+		height: rem(300);
 	}
 
 	.details-movewrap {
 		.page-movewrap {
-			display: block;
-
+			display: flex;
+			font-size: rem(14);
 			.works__btn {
 				margin: rem(10) auto;
 			}

@@ -84,7 +84,7 @@
 		object-fit: cover;
 		height: 100%;
 		font-family: "object-fit: cover;";  /*IE対策*/
-		transition-duration: .5s;
+		transition-duration: 1s;
 
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
@@ -111,7 +111,7 @@
 		margin-left: 10px;
 		background-color: $works-color;
 		transform-origin: left;
-		transition: all .3s;
+		transition: all .8s;
 	}
 	.works-induction__arrow::before {
 		content: "";
