@@ -109,7 +109,7 @@
 
 .hamburger-inner {
 	width: 100%;
-	height: 50%;
+	height: 60%;
 }
 
 .hamburger__nav {
@@ -141,5 +141,27 @@
 
 	.hamburger-overlay {
 		left: rem(40);
+	}
+}
+
+@include mq(sp) {
+	.header {
+		.hamburger-inner {
+			width: 100%;
+			height: rem(400);
+			.hamburger__nav {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				height: 100%;
+				.hamburger__list {
+					a {
+						display: block;
+						width: 100%;
+						padding: rem(20) 0;
+					}
+				}
+			}
+		}
 	}
 }
