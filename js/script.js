@@ -59,15 +59,13 @@ jQuery(document).ready(function ($) {
   });
 
   // ハンバーガーメニュー
-  $('.js-hamburgerbtn , .hamburger-overlay').on('click', function () {
+  $('.js-hamburgerbtn').on('click', function () {
     $('.hamburgerbtn-line').toggleClass('open');
-    $('body').toggleClass('no-scroll');
-    $('.hamburger-overlay').fadeToggle(300);
+    $('.hamburger-inner').fadeToggle(300);
   })
 
   $('.hamburger__list').on('click', function () {
     $('.hamburgerbtn-line').toggleClass('open');
-    $('body').toggleClass('no-scroll');
-    $('.hamburger-overlay').fadeOut(300);
+    $('.hamburger-inner').fadeOut(300);
   })
 });

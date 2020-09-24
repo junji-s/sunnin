@@ -12,11 +12,6 @@ body {
 	animation: fadein 1s forwards;
 }
 
-// ハンバーメニューオープン時にスクロールロック
-body.no-scroll {
-	overflow: hidden;
-}
-
 // ページ遷移時アニメーション
 @keyframes fadein {
 	0% {
