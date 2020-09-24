@@ -1,0 +1,127 @@
+.access {
+	position: relative;
+	margin-bottom: rem(315);
+}
+.access-wrap {
+	max-width: rem(370);
+
+	.access-ttl {
+		margin-bottom: rem(20);
+		font-weight: 600;
+		font-size: rem(24);
+	}
+
+	.access-about {
+		margin-bottom: rem(40);
+		font-size: rem(18);
+		line-height: 1.8;
+	}
+}
+
+.access-map {
+	width: 100%;
+	height: rem(344);
+	margin-bottom: rem(80);
+}
+
+// 背景
+.access::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 80px;
+	z-index: -1;
+	width: calc(100vw - 80px);
+	height: 800px;
+	margin: 0 calc(50% - 50vw);
+	background-color: rgba(236, 236, 236, .5);
+	transform: skewY(-13deg);
+	transform-origin: bottom right;
+}
+
+.access-wrap::before {
+	content: "";
+	position: absolute;
+	top: 590px;
+	left: 0;
+	z-index: -2;
+	width: 100vw;
+	height: 1px;
+	margin: 0 calc(50% - 50vw);
+	background-color: $business-color;
+	transform: skewY(17deg);
+	transform-origin: bottom right;
+}
+
+.access::after {
+	content: "";
+	position: absolute;
+	top: 500px;
+	left: 0;
+	z-index: -2;
+	width: 100vw;
+	height: 850px;
+	margin: 0 calc(50% - 50vw);
+	background-color: #ddd;
+	transform: skewY(17deg);
+	transform-origin: bottom left;
+}
+
+
+
+@include mq(pc) {
+	.access-map {
+		width: 100%;
+		height: rem(344);
+		margin-bottom: rem(80);
+	}
+}
+
+@include mq(tab) {
+	// 背景
+	.access::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 25px;
+		z-index: -1;
+		width: calc(100vw - 40px);
+		height: 800px;
+		margin: 0 calc(50% - 50vw);
+		background-color: rgba(236, 236, 236, .5);
+		transform: skewY(-13deg);
+		transform-origin: bottom right;
+	}
+
+	.access-wrap::before {
+		content: "";
+		position: absolute;
+		top: 590px;
+		left: -25px;
+		z-index: -2;
+		width: calc(100vw + 10px);
+		height: 1px;
+		margin: 0 calc(50% - 50vw);
+		background-color: $business-color;
+		transform: skewY(17deg);
+		transform-origin: bottom right;
+	}
+
+	.access::after {
+		content: "";
+		position: absolute;
+		top: 500px;
+		left: -25px;
+		z-index: -2;
+		width: calc(100vw + 10px);
+		height: 850px;
+		margin: 0 calc(50% - 50vw);
+		background-color: #ddd;
+		transform: skewY(17deg);
+		transform-origin: bottom left;
+	}
+
+	.access-wrap::before {
+		display: none;
+	}
+}

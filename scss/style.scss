@@ -1,0 +1,48 @@
+//******* setting：基本設定（変数などにまとめられるスタイル基本情報）
+@import "setting/setting";
+
+//******* base：ベース設定(サイト全体スタイル・リセットCSS)
+@import "base/base";
+
+//******* mixin：共通スタイル（別Block間で使いまわせるスタイルの部品化）
+@import "mixin/mixin";
+
+//******* module：モジュール（別Block間で使いまわせる共通スタイル  ※m-）
+@import "module/module";
+
+//******* section：トップページ用セクション区切り
+// トップページ
+@import "section/header";
+@import "section/hero";
+@import "section/current";
+@import "section/message";
+@import "section/business";
+@import "section/works";
+@import "section/instagram";
+@import "section/produce";
+@import "section/contact";
+@import "section/footer";
+
+
+//******* page：下層ページ
+// 下層ページ共通スタイル
+@import "page/b-common/b-common";
+
+// company
+@import "page/company/m-company";
+@import "page/company/ourbusiness-sec1";
+@import "page/company/ourbusiness-sec2";
+@import "page/company/ourbusiness-sec3";
+@import "page/company/company.scss";
+@import "page/company/access";
+
+
+// works
+@import "page/works/b-works";
+@import "page/works/b-works__details";
+
+// recruit
+@import "page/recruit/recruit";
+
+// contact
+@import "page/contact/_b-contact";

@@ -1,0 +1,102 @@
+/*  下層ページ用module（共通アイテム） */
+/* --------------------------------- */
+//hero背景
+.m-hero__bottom {
+	position: relative;
+	padding: rem(120) rem(80);
+}
+
+@include mq(tab) {
+	.m-hero__bottom {
+		padding: rem(120) rem(40);
+	}
+}
+.m-hero__bottom::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 80px;
+	z-index: -1;
+	width: calc(100vw - 80px);
+	height: 320px;
+	margin: 0 calc(50% - 50vw);
+	background-color: #fafafa;
+	transform: skewY(-4deg);
+	transform-origin: bottom left;
+}
+
+@include mq(tab) {
+	.m-hero__bottom::before {
+		content: "";
+		position: absolute;
+		top: 10px;
+		left: 35px;
+		z-index: -1;
+		width: calc(100vw - 35px);
+		height: 320px;
+		margin: 0 calc(50% - 50vw);
+		background-color: #fafafa;
+		transform: skewY(-10deg);
+		transform-origin: bottom left;
+	}
+}
+
+// 下層ページheroタイトル
+.m-bottom__ttl {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: rem(48);
+}
+
+
+/* 下層ページ用utility（便利スタイル） */
+/* --------------------------------- */
+.u-wrap__bottom {
+	max-width: rem(1440);
+	margin: 0 auto;
+	padding: 0 rem(80);
+}
+
+@include mq(tab) {
+	.u-wrap__bottom {
+		padding: 0 rem(15) 0 rem(40);
+	}
+}
+
+// 下層ページ用ヒーロー幅
+.hero__bottom {
+	height: rem(320);
+}
+
+// 下層ページcontact背景
+@include mq(tab) {
+	.b-contact::before {
+		content: "";
+		position: absolute;
+		top: -100px;
+		left: 20px;
+		z-index: -3;
+		width: calc(100vw - 35px);
+		height: 200%;
+		margin: 0 calc(50% - 50vw);
+		background-color: rgba(245, 245, 245, .7);
+		transform: skewY(-10deg);
+		transform-origin: top right;
+	}
+
+	.b-footer::before {
+		content: "";
+		position: absolute;
+		top: -100%;
+		left: 20px;
+		width: calc(100vw - 20px);
+		height: 100%;
+		margin: 0 calc(50% - 50vw);
+		background-color: #f7f7f7;
+		transform: skewY(5deg);
+		transform-origin: top left;
+	}
+}

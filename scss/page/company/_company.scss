@@ -1,0 +1,55 @@
+.company__table {
+	max-width: rem(840);
+	margin-left: auto;
+	font-size: rem(18);
+	line-height: 2;
+
+	.company-block {
+		display: flex;
+		align-items: flex-start;
+		width: 100%;
+		.company__team {
+			display: block;
+			width: rem(200);
+			padding: rem(20) 0 0 rem(20);
+		}
+		.company__description {
+			display: inline-block;
+			width: calc(830px - 200px);
+			padding: rem(20) rem(40) rem(20) 0;
+		}
+	}
+	.company-block:nth-last-child(odd) {
+		background-color: #fafafa;
+	}
+	.company__description-link {
+		color: $business-color;
+	}
+}
+
+@include mq(tab) {
+	.company__table {
+		.company-block {
+			display: flex;
+			flex-direction: column;
+			padding: rem(16);
+
+			.company__team {
+				width: 100%;
+				margin-bottom: rem(16);
+				padding: 0;
+			}
+			.company__description {
+				width: 100%;
+				padding: 0;
+				font-size: rem(16);
+			}
+		}
+		.company-block:nth-last-child(odd) {
+			background-color: #fafafa;
+		}
+		.company__description-link {
+			color: $business-color;
+		}
+	}
+}

@@ -1,0 +1,100 @@
+/* -------------- instagram ------------------- */
+.instagram {
+	position: relative;
+	.instagram-ttl::after {
+		content: "";
+		display: block;
+		width: rem(80);
+		height: rem(10);
+		margin-top: rem(10);
+		background-color: $instagram-color;
+	}
+
+	.instagram-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: calc((260px * 3) + 60px);
+
+		.instagram__content {
+			width: rem(260);
+			height: rem(260);
+			margin: 0 rem(30) rem(30) 0;
+
+			img {
+				object-fit: cover;
+				height: 100%;
+				font-family: "object-fit: cover;";  /*IE対策*/
+			}
+		}
+		.instagram__content:nth-child(3n) {
+			margin: 0 0 rem(30) 0;
+		}
+	}
+}
+
+@include mq(pc) {
+	.instagram {
+		.instagram-wrap {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+
+			.instagram__content {
+				width: calc((100% / 2) - 20px);
+				height: rem(200);
+				margin: 0 rem(20) rem(20) 0;
+
+				img {
+					object-fit: cover;
+					height: 100%;
+					font-family: "object-fit: cover;";  /*IE対策*/
+				}
+			}
+			.instagram__content:nth-child(3n) {
+				margin: 0 rem(20) rem(20) 0;
+			}
+			.instagram__content:nth-child(2n) {
+				margin: 0 0 rem(20) 0;
+			}
+		}
+	}
+}
+
+@include mq(sp) {
+	.instagram {
+		.instagram-wrap {
+			.instagram__content {
+				width: calc((100% / 2) - 10px);
+				height: rem(150);
+				margin: 0 rem(10) rem(10) 0;
+
+				img {
+					object-fit: cover;
+					height: 100%;
+					font-family: "object-fit: cover;";  /*IE対策*/
+				}
+			}
+			.instagram__content:nth-child(3n) {
+				margin: 0 rem(10) rem(10) 0;
+			}
+			.instagram__content:nth-child(2n) {
+				margin: 0 0 rem(10) 0;
+			}
+		}
+	}
+}
+
+// 背景
+.instagram::before {
+	content: "";
+	position: absolute;
+	top: -50px;
+	left: 0;
+	z-index: -1;
+	width: 100vw;
+	height: 80%;
+	margin: 0 calc(50% - 50vw);
+	background-color: #f5f5f5;
+	transform: skewY(-10deg);
+	transform-origin: top right;
+}

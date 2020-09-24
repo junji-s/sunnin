@@ -1,0 +1,14 @@
+//・・・・・・・ フォントサイズ ・・・・・・・
+// setting.scss ： $baseFontsize: 16;
+@function rem($pixels) {
+	@return $pixels / $baseFontsize * 1rem;
+}
+
+
+// ・・・・・・・ レスポンシブwidth設定（スマホ基準）・・・・・・・
+// setting.scss ： $mq-breakpoints: ('xs': 320px, 'sp': 480px, 'tab': 600px, 'pc' : 1000px, 'full': 1100px);
+@mixin mq($breakpoint: sp) {
+	@media screen and (max-width: #{map-get($mq-breakpoints, $breakpoint)}) {
+		@content;
+	}
+}

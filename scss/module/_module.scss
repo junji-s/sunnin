@@ -1,0 +1,142 @@
+/* module（共通アイテム） */
+/* --------------------------------- */
+
+/* サイトtitleロゴ */
+// トップページ
+.m-site__ttl {
+	width: rem(140);
+}
+
+@include mq(tab) {
+	.m-site__ttl {
+		width: rem(100);
+	}
+}
+/* セクションtitle */
+.m-ttl {
+	position: relative;
+	margin-bottom: rem(105);
+	text-transform: uppercase;  // 全ての文字を大文字に
+	font-weight: 600;
+	font-size: rem(72);
+}
+
+@media screen and (max-width: 780px) {
+	.m-ttl {
+		margin-bottom: rem(40);
+	}
+}
+@include mq(tab) {
+	.m-ttl {
+		font-size: rem(60);
+	}
+}
+@include mq(sp) {
+	.m-ttl {
+		margin-bottom: rem(30);
+		font-size: rem(40);
+	}
+}
+
+.m-ttl__wrap {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+
+
+/* ページ移動用button */
+.m-more__btn {
+	display: block;
+	border: 1px solid #333;
+
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		padding: .75em 2.5em;
+	}
+}
+
+// タッチ端末hover
+// jQueryでタップ時.more__btnSPクラスを付与
+.m-more__btn.more__btnSP {
+	opacity: .8;
+}
+
+// スクロール誘導アイコン
+.m-induction__icon {
+	padding: 2em 1em;
+	background: $scrollBg-color;
+	color: $scrollFont-color;
+	text-transform: uppercase;  // 全ての文字を大文字に
+	letter-spacing: .08em;
+	font-weight: 300;
+	writing-mode: vertical-rl; // 縦書き
+	transition: .5s;
+}
+
+.m-induction__icon:hover {
+	background-color: $scrollFont-color;
+	color: $scrollBg-color;
+}
+
+@include mq(pc) {
+	.m-induction__icon {
+		padding: 1.5em 1em;
+		font-size: rem(14);
+	}
+}
+@include mq(sp) {
+	.m-induction__icon {
+		padding: 1em .5em;
+		font-size: rem(14);
+	}
+}
+
+
+/* utility（便利スタイル） */
+/* --------------------------------- */
+// 全体コンテナ要素
+.u-wrap {
+	padding: 0 rem(80);
+}
+
+@include mq(tab) {
+	.u-wrap {
+		padding: 0 rem(40);
+	}
+}
+
+.u-wrap__inner {
+	max-width: rem(1320);
+	margin: 0 auto;
+}
+
+// セクション毎の余白
+.u-sec-wrap {
+	padding-bottom: rem(120);
+}
+
+@include mq(pc) {
+	.u-sec-wrap {
+		padding-bottom: rem(100);
+	}
+}
+
+// 改行
+@media screen and (max-width: 1200px) {
+	.br-none {
+		display: none;
+	}
+}
+// 改行(SPのみ）
+@include mq(sp) {
+	.br-sp {
+		display: block;
+	}
+
+	.br-sp::after {
+		content: "\A";
+	}
+}

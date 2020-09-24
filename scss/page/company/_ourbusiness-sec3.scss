@@ -1,0 +1,176 @@
+.business__realestate {
+	display: flex;
+	margin-bottom: rem(220);
+
+	.business__realestate-imgwrap {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: rem(360);
+		height: rem(310);
+		margin-right: rem(78);
+
+		.business__realestate-logo {
+			padding: rem(10);
+			background-color: #fff;
+		}
+
+		.business__realestate-logowrap1 {
+			display: flex;
+			justify-content: center;
+			position: relative;
+			width: 100%;
+			.business__realestate-logo:first-child::before {
+				content: "不動産仲介";
+				display: block;
+				display: block;
+				position: absolute;
+				bottom: -18px;
+				width: 100%;
+				padding: rem(5);
+				background-color: #fff;
+				text-align: center;
+				font-weight: 300;
+				font-size: rem(12);
+			}
+		}
+		.business__realestate-logowrap1::before {
+			content: url(./../img/business/sec3/path.png);
+			position: absolute;
+			top: 40px;
+			z-index: -10;
+		}
+		.business__realestate-logowrap2 {
+			display: flex;
+			justify-content: space-between;
+			.business__realestate-logo:first-child::before {
+				content: "建物管理";
+				display: block;
+				position: absolute;
+				bottom: -18px;
+				width: 100%;
+				padding: rem(5);
+				background-color: #fff;
+				text-align: center;
+				font-weight: 300;
+				font-size: rem(12);
+			}
+			.business__realestate-logo:nth-child(2)::before {
+				content: "不動産売買";
+				display: block;
+				position: absolute;
+				bottom: -18px;
+				width: 100%;
+				padding: rem(5);
+				background-color: #fff;
+				text-align: center;
+				font-weight: 300;
+				font-size: rem(12);
+			}
+		}
+		.business__realestate-logowrap3 {
+			display: flex;
+			justify-content: space-around;
+
+			.business__realestate-logo:first-child::before {
+				content: "現状回復";
+				display: block;
+				position: absolute;
+				bottom: -18px;
+				width: 100%;
+				text-align: center;
+				font-weight: 300;
+				font-size: rem(12);
+			}
+			.business__realestate-logo:nth-child(2)::before {
+				content: "デザイン\Aリフォーム";
+				display: block;
+				position: absolute;
+				bottom: -36px;
+				width: 100%;
+				padding: rem(5);
+				background-color: #fff;
+				text-align: center;
+				white-space: pre;
+				font-weight: 300;
+				font-size: rem(12);
+			}
+		}
+		.business__realestate-logo {
+			position: relative;
+			width: rem(70);
+		}
+	}
+
+	.business__realestate-itemwrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: rem(840);
+
+		.business__realestate-item {
+			width: rem(400);
+			margin-bottom: rem(80);
+		}
+	}
+}
+
+
+@media screen and (max-width: 1439px) {
+	.business__realestate {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 0 auto rem(212);
+
+		.business__realestate-imgwrap {
+			margin: 0 auto rem(60);
+		}
+		.business__realestate-itemwrap {
+			margin: 0 auto;
+
+			.business__realestate-item {
+				width: rem(400);
+			}
+		}
+	}
+}
+
+@include mq(pc) {
+	.business__realestate {
+		.business__realestate-itemwrap {
+			.business__realestate-item {
+				width: 80%;
+				margin: 0 auto rem(40);
+			}
+		}
+	}
+}
+
+@include mq(tab) {
+	.business__realestate {
+		margin: 0 auto rem(100);
+		.business__realestate-imgwrap {
+			max-width: 100%;
+			.business__realestate-logo {
+				position: relative;
+			}
+		}
+		.business__realestate-itemwrap {
+			.business__realestate-item {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@include mq(sp) {
+	.business__realestate {
+		.business__realestate-imgwrap {
+			.business__realestate-logo {
+				padding: rem(10);
+				background-color: #fff;
+			}
+		}
+	}
+}
