@@ -43,13 +43,13 @@
 }
 .page-move__arrow:first-child {
 	span {
-		margin-right: 8px;
+		margin-right: 12px;
 	}
 }
 .page-move__arrow:last-child {
 	flex-direction: row-reverse;
 	span {
-		margin-left: 8px;
+		margin-left: 12px;
 	}
 }
 
@@ -219,7 +219,6 @@
 	.details-movewrap {
 		.page-movewrap {
 			display: flex;
-			justify-content: flex-start;
 			font-size: rem(14);
 			.works__btn {
 				margin: rem(10) auto;

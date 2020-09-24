@@ -235,9 +235,6 @@ button , input , optgroup , select , textarea {
 	vertical-align: middle;
 	text-align: inherit;
 	font: inherit;
-
-	/* -webkit-appearance: none;
-	appearance: none; */
 }
 
 [type="checkbox"] {

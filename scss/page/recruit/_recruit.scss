@@ -18,7 +18,10 @@
 	font-weight: 900;
 	font-size: rem(72);
 }
-
+// safariのみフォントサイズ修正
+_::-webkit-full-page-media , _:future , :root .recruit-question {
+	font-weight: 700;
+}
 .recruit-answer {
 	position: relative;
 	margin-bottom: rem(160);

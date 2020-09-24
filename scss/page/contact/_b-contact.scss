@@ -1,3 +1,10 @@
+button , input , optgroup , select , textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+
 input {
 	padding: 1em;
 }
@@ -8,7 +15,29 @@ input::placeholder , textarea::placeholder {
 select {
 	padding: 1em;
 }
-
+.select__label {
+	position: relative;
+}
+.select__label::after {
+	content: "\f107";
+	position: absolute;
+	top: 43px;
+	left: 330px;
+	font-weight: 600;
+	font-size: 16px;
+	font-family: "Font Awesome 5 Free";
+}
+@include mq(sp) {
+	.select__label::after {
+		content: "\f107";
+		position: absolute;
+		top: 43px;
+		left: 92%;
+		font-weight: 600;
+		font-size: 16px;
+		font-family: "Font Awesome 5 Free";
+	}
+}
 option::selection {
 	color: #000;
 }

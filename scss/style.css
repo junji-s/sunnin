@@ -610,7 +610,7 @@ img {
   position: fixed;
   top: 80px;
   right: 0;
-  z-index: 10;
+  z-index: 11;
 }
 
 .current .current-inner {
@@ -4146,7 +4146,7 @@ img {
 }
 
 .page-move__arrow:first-child span {
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 .page-move__arrow:last-child {
@@ -4157,7 +4157,7 @@ img {
 }
 
 .page-move__arrow:last-child span {
-  margin-left: 12px;
+  margin-left: 8px;
 }
 
 .works__details-wrap::after {
@@ -4333,6 +4333,9 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     font-size: 0.875rem;
   }
   .details-movewrap .page-movewrap .works__btn {
@@ -4361,6 +4364,10 @@ img {
   margin: 6.25rem 0 5rem;
   font-weight: 900;
   font-size: 4.5rem;
+}
+
+_::-webkit-full-page-media, _:future, :root .recruit-question {
+  font-weight: 700;
 }
 
 .recruit-answer {
@@ -4705,6 +4712,12 @@ img {
   }
 }
 
+button, input, optgroup, select, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 input {
   padding: 1em;
 }
@@ -4727,6 +4740,32 @@ input::placeholder, textarea::placeholder {
 
 select {
   padding: 1em;
+}
+
+.select__label {
+  position: relative;
+}
+
+.select__label::after {
+  content: "\f107";
+  position: absolute;
+  top: 43px;
+  left: 330px;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: "Font Awesome 5 Free";
+}
+
+@media screen and (max-width: 480px) {
+  .select__label::after {
+    content: "\f107";
+    position: absolute;
+    top: 43px;
+    left: 92%;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: "Font Awesome 5 Free";
+  }
 }
 
 option::-moz-selection {
