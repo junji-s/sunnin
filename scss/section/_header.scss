@@ -135,10 +135,11 @@
 	.header {
 		width: rem(40);
 		.header-inner {
-			padding: rem(15) 0 rem(23);
+			padding: rem(10) 0 rem(15);
 		}
 	}
 	.hamburger__list {
+		padding: rem(10) 0;
 		a {
 			padding: 0;
 			transition: all .2s;

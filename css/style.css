@@ -322,7 +322,10 @@ img {
     width: 2.5rem;
   }
   .header .header-inner {
-    padding: 0.9375rem 0 1.4375rem;
+    padding: 0.625rem 0 0.9375rem;
+  }
+  .hamburger__list {
+    padding: 0.625rem 0;
   }
   .hamburger__list a {
     padding: 0;
