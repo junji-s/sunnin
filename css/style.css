@@ -300,6 +300,7 @@ img {
 }
 
 .hamburger__list a {
+  padding: 0 1.25rem;
   transition: all .2s;
 }
 
@@ -311,6 +312,14 @@ img {
 @media screen and (max-width: 600px) {
   .header {
     width: 2.5rem;
+  }
+  .hamburger__list a {
+    padding: 0.5rem;
+    transition: all .2s;
+  }
+  .hamburger__list a:hover {
+    text-decoration: overline;
+    opacity: .5;
   }
 }
 
@@ -534,16 +543,19 @@ img {
 
 .current .current-inner .current__list {
   margin-bottom: 1rem;
-  transition: .3s;
 }
 
 .current .current-inner .current__list a {
+  display: block;
+  padding: 0 1.25rem;
   text-transform: capitalize;
   font-size: 0.75rem;
+  transition: all .2s;
 }
 
-.current .current-inner .current__list a {
-  opacity: .6;
+.current .current-inner .current__list a:hover {
+  text-decoration: overline;
+  opacity: .5;
 }
 
 @media screen and (max-width: 600px) {

@@ -114,6 +114,7 @@
 	text-transform: capitalize;
 	font-size: rem(12);
 	a {
+		padding: 0 rem(20);
 		transition: all .2s;
 	}
 	a:hover {
@@ -126,5 +127,15 @@
 @include mq(tab) {
 	.header {
 		width: rem(40);
+	}
+	.hamburger__list {
+		a {
+			padding: rem(8);
+			transition: all .2s;
+		}
+		a:hover {
+			text-decoration: overline;
+			opacity: .5;
+		}
 	}
 }

@@ -14,14 +14,17 @@
 		writing-mode: vertical-lr;
 		.current__list {
 			margin-bottom: rem(16);
-			transition: .3s;
 			a {
+				display: block;
+				padding: 0 rem(20);
 				text-transform: capitalize;
 				font-size: rem(12);
+				transition: all .2s;
 			}
-		}
-		.current__list a {
-			opacity: .6;
+			a:hover {
+				text-decoration: overline;
+				opacity: .5;
+			}
 		}
 	}
 }
