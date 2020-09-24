@@ -22,16 +22,18 @@
 	}
 
 	// リンクボタン
-	.contact__btn {
-		margin: 0 auto rem(100);
-		border: 1px solid $contact-color ;
-		color: $contact-color;
-		transition: .5s;
-	}
+	.m-btnwrap {
+		.contact__btn {
+			margin: 0 auto rem(100);
+			border: 1px solid $contact-color ;
+			color: $contact-color;
+			transition: .5s;
+		}
 
-	.contact__btn:hover {
-		background-color: $contact-color;
-		color: #fff;
+		.contact__btn:hover {
+			background-color: $contact-color;
+			color: #fff;
+		}
 	}
 }
 

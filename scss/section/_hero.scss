@@ -5,7 +5,7 @@
 
 	&__ttl {
 		position: absolute;
-		top: 50px;
+		top: 25px;
 		z-index: 5;
 		transition: .4s;
 	}
@@ -114,9 +114,6 @@
 
 @include mq(pc) {
 	.hero {
-		&__ttl {
-			top: 60px;
-		}
 		.concept-wrap {
 			bottom: rem(30);
 			left: rem(20);
