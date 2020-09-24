@@ -25,6 +25,9 @@
 				text-decoration: overline;
 				opacity: .5;
 			}
+			_:lang(x) + _:-webkit-full-screen-document , a:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }
