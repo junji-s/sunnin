@@ -136,10 +136,20 @@
 		width: rem(40);
 		.header-inner {
 			padding: rem(10) 0 rem(15);
+			.header-fixed {
+				margin-top: 0;
+			}
+			.header__icon {
+				margin-bottom: rem(10);
+				transition: .3s;
+			}
 		}
 	}
+	.hamburgerbtn {
+		margin-bottom: rem(10);
+	}
 	.hamburger__list {
-		padding: rem(10) 0;
+		padding: 7px 0;
 		a {
 			padding: 0;
 			transition: all .2s;

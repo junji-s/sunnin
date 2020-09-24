@@ -324,8 +324,18 @@ img {
   .header .header-inner {
     padding: 0.625rem 0 0.9375rem;
   }
+  .header .header-inner .header-fixed {
+    margin-top: 0;
+  }
+  .header .header-inner .header__icon {
+    margin-bottom: 0.625rem;
+    transition: .3s;
+  }
+  .hamburgerbtn {
+    margin-bottom: 0.625rem;
+  }
   .hamburger__list {
-    padding: 0.625rem 0;
+    padding: 7px 0;
   }
   .hamburger__list a {
     padding: 0;
