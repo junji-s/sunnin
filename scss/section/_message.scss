@@ -13,23 +13,38 @@
 	}
 
 	.message-wrap {
-		display: flex;
-
-		.message__theme {
-			margin-right: rem(60);
-			font-weight: 600;
-			font-size: rem(72);
-			line-height: 1.2;
-		}
-
+		max-width: 100%;
 		.message__txt-wrap {
+			max-width: rem(840);
+			margin-left: calc(100% - 840px);
 			.message__txt {
-				width: 100%;
 				margin-bottom: rem(40);
+				counter-increment: number;
 				line-height: 2;
+
+				.message__sub-ttl {
+					color: #fd6620;
+					font-weight: 600;
+				}
+				.message__sub-ttl::before {
+					content: counter(number);
+					margin-right: 8px;
+				}
 			}
 		}
 	}
+}
+
+.message__theme {
+	margin-bottom: rem(80);
+	font-weight: 500;
+	font-size: rem(72);
+	line-height: 1.2;
+}
+
+// safari 対策
+_::-webkit-full-page-media , :root .message__theme {
+	font-weight: 400;
 }
 
 // 背景
@@ -37,9 +52,9 @@
 	content: "";
 	position: absolute;
 	top: 0;
-	left: 87px;
+	left: 80px;
 	z-index: -1;
-	width: calc(100vw - 87px);
+	width: calc(100vw - 80px);
 	height: 110%;
 	margin: 0 calc(50% - 50vw);
 	background-color: rgba(219, 218, 218, .5);
@@ -84,6 +99,10 @@
 				margin-right: rem(20);
 				font-size: rem(50);
 			}
+
+			.message__txt-wrap {
+				margin-left: rem(100);
+			}
 		}
 	}
 }
@@ -93,12 +112,13 @@
 		.message-wrap {
 			display: flex;
 			flex-direction: column;
-			.message__theme {
-				margin: 0 0 rem(20) 0;
-				font-size: rem(50);
-			}
 			.message__txt-wrap {
 				width: 100%;
+				margin-left: 0;
+				padding: 0 rem(30);
+				.message__txt {
+					margin-bottom: rem(40);
+				}
 			}
 		}
 	}
@@ -108,7 +128,9 @@
 	.message {
 		.message-wrap {
 			.message__theme {
-				font-size: rem(40);
+				margin-right: 0;
+				margin-bottom: rem(50);
+				font-size: rem(32);
 			}
 		}
 	}
@@ -143,7 +165,13 @@
 	.message {
 		.message-wrap {
 			.message__theme {
-				font-size: rem(26);
+				font-size: rem(22);
+			}
+			.message__txt-wrap {
+				padding: 0 rem(15);
+				.message__txt {
+					margin-bottom: rem(40);
+				}
 			}
 		}
 	}

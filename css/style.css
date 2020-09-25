@@ -633,29 +633,48 @@ img {
 }
 
 .message .message-wrap {
-  display: flex;
+  max-width: 100%;
 }
 
-.message .message-wrap .message__theme {
-  margin-right: 3.75rem;
+.message .message-wrap .message__txt-wrap {
+  max-width: 52.5rem;
+  margin-left: calc(100% - 840px);
+}
+
+.message .message-wrap .message__txt-wrap .message__txt {
+  margin-bottom: 2.5rem;
+  counter-increment: number;
+  line-height: 2;
+}
+
+.message .message-wrap .message__txt-wrap .message__txt .message__sub-ttl {
+  color: #fd6620;
   font-weight: 600;
+}
+
+.message .message-wrap .message__txt-wrap .message__txt .message__sub-ttl::before {
+  content: counter(number);
+  margin-right: 8px;
+}
+
+.message__theme {
+  margin-bottom: 5rem;
+  font-weight: 500;
   font-size: 4.5rem;
   line-height: 1.2;
 }
 
-.message .message-wrap .message__txt-wrap .message__txt {
-  width: 100%;
-  margin-bottom: 2.5rem;
-  line-height: 2;
+_::-webkit-full-page-media, :root .message__theme {
+  font-weight: 400;
 }
 
 .message::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 87px;
+  left: 80px;
   z-index: -1;
-  width: calc(100vw - 87px);
+  width: calc(100vw - 80px);
   height: 110%;
   margin: 0 calc(50% - 50vw);
   background-color: rgba(219, 218, 218, 0.5);
@@ -698,6 +717,9 @@ img {
     margin-right: 1.25rem;
     font-size: 3.125rem;
   }
+  .message .message-wrap .message__txt-wrap {
+    margin-left: 6.25rem;
+  }
 }
 
 @media screen and (max-width: 780px) {
@@ -705,18 +727,21 @@ img {
     display: flex;
     flex-direction: column;
   }
-  .message .message-wrap .message__theme {
-    margin: 0 0 1.25rem 0;
-    font-size: 3.125rem;
-  }
   .message .message-wrap .message__txt-wrap {
     width: 100%;
+    margin-left: 0;
+    padding: 0 1.875rem;
+  }
+  .message .message-wrap .message__txt-wrap .message__txt {
+    margin-bottom: 2.5rem;
   }
 }
 
 @media screen and (max-width: 600px) {
   .message .message-wrap .message__theme {
-    font-size: 2.5rem;
+    margin-right: 0;
+    margin-bottom: 3.125rem;
+    font-size: 2rem;
   }
   .message::before {
     content: "";
@@ -750,7 +775,13 @@ img {
 
 @media screen and (max-width: 480px) {
   .message .message-wrap .message__theme {
-    font-size: 1.625rem;
+    font-size: 1.375rem;
+  }
+  .message .message-wrap .message__txt-wrap {
+    padding: 0 0.9375rem;
+  }
+  .message .message-wrap .message__txt-wrap .message__txt {
+    margin-bottom: 2.5rem;
   }
 }
 
