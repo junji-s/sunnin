@@ -2669,6 +2669,105 @@ _::-webkit-full-page-media, :root .message__theme {
   padding: 2.5rem 4.875rem;
 }
 
+.business__samplewrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38.75rem;
+  max-width: 80rem;
+  margin: 0 auto 5rem;
+  padding: 1.875rem;
+  background-color: #fff;
+}
+
+.business__samplewrap .business__sanple--sm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 1.25rem;
+}
+
+.business__samplewrap .business__sanple--sm .business__sanpleimg--sm {
+  height: 16.875rem;
+  max-width: 22.5rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #ddd;
+}
+
+.business__samplewrap .business__sanple--sm .business__sanpleimg--sm:nth-child(3), .business__samplewrap .business__sanple--sm .business__sanpleimg--sm:nth-child(4) {
+  margin-bottom: 0;
+}
+
+.business__samplewrap .business__sanpleimg--lg {
+  height: 35rem;
+  border: 1px solid #ddd;
+}
+
+.business__samplewrap .business__sanpleimg--lg img {
+  height: 100%;
+}
+
+@media screen and (max-width: 1400px) {
+  .business__samplewrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .business__samplewrap .business__sanple--sm {
+    display: flex;
+    justify-content: space-around;
+  }
+  .business__samplewrap .business__sanple--sm .business__sanpleimg--sm:nth-child(3), .business__samplewrap .business__sanple--sm .business__sanpleimg--sm:nth-child(4) {
+    margin-bottom: 1.25rem;
+  }
+  .business__samplewrap .business__sanpleimg--lg {
+    max-width: 22.5rem;
+    max-height: 35rem;
+  }
+  .business__samplewrap .business__sanpleimg--lg img {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .business__samplewrap {
+    align-items: center;
+    justify-content: center;
+  }
+  .business__samplewrap .business__sanple--sm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .business__samplewrap {
+    margin: 0 auto 2.5rem;
+  }
+  .business__samplewrap .business__sanple--sm .business__sanpleimg--sm {
+    height: 100%;
+  }
+  .business__samplewrap .business__sanple--sm .business__sanpleimg--sm img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    font-family: "object-fit: cover;";
+    /*IE対策*/
+  }
+  .business__samplewrap .business__sanpleimg--lg {
+    height: 100%;
+  }
+  .business__samplewrap .business__sanpleimg--lg img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    font-family: "object-fit: cover;";
+    /*IE対策*/
+  }
+}
+
 .business-collaboration__wrap {
   width: 100%;
   margin-bottom: 16.25rem;
