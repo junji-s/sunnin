@@ -811,6 +811,7 @@ _::-webkit-full-page-media, :root .message__theme {
   width: 25rem;
   margin: 0 0 3.75rem 2.5rem;
   counter-increment: number;
+  transition: all .7s;
 }
 
 .business .business__card-wrap .business__card-img {
@@ -869,6 +870,10 @@ _::-webkit-full-page-media, :root .message__theme {
 
 .business .business__card-wrap .business__card:nth-child(3n+1) {
   margin: 0 0 3.75rem 0;
+}
+
+.business .business__card-wrap .business__card:hover {
+  opacity: .6;
 }
 
 @media screen and (max-width: 1440px) {
@@ -2016,6 +2021,7 @@ _::-webkit-full-page-media, :root .message__theme {
 }
 
 .business__sec-wrap {
+  padding-top: 6.25rem;
   counter-increment: number;
 }
 
@@ -2171,7 +2177,7 @@ _::-webkit-full-page-media, :root .message__theme {
 }
 
 .business-introduction-wrap {
-  margin-bottom: 17.5rem;
+  margin-bottom: 11.25rem;
 }
 
 .business-introduction-wrap .business-introduction__cotents {
@@ -2858,7 +2864,7 @@ _::-webkit-full-page-media, :root .message__theme {
 
 .business-collaboration__wrap {
   width: 100%;
-  margin-bottom: 16.25rem;
+  margin-bottom: 10rem;
 }
 
 .business-collaboration__cotents {
