@@ -2758,6 +2758,14 @@ _::-webkit-full-page-media, :root .message__theme {
   margin-bottom: 0;
 }
 
+.business__sample-plan::before {
+  content: "左";
+}
+
+.business__sample-quote::before {
+  content: "右";
+}
+
 @media screen and (max-width: 1400px) {
   .business__samplewrap {
     display: flex;
@@ -2808,6 +2816,12 @@ _::-webkit-full-page-media, :root .message__theme {
     justify-content: center;
     width: 80%;
     margin-right: 0;
+  }
+  .business__sample-plan::before {
+    content: "上";
+  }
+  .business__sample-quote::before {
+    content: "下";
   }
 }
 

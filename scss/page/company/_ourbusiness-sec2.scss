@@ -174,6 +174,13 @@
 	}
 }
 
+.business__sample-plan::before {
+	content: "左";
+}
+.business__sample-quote::before {
+	content: "右";
+}
+
 @media screen and (max-width: 1400px) {
 	.business__samplewrap {
 		display: flex;
@@ -225,6 +232,12 @@
 			width: 80%;
 			margin-right: 0;
 		}
+	}
+	.business__sample-plan::before {
+		content: "上";
+	}
+	.business__sample-quote::before {
+		content: "下";
 	}
 }
 @include mq(sp) {
