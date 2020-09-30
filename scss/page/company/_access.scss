@@ -21,19 +21,19 @@
 .access-map {
 	width: 100%;
 	margin-bottom: rem(80);
+	transition: all .7s;
 
 	img {
 		object-fit: cover;
 		height: 100%;
 		font-family: "object-fit: cover;";  /*IE対策*/
-		transition-duration: .7s;
+		transition: all .7s;
 	}
 }
 
 // hover装飾
 .access-map:hover {
-	display: block;
-	background-color: #e8e8e8;
+	background-color: #fff;
 
 	img {
 		opacity: .6;
@@ -94,6 +94,9 @@
 }
 
 @include mq(tab) {
+	.access {
+		margin-bottom: rem(150);
+	}
 	// 背景
 	.access::before {
 		content: "";

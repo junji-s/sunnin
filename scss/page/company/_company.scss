@@ -29,6 +29,7 @@
 
 @include mq(tab) {
 	.company__table {
+		margin-bottom: rem(100);
 		.company-block {
 			display: flex;
 			flex-direction: column;

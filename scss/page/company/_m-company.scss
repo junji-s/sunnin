@@ -24,7 +24,10 @@
 
 @include mq(sp) {
 	.business-ttl {
-		margin: REM(30) 0;
+		margin: 0 0 rem(30) 0;
+	}
+	.m-100 {
+		margin: rem(100) 0;
 	}
 }
 
@@ -153,10 +156,15 @@
 	}
 }
 
-
+// セクションラップ
 .business__sec-wrap {
-	padding-bottom: rem(100);
 	counter-increment: number;
+}
+
+@include mq(sp) {
+	.business__sec-wrap {
+		padding-bottom: rem(100);
+	}
 }
 
 .business__count-style {
