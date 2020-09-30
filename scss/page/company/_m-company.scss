@@ -22,6 +22,12 @@
 	margin: rem(78) 0 rem(105);
 }
 
+@include mq(sp) {
+	.business-ttl {
+		margin: REM(30) 0;
+	}
+}
+
 .business-ttl::after {
 	content: "";
 	display: block;
@@ -149,6 +155,7 @@
 
 
 .business__sec-wrap {
+	padding-bottom: rem(100);
 	counter-increment: number;
 }
 

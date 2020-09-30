@@ -166,6 +166,7 @@
 
 @include mq(sp) {
 	.business__realestate {
+		margin: 0 auto;
 		.business__realestate-imgwrap {
 			.business__realestate-logo {
 				padding: rem(10);
