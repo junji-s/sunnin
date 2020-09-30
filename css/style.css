@@ -3405,6 +3405,7 @@ _::-webkit-full-page-media, :root .message__theme {
 
 .company__table {
   max-width: 52.5rem;
+  margin-bottom: 14.375rem;
   margin-left: auto;
   font-size: 1.125rem;
   line-height: 2;
