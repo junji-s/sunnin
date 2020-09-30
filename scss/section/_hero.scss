@@ -138,6 +138,11 @@
 	.hero {
 		width: calc(100vw - 40px);
 		height: 300px;
+		&__ttl {
+			position: absolute;
+			top: 20px;
+		}
+
 		&__carousel {
 			width: calc(100vw - 40px);
 			height: 300px;

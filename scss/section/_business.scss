@@ -22,9 +22,17 @@
 			counter-increment: number;
 
 			&-img {
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				width: 100%;
 				height: rem(300);
 				background-color: #ddd;
+				img {
+					object-fit: cover;
+					width: 65%;
+					font-family: "object-fit: cover;";  /*IE対策*/
+				}
 			}
 			&-ttl {
 				display: flex;

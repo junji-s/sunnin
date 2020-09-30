@@ -19,9 +19,32 @@
 }
 
 .access-map {
+	position: relative;
 	width: 100%;
-	height: rem(344);
 	margin-bottom: rem(80);
+	overflow: hidden;
+	transition: all .5s;
+
+	img {
+		object-fit: cover;
+		height: 100%;
+		font-family: "object-fit: cover;";  /*IE対策*/
+		transition-duration: .7s;
+
+		// -webkit-backface-visibility: hidden;
+		// backface-visibility: hidden;
+	}
+}
+
+// hover装飾
+.access-map:hover {
+	display: block;
+	background-color: #e8e8e8;
+
+	img {
+		filter: grayscale(1);
+		transform: scale(1.1);
+	}
 }
 
 // 背景

@@ -171,13 +171,16 @@
 
 @include mq(tab) {
 	.details-hero {
+		padding: 0 rem(40);
 		.details-ttl {
 			margin-bottom: rem(60);
-			font-size: rem(32);
+			padding-top: rem(100);
+			font-size: rem(28);
 		}
 		.details-hero__about {
 			width: 100%;
 			padding-bottom: rem(60);
+			text-align: left;
 			font-size: rem(16);
 		}
 	}
