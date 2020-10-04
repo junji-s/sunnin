@@ -3116,6 +3116,7 @@ _::-webkit-full-page-media, :root .message__theme {
     width: 60px;
     margin-right: 0.625rem;
     color: #258c98;
+    font-size: 0.75rem;
   }
   .business__partner-wrap .business__partner .business__partner-flow .business__partner-stack {
     width: 6.25rem;
