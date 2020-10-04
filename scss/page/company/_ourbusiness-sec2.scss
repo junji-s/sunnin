@@ -410,6 +410,7 @@
 
 			.business__partner-img {
 				display: flex;
+				align-content: center;
 				flex-wrap: wrap;
 				justify-content: center;
 				width: rem(600);
@@ -420,6 +421,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				height: rem(100);
 
 				figure {
 					width: rem(70);
