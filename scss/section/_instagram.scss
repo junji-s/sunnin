@@ -98,3 +98,18 @@
 	transform: skewY(-10deg);
 	transform-origin: top right;
 }
+
+// 線
+.instagram::after {
+	content: "";
+	position: absolute;
+	top: 140px;
+	left: 0;
+	z-index: -1;
+	width: 100vw;
+	height: 1px;
+	margin: 0 calc(50% - 50vw);
+	background-color: $instagram-color;
+	transform: skewY(10deg);
+	transform-origin: bottom left;
+}
