@@ -144,3 +144,12 @@
 		display: none;
 	}
 }
+
+@include mq(sp) {
+	.access-map {
+		height: 100%;
+		img {
+			object-fit: contain;
+		}
+	}
+}
