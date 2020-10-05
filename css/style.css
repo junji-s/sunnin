@@ -102,7 +102,7 @@ img {
 .m-induction__icon {
   padding: 2em 1em;
   background: #fff;
-  color: #5a93ff;
+  color: #333;
   text-transform: uppercase;
   letter-spacing: .08em;
   font-weight: 300;
@@ -113,7 +113,7 @@ img {
 }
 
 .m-induction__icon:hover {
-  background-color: #5a93ff;
+  background-color: #333;
   color: #fff;
 }
 
@@ -391,7 +391,7 @@ img {
   display: flex;
   align-items: center;
   position: absolute;
-  right: 40px;
+  right: 50px;
   bottom: 0;
   z-index: 10;
 }
@@ -403,7 +403,7 @@ img {
   width: 1px;
   height: 40px;
   margin-top: 0.625rem;
-  background-color: #5a93ff;
+  background-color: #333;
   transition: all .5s;
 }
 
@@ -415,7 +415,7 @@ img {
   left: 3px;
   width: 1px;
   height: 8px;
-  background-color: #5a93ff;
+  background-color: #333;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   transition: all .5s;
@@ -429,7 +429,7 @@ img {
   left: -3px;
   width: 1px;
   height: 8px;
-  background-color: #5a93ff;
+  background-color: #333;
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
   transition: all .5s;
@@ -1593,7 +1593,7 @@ _::-webkit-full-page-media, :root .message__theme {
   align-items: center;
   flex-direction: row-reverse;
   position: absolute;
-  right: 80px;
+  right: 50px;
   bottom: 20px;
   z-index: 10;
 }
@@ -1604,7 +1604,7 @@ _::-webkit-full-page-media, :root .message__theme {
   width: 1px;
   height: 40px;
   margin-bottom: 0.625rem;
-  background-color: #5a93ff;
+  background-color: #333;
   transition: all .5s;
 }
 
@@ -1616,7 +1616,7 @@ _::-webkit-full-page-media, :root .message__theme {
   left: 3px;
   width: 1px;
   height: 8px;
-  background-color: #5a93ff;
+  background-color: #333;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   transition: all .5s;
@@ -1630,7 +1630,7 @@ _::-webkit-full-page-media, :root .message__theme {
   left: -3px;
   width: 1px;
   height: 8px;
-  background-color: #5a93ff;
+  background-color: #333;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
   transition: all .5s;
@@ -1749,8 +1749,8 @@ _::-webkit-full-page-media, :root .message__theme {
   }
   .footer .footer-induction__icon {
     position: absolute;
-    right: 60px;
-    bottom: 400px;
+    right: 40px;
+    bottom: 350px;
     font-size: 0.75rem;
   }
 }
@@ -3706,6 +3706,16 @@ _::-webkit-full-page-media, :root .message__theme {
   }
   .access-wrap::before {
     display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .access-map {
+    height: 100%;
+  }
+  .access-map img {
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 

@@ -66,7 +66,7 @@
 .m-induction__icon {
 	padding: 2em 1em;
 	background: $scrollBg-color;
-	color: $scrollFont-color;
+	color: #333;
 	text-transform: uppercase;  // 全ての文字を大文字に
 	letter-spacing: .08em;
 	font-weight: 300;
@@ -75,7 +75,7 @@
 }
 
 .m-induction__icon:hover {
-	background-color: $scrollFont-color;
+	background-color: #333;
 	color: $scrollBg-color;
 }
 

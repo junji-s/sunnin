@@ -41,7 +41,7 @@
 		align-items: center;
 		flex-direction: row-reverse;
 		position: absolute;
-		right: 80px;
+		right: 50px;
 		bottom: 20px;
 		z-index: 10;
 
@@ -51,7 +51,7 @@
 			width: 1px;
 			height: 40px;
 			margin-bottom: rem(10);
-			background-color: $scrollFont-color;
+			background-color: #333;
 			transition: all .5s;
 		}
 		.footer-induction__arrow::before {
@@ -62,7 +62,7 @@
 			left: 3px;
 			width: 1px;
 			height: 8px;
-			background-color: $scrollFont-color;
+			background-color: #333;
 			transform: rotate(-45deg);
 			transition: all .5s;
 		}
@@ -74,7 +74,7 @@
 			left: -3px;
 			width: 1px;
 			height: 8px;
-			background-color: $scrollFont-color;
+			background-color: #333;
 			transform: rotate(-135deg);
 			transition: all .5s;
 		}
@@ -196,8 +196,8 @@
 
 		.footer-induction__icon {
 			position: absolute;
-			right: 60px;
-			bottom: 400px;
+			right: 40px;
+			bottom: 350px;
 			font-size: rem(12);
 		}
 	}
