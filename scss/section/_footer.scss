@@ -195,10 +195,12 @@
 		}
 
 		.footer-induction__icon {
-			position: absolute;
-			right: 40px;
-			bottom: 350px;
-			font-size: rem(12);
+			// position: absolute;
+			// right: 50px;
+			// bottom: 350px;
+			// width: rem(35);
+			// font-size: rem(12);
+			display: none;
 		}
 	}
 }

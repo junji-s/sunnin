@@ -1748,10 +1748,7 @@ _::-webkit-full-page-media, :root .message__theme {
     margin: 0 0 1.5rem 0;
   }
   .footer .footer-induction__icon {
-    position: absolute;
-    right: 40px;
-    bottom: 350px;
-    font-size: 0.75rem;
+    display: none;
   }
 }
 
