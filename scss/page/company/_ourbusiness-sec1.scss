@@ -10,6 +10,9 @@
 
 	.business__contents {
 		width: rem(400);
+		.business__contents-wrap {
+			width: 100%;
+		}
 	}
 
 	// logo-wrap
@@ -192,15 +195,17 @@
 
 
 ///////////////// レスポンシブ 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
 	.business__about-wrap {
 		display: flex;
-		flex-direction: column;
-
+		.business__contents {
+			width: 100%;
+			margin-left: rem(30);
+		}
 		.business__logo-wrap {
 			align-items: center;
 			justify-content: center;
-			width: 100%;
+			width: 70%;
 			margin: rem(20) auto 0;
 
 			.business__logo {
@@ -211,6 +216,19 @@
 					margin-bottom: rem(20);
 				}
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.business__about-wrap {
+		display: flex;
+		flex-direction: column;
+		.business__contents {
+			margin-left: 0;
+		}
+		.business__logo-wrap {
+			width: 100%;
 		}
 	}
 }
