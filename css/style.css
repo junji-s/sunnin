@@ -391,7 +391,7 @@ img {
   display: flex;
   align-items: center;
   position: absolute;
-  right: 50px;
+  right: 80px;
   bottom: 0;
   z-index: 10;
 }
@@ -1593,7 +1593,7 @@ _::-webkit-full-page-media, :root .message__theme {
   align-items: center;
   flex-direction: row-reverse;
   position: absolute;
-  right: 50px;
+  right: 80px;
   bottom: 20px;
   z-index: 10;
 }
@@ -2644,11 +2644,7 @@ _::-webkit-full-page-media, :root .message__theme {
 }
 
 .business__partner-wrap .business__partner .business__partner-flow figure img {
-  -o-object-fit: cover;
-     object-fit: cover;
   height: 100%;
-  font-family: "object-fit: cover;";
-  /*IE対策*/
 }
 
 .business__partner-wrap .business__partner .business__partner-flow figure .business__partner-txt {
